@@ -1,0 +1,122 @@
+<div ng-include="'/angular/shared/views/home/desktop-navigation.blade.html'">
+</div>
+<div ng-include="'/angular/shared/views/home/mobile-navigation.blade.html'">
+</div>
+<div class="carousel slide" data-ride="carousel" id="myCarousel">
+    <div class="carousel-inner">
+        <div class="item active first-slide change_margin">
+            <img src="../img/locum_home_pic.png">
+                <div class="description-slide1 locum-home-slide col-lg-10 col-md-10 col-sm-8 col-xs-8 col-md-offset-1">
+                    <h1 class="book-sessional-locum-home col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                        Have questions? Want to know more?   
+                    </h1>
+                    <p class="description-slide-locum-home col-lg-10 col-md-6 col-sm-6 col-xs-12">
+                        Already trusted by 1 in 10 GPs and practices, to manage sessional bookings and invoices without agencies.
+                    </p>
+                    <div class="create-acc-locum-home col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <button class="btn create-your-acc-btn custom_create_account" ng-click="goToRegistrationLocum()" ng-if="createAccBtn" type="submit">
+                            Create your account
+                        </button>
+                    </div>
+                </div>
+            </img>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div>
+        <h1>
+            Contact Us
+        </h1>
+    </div>
+    <div class="latest-vacancies-description">
+        <p>
+            Fill in your details and questions
+        </p>
+    </div>
+    <div class="line">
+    </div>
+</div>
+<div class="container contact-form">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="well well-sm">
+                <form ng-submit="onFormSubmit()" class="form-horizontal" name="form">
+                    <fieldset>
+                        <legend class="text-center">
+                            Contact us
+                        </legend>
+                        <!-- Name input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="name">
+                                Name
+                            </label>
+                            <div class="col-md-9">
+                                <div ng-class="{'has-error': !form.name.$valid}">
+                                    <input class="form-control" id="name" name="name" ng-model="user.name" ng-required="true" placeholder="Your name" type="text" ng-required="true">
+                                    </input>
+                                </div>
+                                <div class="col-xs-12 text-right">
+                                    <div class="row">
+                                        <div ng-messages="form.name.$error" role="alert">
+                                            <div class="text-danger" ng-message="required">Required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Email input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="email">
+                                Your E-mail
+                            </label>
+                            <div class="col-md-9">
+                                <div ng-class="{'has-error': !form.email.$valid}">
+                                    <input class="form-control" id="email" name="email" ng-model="user.mail" ng-required="true" placeholder="Your email" type="email">
+                                    </input>
+                                </div>
+                                <div class="col-xs-12 text-right">
+                                    <div class="row">
+                                        <div ng-messages="form.email.$error" role="alert">
+                                            <div class="text-danger" ng-message="required">Required</div>
+                                            <div class="text-danger" ng-message="email">Not a valid email.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Message body -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="message">
+                                Your message
+                            </label>
+                            <div class="col-md-9 txa-resize">
+                                <div ng-class="{'has-error': !form.message.$valid}">
+                                    <textarea class="form-control" id="message" name="message" ng-model="user.message" ng-required="true" placeholder="Please enter your message here..." rows="5">
+                                    </textarea>
+                                </div>
+                                <div class="col-xs-12 text-right">
+                                    <div class="row">
+                                        <div ng-messages="form.message.$error" role="alert">
+                                            <div class="text-danger" ng-message="required">Required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Form actions -->
+                        <div class="form-group">
+                            <div class="col-md-12 text-right">
+                                <button class="btn btn-lg contact-form-button" ng-disabled="!form.$valid || isSubmitted" type="submit">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="'/angular/shared/views/home/footer.blade.html'">
+</div>

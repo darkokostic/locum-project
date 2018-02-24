@@ -1,0 +1,26 @@
+.admin-panel i {
+	margin-right: 15px;
+}
+.admin-header button {
+	height: auto;
+	font-size: 20px;
+	margin-top: 10px !important;
+}
+.admin-header-btn {
+	width: 40px !important;
+}
+.admin-panel button {
+    color: #ffffff;
+    margin-left: 5px;
+}
+.delete-btn-news {
+	height: 42px !important;
+}
+.custom-add-margin {
+	margin-right: 10px;
+}
+@media (max-width: 425px) {
+	.custom-add-margin {
+		margin-left: 10px!important;
+	}
+}

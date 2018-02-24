@@ -1,0 +1,496 @@
+<div ng-include="'/angular/shared/views/locum/desktop-navigation.blade.html'">
+</div>
+<div ng-include="'/angular/shared/views/locum/mobile-navigation.blade.html'">
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="media media-container col-xs-12 col-md-6">
+                <div class="row">
+                    <div class="media-left col-xs-12 col-sm-3 col-md-4 col-lg-3">
+                        <img class="media-object picture-media-object images-avatar" ng-src="{{jobDetails.practice.avatar}}">
+                        </img>
+                    </div>
+                    <div class="media-body">
+                        <div class="row">
+                            <a ng-click="viewPractice(jobDetails.practice.id)" style="cursor:pointer;">
+                                <h4 class="media-heading col-xs-12 col-md-7 col-lg-12" style="color:#000000">
+                                    {{jobDetails.practice.practice_name}}
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="dr-live-place">
+                            <i aria-hidden="true" class="fa fa-map-marker col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                            </i>
+                            <p class="col-xs-11 col-sm-11 col-md-10 col-lg-11">
+                                {{jobDetails.practice.practice_city}}, {{jobDetails.practice.practice_province}}
+                            </p>
+                        </div>
+                        <button class="btn last-jobs-btn job-rewierws-btn feedback-btn-last" ng-click="viewPractice(jobDetails.practice.id)">
+                            Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1" ng-model="currentUser.address1">
+                                        <span class="hover-icon-text color-black">
+                                            <i aria-hidden="true" class="fa fa-map-marker person-details-icon">
+                                            </i>
+                                            Address 1 
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 address-padding">
+                                    {{jobDetails.practice.practice_address1}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="addres1 addres2 panel panel-default" ng-hide="jobDetails.practice.practice_address2=='' || jobDetails.practice.practice_address2==null">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1" ng-model="currentUser.address2">
+                                        <span class="hover-icon-text color-black">
+                                            <i aria-hidden="true" class="fa fa-map-marker person-details-icon">
+                                            </i>
+                                            Address 2 
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 address-padding">
+                                    {{jobDetails.practice.practice_address2}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1" ng-model="currentUser.city">
+                                        <span class="hover-icon-text color-black">
+                                            <i aria-hidden="true" class="fa fa-home person-details-icon">
+                                            </i>
+                                            City 
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{jobDetails.practice.practice_city}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1" ng-model="currentUser.province">
+                                        <span class="hover-icon-text color-black">
+                                            <i aria-hidden="true" class="fa fa-building-o person-details-icon">
+                                            </i>
+                                            Province 
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{jobDetails.practice.practice_province}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1" ng-model="currentUser.postal_code">
+                                        <span class="hover-icon-text color-black">
+                                            <i aria-hidden="true" class="fa fa-paper-plane-o person-details-icon">
+                                            </i>
+                                            Postal code 
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{jobDetails.practice.practice_postal_code | postal}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                            <i class="fa fa-sort-numeric-asc person-details-icon" aria-hidden="true">
+                                            </i>
+                                            Size In SqFt 
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{jobDetails.practice.sq_ft}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                            <i class="fa fa-group person-details-icon" aria-hidden="true">
+                                            </i>
+                                            Number of Staff 
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{jobDetails.practice.no_of_staff}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                        <i class="fa fa-phone person-details-icon" aria-hidden="true">
+                                        </i>
+                                            Phone 
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{jobDetails.practice.practice_phone | tel}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                            <i class="fa fa-envelope-o person-details-icon" aria-hidden="true">  
+                                            </i>
+                                            Practice email 
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{jobDetails.practice.practice_email}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                            <i class="fa fa-rss-square person-details-icon" aria-hidden="true">
+                                            </i>Website 
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{jobDetails.practice.practice_website}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                            <i class="fa fa-facebook person-details-icon" aria-hidden="true">
+                                            </i>
+                                            Facebook 
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{jobDetails.practice.practice_facebook}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                        <i class="fa fa-eye person-details-icon" aria-hidden="true">
+                                        </i>
+                                        Number of exam lanes 
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{jobDetails.practice.no_of_exam_lanes}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+       <div class="row">
+            <div class="col-xs-12">
+            <h3>Job Details</h3>
+            <p class='text-muted'>Here you will be shown a job with details and applications.</p>
+        <hr>
+        </div>
+       </div>
+        <div class="row job-review-right">
+            <div class="col-xs-6">
+                <div class="title-of-job title-ofjob-my-jobs">
+                    <h1 style="color: #ff8f00;">
+                        {{jobDetails.title}}
+                    </h1>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="title-of-job title-of-job-my-jobs title-of-see-more pull-right" ng-if="jobDetails.user_id==null">
+                    <button ng-if="jobDetails.isApplicationExpired==false && jobDetails.isApplied==false" class="btn last-jobs-btn mail-profile-btn-practice apply-btn" data-target="#appJobModal" data-toggle="modal" ng-click="" type="submit" ng-disabled="disabledApply">
+                        Apply
+                    </button>
+                </div>
+                <div class="title-of-job title-of-job-my-jobs title-of-see-more pull-right" ng-if="jobDetails.isApplied==true">
+                    <h3 >You applied for this Job</h3>
+                </div>
+                <div class="title-of-job title-of-job-my-jobs title-of-see-more pull-right" ng-if="jobDetails.isApplicationExpired==true && jobDetails.isApplied==false" >
+                    <h3 >Application time expired</h3>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="practice-name-my-job-div">
+                    <a ng-click="viewPractice(jobDetails.practice.id)" style="cursor:pointer;">
+                        <p class="practice-name-my-job">
+                            <i class="fa fa-building-o" aria-hidden="true"></i>&nbsp{{jobDetails.practice.practice_name}}
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12 pin-applications">
+                <div style="margin-top:-20px">
+                    <i aria-hidden="true" class="fa fa-map-marker">
+                    </i>
+                    <p>
+                        {{jobDetails.practice.practice_city}},
+                        <span class="living-place">
+                            {{jobDetails.practice.practice_province}}
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="job-description">
+                    <h3>
+                        {{jobDetails.desc}}
+                    </h3>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="position-cards-feedback col-xs-12 col-sm-10">
+                    <div class="cards-feedback col-xs-2" ng-hide="jobDetails.practice.contact_lens_specialty==0 || jobDetails.practice.contact_lens_specialty==null">
+                        {{jobDetails.practice.contact_lens_specialty}}
+                    </div>
+                    <div class="cards-feedback col-xs-2" ng-hide="jobDetails.practice.patient_booking_preference==0 || jobDetails.practice.patient_booking_preference==null">
+                        {{jobDetails.practice.patient_booking_preference}}
+                    </div>
+                    <div class="cards-feedback col-xs-2" ng-hide="jobDetails.practice.practice_management_system==0 || jobDetails.practice.practice_management_system==null">
+                        {{jobDetails.practice.practice_management_system}}
+                    </div>
+                    <div class="cards-feedback col-xs-2" ng-hide="jobDetails.practice.practice_specialty==0 || jobDetails.practice.practice_specialty==null">
+                        {{jobDetails.practice.practice_specialty}}
+                    </div>
+                    <div class="cards-feedback col-xs-2" ng-hide="jobDetails.practice.pretest_equipment==0 || jobDetails.practice.pretest_equipment==null">
+                        {{jobDetails.practice.pretest_equipment}}
+                    </div>
+                    <div class="cards-feedback col-xs-2" ng-hide="jobDetails.practice.specialist_equipment==0 || jobDetails.practice.specialist_equipment==null">
+                        {{jobDetails.practice.specialist_equipment}}
+                    </div>
+                    <div class="cards-feedback col-xs-2" ng-hide="jobDetails.practice.lens_product_affiliation==0 || jobDetails.practice.lens_product_affiliation==null">
+                        {{jobDetails.practice.lens_product_affiliation}}
+                    </div>
+                </div>
+                <div ng-if="jobDetails.percentages!=null && jobDetails.user_id!=null" ng-repeat="percentage in jobDetails.percentages track by $index">
+                    <div class="cards-feedback col-xs-2" style="margin-left: 35px; margin-top: 25px;">
+                        Day: {{moment(percentage.day).format('MMM DD YYYY')}} <p ng-show="percentage.isSent==1">Amount: {{percentage.amount| currency:"$"}}</p>
+                        <input ng-model="percentage.amount" ng-show="percentage.isSent==0" style="margin-left: 10px; height: 20px;" type="number" ng-change="checkForLength(percentage.amount,$index)">
+                        </input>
+                        <button ng-attr-id="{{percentage.id}}" ng-click="check(percentage.id,percentage.amount, $index)" ng-show="percentage.isSent==0" style="margin-left: 10px; height: 20px; max-width: 70px;line-height: 15px;padding-top: 1px;" >
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12" ng-show="userWhoWon.user.id!=null">
+                <hr>
+            </div>
+            <div class="col-xs-12">
+                <div ng-show="userWhoWon.user.id!=null">
+                    <h3 style="color: #ff8f00;">Won <span class="applications-text">Application</span></h3>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="about-doctor-my-jobs" ng-show="userWhoWon.user.id!=null">
+                    <a ng-click="viewLocum(userWhoWon.user.id)" style="cursor:pointer;">
+                        <div class="about-dr-img col-xs-1">
+                            <img style="margin-left: -15px;" class="img-responsive responsive-img" ng-src="{{userWhoWon.user.avatar}}">
+                        </div>
+                        <div class="col-xs-11 ">
+                            <h3 class="dr-my-jobs">{{userWhoWon.user.name}}</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3>{{userWhoWon.desc}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12" ng-hide="allOtherApplications==0 || allOtherApplications==null">
+                <hr>
+            </div>
+            <div class="col-xs-12">
+                <div ng-hide="allOtherApplications==0 || allOtherApplications==null">
+                    <h3 style="color: #ff8f00;">
+                        ALL
+                        <span class="applications-text">
+                            Applications
+                        </span>
+                    </h3>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="about-doctor-my-jobs" ng-repeat="otherApplication in allOtherApplications" style="margin-bottom:30px !important;">
+                    <a>
+                        <div class="about-dr-img col-xs-1">
+                            <img style="margin-left: -15px;" class="img-responsive responsive-img" ng-src="{{otherApplication.user.avatar}}">
+                            </img>
+                        </div>
+                        <div class="col-xs-11">
+                            <a >
+                                <h3 ng-click="viewLocum(otherApplication.user.id)" style="cursor:pointer;" class="dr-my-jobs">
+                                    &nbsp{{otherApplication.user.name}}
+                                </h3>
+                            </a>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3>
+                                &nbsp{{otherApplication.desc}}
+                            </h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <center>
+                <div class="col-xs-12 view-more view-more-locum-my-job" ng-if="nextPageURL">
+                    <p infinite-scroll="paginate(nextPageURL)" infinite-scroll-disabled="disabledScroll">
+                        <span us-spinner="{radius:15, width:4, length: 6}" spinner-on="disabledScroll"></span>
+                    </p>
+                </div>
+            </center>
+            <div class="sk-three-bounce" ng-if="showLoader">
+                <div class="sk-child sk-bounce1"></div>
+                <div class="sk-child sk-bounce2"></div>
+                <div class="sk-child sk-bounce3"></div>
+            </div>
+
+        </div>
+    </div>
+    <div ng-include="'/angular/shared/views/locum/footer.blade.html'"></div>
+    <div class="modal fade" id="appJobModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">
+                        <i aria-hidden="true" class="fa fa-times exit-popup">
+                        </i>
+                    </button>
+                    <h4 class="modal-title">
+                        Job Details - {{jobDetails.title | limitTo:50}}{{jobDetails.title.length > 50 ? '...' : ''}}
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form name="apply">
+                        <div class="form-group col-xs-11 col-sm-12 span-date">
+                            <h3 class="title-popup">
+                                <label><b>Job Description:</b></label>
+                                <span>
+                                    {{jobDetails.desc | limitTo:250}}{{jobDetails.desc.length > 250 ? '...' : ''}}
+                                </span>
+                            </h3>
+                            <textarea class="form-control latest-vacancies-description edit-overview popup-mail" ng-model="jobForApplication.description" ng-required="true" placeholder="Modal body" rows="4">
+                            </textarea>
+                        </div>
+                        <center>
+                            <button class="btn create-your-acc-btn send-popup" data-dismiss="modal" ng-click="applyForAJob(jobDetails.id)" ng-disabled="!apply.$valid" type="submit">
+                                Apply
+                            </button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

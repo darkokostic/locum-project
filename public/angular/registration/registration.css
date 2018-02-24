@@ -1,0 +1,219 @@
+.registration-form h6 {
+    font-size: 16px;
+    color: rgb(144, 164, 174);
+    line-height: 1.438;
+    text-align: center;
+    -moz-transform: matrix( 0.99988637508828, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix( 0.99988637508828, 0, 0, 1, 0, 0);
+    -ms-transform: matrix( 0.99988637508828, 0, 0, 1, 0, 0);
+    z-index: 120;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px !important;
+}
+.registration-form {
+    align-content:  center;
+    border-radius: 4px;
+    background-color: rgba(233, 132, 4, 0);
+    /*box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.12);*/
+    margin-top: 60px;
+    width: 100%;
+    top: 50px;
+    z-index: 31;
+    margin-bottom: 80px;
+    padding-left: 30px;
+}
+.registration-form h2 {
+    text-align: center;
+  	font-size: 25px;
+  	font-family: "Asap";
+  	color: rgb(33, 33, 33);
+  	line-height: 1.2;
+    z-index: 84;
+    margin-top: 20px;
+}
+.registration-form img {
+    text-align: center;
+}
+.registration-form p {
+  	font-size: 16px;
+  	font-family: "Asap";
+  	color: rgb(144, 164, 174);
+  	line-height: 1.438;
+    text-align: center;
+    -moz-transform: matrix( 0.99988637508828,0,0,1,0,0);
+    -webkit-transform: matrix( 0.99988637508828,0,0,1,0,0);
+    -ms-transform: matrix( 0.99988637508828,0,0,1,0,0);
+    z-index: 82;
+}
+.registration-form input {
+  	border: none;
+  	font-size: 14px;
+}
+.registration-form input:hover {
+  	border: none;
+}
+.registration-form input:focus {
+  	border: none;
+  	outline: none;
+}
+.registration-form input:active {
+  	border: none;
+}
+.custom-margin {
+  margin-left:2px;
+}
+.input-register i {
+	color: rgb(207, 216, 220);
+	margin-left: 20px;
+	font-size: 11px;
+	line-height: 42px;
+}
+.custom_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.input-register {
+	  border-style: solid;
+  	border-width: 1px;
+  	border-color: rgb(207, 216, 220);
+  	border-radius: 2px;
+  	background-color: rgba(233, 132, 4, 0);
+  	z-index: 78;
+  	min-height: 42px;
+  	margin-top: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.sign-up-button button {
+  	background-color: #fff;
+  	border: 1px solid #ff8f00;
+  	width: 100%;
+  	min-height: 42px;
+  	color: #ff8f00;
+  	margin-top: 20px;
+}
+.sign-up-button button:hover {
+	background-color: #ff8f00;
+	color: #fff;
+	border-color: #ff8f00;
+}
+.sign-up-button button:active {
+	background-color: #fff;
+	color: #ff8f00;
+	border-color: #ff8f00;
+}
+.sign-up-button button:active:focus {
+	background-color: #ff8f00;
+	color: #fff;
+	border-color: #ff8f00;
+	outline: none;
+}
+.sign-up-button button:focus {
+	background-color: #fff;
+	color: #ff8f00;
+	border-color: #ff8f00;
+	outline: none;
+}
+.sign-up-button {
+	margin-bottom: 20px;
+  padding-right: 75px;
+  padding-left: 75px;
+}
+
+/*checkboc*/
+.forgot-password {
+    color: #9f9e9e;
+    text-decoration: none !important;
+}
+.checkbox label {
+    padding-left: 0px;
+    color: #9f9e9e;
+}
+.checkbox label:after,
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ff8f00;
+    background: #ff8f00;
+    color: #FFFFFF;
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: .5em;
+}
+.radio .cr {
+    border-radius: 50%;
+}
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+/* Checkbox */
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+.check-box-forgot-pw  {
+    margin-top: 30px;
+    max-width: 380px;
+}
+.forgot-password {
+    line-height: 40px;
+}
+.position-registration {
+    margin-top: 33px;
+    margin-bottom: 20px;
+}
+.left-checkbox {
+    margin-left: 22%;
+}
+@media (min-width: 1200px) {
+    .policy-network-locum {
+        margin-left: 27px;
+    }
+}
+@media (max-width: 1200px) {
+    .select-province {
+        width: 140px !important;
+    }
+}
+/*responsive*/
+@media only screen and (max-width: 768px) {
+    .registration-form {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+@media (max-width: 550px) {
+    .select-province {
+        width: 120px !important;
+    }
+}
+

@@ -1,0 +1,410 @@
+.addres1 {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(207, 216, 220);
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 14px;
+    color: rgb(144, 164, 174);
+    text-align: left;
+    margin-bottom: 8px;
+}
+.media-container {
+    margin-top: 30px !important;
+    margin-bottom: 5px;
+}
+.media-heading {
+    font-weight: 400;
+}
+.color-dayprice {
+    color: #757575;
+    font-size: 18px;
+    font-weight: 400;
+}
+.description-addres1 {
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+.cards-locum {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 6px 10.392px 45px 0px rgba(0, 0, 0, 0.15);
+    height: 380px;
+    margin-top: 15px;
+}
+.cards-locum-first {
+    margin-left: 0px !important;
+}
+.description-card-locum {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.description-card-locum p {
+    color: #90a4ae;
+    padding-left: 0px;
+}
+.specialist-equipment{
+    color: #ff8f00 !important;
+    margin-bottom: 20px;
+}
+.person-details-icon {
+    width: 39px;
+    margin-top: 3px;
+}
+.hover-icon-text {
+    font-weight: 700;
+}
+.hover-icon-text:hover {
+    color: #ff8f00;
+}
+.personal-details {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.check-circle {
+    color:#66bb6a;
+}
+.first-line-cards {
+    margin-top: 25px;
+}
+.dr-live-place p{
+    padding-left: 0px;
+}
+.dr-live-place i{
+    margin-left: -30px;
+    top: 2px;
+}
+.job-rewierws-btn {
+    color: #212121;
+    font-weight: 400;
+}
+.edit-btn-color {
+    background-color: #ff8f00;
+    color: #ffffff;
+}
+
+/*EDIT LOCUM*/
+.edit-media-heading {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(207, 216, 220);
+    border-radius: 2px;
+    background-color: rgba(144, 164, 174, 0);
+    width: 275px;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 8px;
+    margin-top: -11px;
+}
+.edit-price {
+    width: 100px;
+}
+.address-edit {
+    font-size: 15px;
+    margin-top: 0px;
+    height: 30px;
+}
+.address-input {
+    background-color: #ffffff !important;
+    color: rgb(144, 164, 174) !important;
+}
+.input-border {
+    border-left: 0px;
+    height: 32px;
+    border-style: solid;
+    border-color: rgb(207, 216, 220);
+    border-radius: 2px;
+    background-color: rgba(144, 164, 174, 0);
+    width: 243px !important;
+}
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative; 
+    width: 40px;  
+}
+.material-switch > input[type="checkbox"] {
+    display: none;   
+}
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative; 
+    width: 40px;  
+}
+.material-switch > label::before {
+    background: #5cb85c;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position:absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
+.input-border-address1 {
+    width: 100% !important;
+    height: 48px;
+}
+.address-input-address1 {
+    width: 135px;
+    padding-left: 0px;
+}
+.address-1-icon {
+    margin-top: 0px;
+}
+.dayprice-edit {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.person-details-edit {
+    margin-top: 0px !important;
+    margin-bottom: 0px;
+}
+.person-details-checkbox {
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+.checkbox-edit {
+    float: right;
+}
+.hidden-visible {
+    margin-bottom: 0px !important;
+    padding-right: 0px;
+}
+
+/* job review roght */
+.job-review-right {
+    max-width: 500px;
+    border: 1px solid #cfd8dc;
+    border-radius: 2px;
+}
+.job-review-right h1 {
+    font-size: 16px;
+    font-family: "Asap";
+    color: rgb(33, 33, 33);
+    line-height: 1.438;
+    text-align: left;
+    -moz-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    -webkit-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    -ms-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    z-index: 146;
+    margin-left: 20px;
+}
+.job-review-right h2 {
+    font-size: 13px;
+    font-family: "Asap";
+    color: rgb(33, 33, 33);
+    line-height: 1.769;
+    text-align: left;
+    -moz-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    -webkit-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    -ms-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    z-index: 147;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: right;
+}
+.job-review-right h3 {
+    font-size: 13px;
+    font-family: "Asap";
+    color: rgb(144, 164, 174);
+    line-height: 1.769;
+    text-align: left;
+    -moz-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    -webkit-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    -ms-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    z-index: 148;
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: 400;
+}
+.job-review-right .review {
+    color: #ff8f00;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.review p {
+    margin-left: 10px;
+}
+.view-more {
+    font-size: 13px;
+    font-family: "Asap";
+    color: rgb(255, 143, 0);
+    line-height: 1.769;
+    text-align: center;
+    cursor: pointer;
+    z-index: 128;
+}
+.loading {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 143, 0);
+    border-radius: 2px;
+    background-color: rgba(255, 143, 0, 0.039);
+    z-index: 106;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 42px;
+    margin-bottom: 20px;
+}
+.loading p {
+    line-height: 42px;
+    text-align: center;
+    color: #ff8f00;
+}
+
+/* media */
+.save-changes {
+    position: fixed;
+    bottom: 0;
+    z-index: 100000;
+    width: 100%;
+    text-align: center;
+}
+.save-changes img {
+    width: 100%;
+    position: absolute;
+}
+.save-changes button {
+    position: relative;
+    background-color: #fff;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-family: "Asap";
+    color: rgb(255, 143, 0);
+    -moz-transform: matrix( 0.99828080381731,0,0,1,0,0);
+    -webkit-transform: matrix( 0.99828080381731,0,0,1,0,0);
+    -ms-transform: matrix( 0.99828080381731,0,0,1,0,0);
+}
+.save-changes button:hover {
+    background-color: rgb(255, 143, 0);
+    color: #fff;
+    border-color: #fff;
+}
+.save-changes button:focus {
+    background-color: rgb(255, 143, 0);
+    color: #fff;
+    border-color: #fff;
+}
+.save-changes button:active {
+    background-color: rgb(255, 143, 0);
+    color: #fff;
+    border-color: #fff;
+}
+.edit-overview {
+    resize: vertical;
+}
+.title-of-job {
+    font-weight: 400;
+}
+.title-of-job h1 {
+    font-weight: 500;
+}
+.title-of-job h2 {
+    font-weight: 500;
+}
+.title-of-job span {
+    color: #90a4ae;
+}
+.job-description {
+    font-weight: 400 !important;
+    font-style: italic;
+}
+.place-marker-xs {
+    max-width: 15px;
+}
+
+/* Availability */
+.availability h1 {
+    font-size: 18px;
+    font-family: "Asap";
+    color: rgb(33, 33, 33);
+    line-height: 1.278;
+    text-align: left;
+}
+.availability-header {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(207, 216, 220);
+    border-radius: 2px;
+    background-color: rgba(33, 33, 33, 0);
+    height: 85px;
+}
+
+/*Calendar locum*/
+.calendar {
+    margin-top: 40px;
+}
+.calendar .fc th, .fc td {
+    border-color: #ff8f00 !important;
+    border-width: 2px;
+}
+.calendar .fc-toolbar .fc-center {
+    color: #ff8f00 !important;
+}
+.calendar .fc-view-container *, .fc-view-container *:before, .fc-view-container *:after {
+    color: #ff8f00 !important;
+}
+.calendar .fc-title {
+    color: #fff !important;
+}
+.calendar .fc-time {
+    color: #fff !important;
+}
+.calendar .fc-day-grid-event .fc-content {
+    background-color: #ff8f00 !important;
+}
+.calendar .fc-event[href], .fc-event.fc-draggable {
+    border-color: #ff8f00 !important;
+}
+.calendar .fc-event {
+    border-color: #ff8f00 !important;
+}
+.calendar .fc-event, .fc-event-dot {
+    background-color: #ff8f00 !important;
+}
+.calendar .fc-day-number {
+    font-size: 20px !important;
+}
+
+/* /calendar locum*/
+@media (min-width: 1201px) {
+    .cards-locum {
+        width: 24%;
+        margin-left: 15px;
+    } 
+}
+@media (max-width: 992px) {
+    .dr-live-place i{
+        padding-left: 17px;
+    }
+}

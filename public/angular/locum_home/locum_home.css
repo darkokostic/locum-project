@@ -1,0 +1,123 @@
+
+.desc-locum-home {
+    height: 71px;
+}
+.locum-home-desc p {
+    word-wrap: break-word;
+}
+.locum-home-desc h4 {
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+.book-sessional-locum-home {
+	font-weight: 400;
+	font-size: 35px !important;
+}
+.locum-home-slide {
+    top: 0px !important;
+}
+.latest-vacanices-locum-home {
+	margin-top: 5vh !important;
+}
+.description-slide-locum-home {
+	max-width: 64ch !important;
+	color: #546e7a;
+	font-size: 18px;
+	font-weight: 400;
+}
+.title-vacancies {
+    margin-top: 20px;
+}
+.back-vacancies a {
+    margin-bottom: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.back-vacancies a:hover {
+    text-decoration: none;
+    color: #ff8f00;
+}
+.bell_positioning {
+    color:white;
+    margin-left:-293px;
+    font-size: 18px;
+    margin-top:12px;
+}
+.arrow_positioning {
+    color:white;
+    float:right;
+    margin-top:-22.5px;
+    margin-right:0px;
+}
+.title-vacancies {
+    margin-top: 20px;
+}
+.back-vacancies a {
+    margin-bottom: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.back-vacancies a:hover {
+    text-decoration: none;
+    color: #ff8f00;
+}
+.bell_positioning {
+    color:white;
+    margin-left:-293px;
+    font-size: 18px;
+    margin-top:12px;
+}
+.arrow_positioning {
+    color:white;
+    float:right;
+    margin-top:-22.5px;
+    margin-right:0px;
+}
+@media (max-width: 630px) {
+    .locum-home-slide h1{
+    	font-size: 13px !important;
+    }
+    .locum-home-slide p{
+    	display:none;
+    }
+    .book-sessional-locum-home {
+    	display: none;
+    }
+    .locum-home-slide {
+		left:0px !important;
+	}
+	.create-acc-locum-home {
+		margin-top: 20px;
+	}
+}
+@media (max-width:1000px) {
+    .locum-home-slide h1{
+    	font-size: 25px !important;
+    }
+    .locum-home-slide {
+		top:0px !important;
+	}
+	.locum-home-slide p{
+    	display:none;
+    }
+}
+@media (max-width: 1220px) {
+	.locum-home-slide {
+		top:-15px !important;
+		left:40px;
+	}
+    .locum-home-slide h1{
+    	font-size: 25px;
+    }
+    .locum-home-slide p{
+    	font-size: 14px;
+    }
+}
+/*responsive*/
+@media only screen and (max-width: 500px) {
+    .desc-locum-home {
+        height: auto;
+    }
+}
+
+

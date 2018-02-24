@@ -1,0 +1,24 @@
+.sessions-header p {
+	color: #99abb4;
+}
+.sessions-table td {
+	height: 90px !important;
+    line-height: 90px !important;
+}
+.sessions-table img {
+	margin-left: 20px;
+}
+.sessions-name a {
+	color: #ff8f00;
+}
+.sessions-text p {
+	margin: 0px 0px 0px 
+}
+.custom-margin-sessions {
+	margin-bottom: -25px;
+}
+@media (max-width: 500px) {
+    .text-for-finish-jobs {
+    	margin-top: 20px;
+    }
+}

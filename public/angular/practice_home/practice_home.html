@@ -1,0 +1,177 @@
+<div ng-include="'/angular/shared/views/home/desktop-navigation.blade.html'">
+</div>
+<div ng-include="'/angular/shared/views/home/mobile-navigation.blade.html'">
+</div>
+<div class="carousel slide" data-ride="carousel" id="myCarousel">
+    <div class="carousel-inner">
+        <div class="item active first-slide change_margin">
+            <img src="../img/practice_home_pic.png">
+                <div class="description-slide1 locum-home-slide col-lg-10 col-md-10 col-sm-8 col-xs-8 col-md-offset-1">
+                    <h1 class="book-sessional-locum-home book-sessional-practice-home col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                        Find Locum resource to fill vacant exam lanes
+                    </h1>
+                    <p class="description-slide-locum-home description-slide-practice-home col-lg-10 col-md-6 col-sm-6 col-xs-12">
+                        Keep your practice busy and offer Patients continued availability, all while you are sipping a Mai Tai in Maui by using trusted colleagues local to you.
+                    </p>
+                    <div class="create-acc-locum-home col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <button class="btn create-your-acc-btn custom_create_account" ng-click="goToRegistrationPractice()" ng-if="!currentUser" type="submit">
+                            Create your account
+                        </button>
+                    </div>
+                </div>
+            </img>
+        </div>
+    </div>
+</div>
+<div class="container latest-vacanices latest-vacanices-locum-home">
+    <div>
+        <h1>
+            Latest Vacancies
+        </h1>
+    </div>
+    <div class="latest-vacancies-description">
+        <p>
+            A selection of our latest vacancies across Canada.
+        </p>
+    </div>
+    <div class="line">
+    </div>
+    <br>
+        <div class="row jobs-blog" ng-if="!vacActive">
+            <div class="media col-md-6" ng-repeat="vacanie in vacancies">
+                <div class="media-left">
+                    <img class="media-object picture-media-object" style="max-width: 125px;" ng-src="{{vacanie.user.avatar}}">
+                    </img>
+                </div>
+                <div class="media-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4 class="media-heading">
+                                {{vacanie.user.name}}  
+                            </h4>
+                        </div>
+                        <div class="col-xs-12 desc-home">
+                            <p>
+                                {{vacanie.desc | limitTo: 140}}{{vacanie.desc.length > 140 ? '...' : ''}}
+                            </p>
+                        </div>
+                        <div class="col-xs-12">
+                            <a>
+                                <button class="btn last-jobs-btn" ng-click="setCurrentVac(vacanie)">
+                                    See more
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="(!vacancies || vacancies.lenght==0) && !showLoader">
+            <h1 class="no-results-found" style="text-align:center">No results found</h1>
+        </div>
+        <div class="sk-three-bounce" ng-if="showLoader">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+        <div class="row" ng-if="vacActive">
+            <div class="col-xs-6 title-vacancies">
+                <h3 class="media-heading">
+                    {{currentVacancy.title}}
+                </h3>
+            </div>
+            <div class="col-xs-6 title-vacancies">
+            </div>
+            <div class="row col-xs-12 latest-vacancies-description">
+                <div class="col-xs-6">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3">
+                            <h5>Publish date:</h5>
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <h6><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp{{ moment(currentVacancy.job_start).format('MMM DD, YYYY')}}</b>&nbsp - <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp{{ moment(currentVacancy.job_end).format('MMM DD, YYYY')}}</b></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <!-- <div class="col-xs-12 col-sm-3">
+                            <h5 class="media-heading">Working Time:</h5>
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <h6><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp <b>{{currentVacancy.working_time_from}}&nbsp - &nbsp <i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp {{currentVacancy.working_time_to}}</b></h6>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 latest-vacancies-description">
+                <p class="media-heading">
+                    {{currentVacancy.desc}}
+                </p>
+            </div>
+            <div class="col-xs-6 back-vacancies">
+                <a ng-click="vacActiveFalse()">
+                    <button class="btn last-jobs-btn"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp Back</button>
+                </a>
+            </div>
+            <div class="col-xs-6 back-vacancies">
+                <a class="pull-right" ng-click="vacActiveFalse()">
+                   <button class="btn last-jobs-btn" ng-click="viewLocum(currentVacancy.user.id)"> See more</button>
+                </a>
+            </div>
+        </div>
+        <div class="latest-vacanices">
+            <h1>
+                Latest News
+            </h1>
+        </div>
+        <div class="latest-vacancies-description">
+            <p>
+                Hot topics and Industry News.
+            </p>
+        </div>
+        <div class="line">
+        </div>
+        <br>
+            <div class="row jobs-blog">
+                <div class="media col-md-6" ng-repeat="vacanciesNew in vacanciesNews">
+                    <div class="media-left">
+                        <img class="media-object picture-media-object" ng-src="{{vacanciesNew.avatar}}">
+                        </img>
+                    </div>
+                    <div class="media-body home-desc">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h4 class="media-heading">
+                                    {{vacanciesNew.title}}
+                                </h4>
+                            </div>
+                            <div class="col-xs-12 desc-locum-home">
+                                <p>
+                                    {{vacanciesNew.content | limitTo: 140}}{{vacanciesNew.content.length > 140 ? '...' : ''}}
+                                </p>
+                            </div>
+                            <div class="col-xs-12">
+                                <a target="_blank" href="{{vacanciesNew.url}}">
+                                    <button class="btn last-jobs-btn" ng-click="setCurrentNews(vacanciesNew)" type="submit">
+                                        See more
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="(!vacanciesNews || vacanciesNews.length==0) && !showLoader">
+                <h1 class="no-results-found" style="text-align:center">No results found</h1>
+            </div>
+            <div class="sk-three-bounce" ng-if="showLoader">
+                <div class="sk-child sk-bounce1"></div>
+                <div class="sk-child sk-bounce2"></div>
+                <div class="sk-child sk-bounce3"></div>
+            </div>
+        </br>
+    </br>
+</div>
+<div ng-include="'/angular/shared/views/home/footer.blade.html'">
+</div>

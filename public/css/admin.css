@@ -1,0 +1,249 @@
+.login-form1 {
+	max-width: 780px;
+}
+.header-login-text {
+	text-align: left;
+}
+#adminNav li.active > a {
+    border-top: 2px solid #fff !important;
+}
+.input-login {
+	max-width: 630px !important;
+}
+.forgot-pw-admin {
+	max-width: none;
+}
+.admin-sign-in {
+	max-width: 662px;
+}
+.password-input-admin {
+	max-width: 107px;
+}
+.email-input-admin {
+	max-width: 91px;
+}
+.admin-nav-bar {
+	height: 77px !important;
+}
+.page-name-admin {
+	margin-top: 13px;
+	color: #ffffff !important;
+	font-size: 15px;
+}
+.table-admin {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(207, 216, 220);
+	border-radius: 2px;
+	background-color: rgba(255, 143, 0, 0);
+	max-width: 1157px;
+	height: 406px;
+	z-index: 40;
+}
+.filter-table-admin {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(207, 216, 220);
+	border-radius: 2px;
+	background-color: rgba(255, 143, 0, 0);
+	max-width: 1159px;
+	height: 88px;
+	z-index: 87;
+	margin-bottom: 40px;
+	margin-top:28px;
+}
+.data-filter-admin {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(207, 216, 220);
+	border-radius: 2px;
+	background-color: rgb(255, 255, 255);
+	max-width: 361px;
+	height: 46px;
+	z-index: 106;
+}
+.date-input-admin {
+	margin-left: 15px !important;
+}
+.body-table-admin {
+	border-color: red;
+}
+.btn-create-corporation {
+	border-radius: 2px;
+	background-color: #ff8f00;
+	color: #ffffff;
+	width: 153px;
+	height: 40px;
+	z-index: 153;
+}
+.btn-create-corporation:hover,
+btn-create-corporation:visited {
+	border-radius: 2px;
+	background-color: #ffffff;
+	color: #ff8f00 !important;
+}
+.border-on-meni {
+	border-top:2px #ffffff solid;
+}
+.border-on-meni:hover {
+	border-top:2px #ffffff solid;
+}
+.corporation-create {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(207, 216, 220);
+	border-radius: 1px;
+	background-color: rgb(255, 255, 255);
+	max-width: 1157px;
+	height: 204px;
+	z-index: 121;
+	margin-top:40px;
+}
+.header-meni-create-corp {
+	border-radius: 2px;
+	background-color: rgb(255, 143, 0) !important;
+	height: 58px;
+	z-index: 151;
+}
+.text-header-corporation {
+	margin-top:10px;
+	color: #ffffff;
+}
+.create-corporation-heading-btn {
+	border-radius: 2px;
+	background-color: #ffffff;
+	color: #ff8f00;
+	width: 153px;
+	height: 40px;
+	z-index: 153;
+}
+.create-corporation-heading-btn:hover,
+.create-corporation-heading-btn:visited {
+	border-radius: 2px;
+	background-color: #ffffff !important;
+	color: #ff8f00 !important;
+}
+.link-create-corp {
+	margin-top:27px;
+}
+.input-create-corp {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(207, 216, 220);
+	border-radius: 1px;
+	background-color: rgba(207, 216, 220, 0);
+	height: 46px;
+	z-index: 136;
+}
+.create-corp-icon {
+	margin-right:8px;
+}
+.edit-btn-news {
+	max-width: 82px;
+	margin-top:0px !important;
+	margin-right:5px;
+}
+.edit-btn-news:hover {
+	background-color: rgb(255, 143, 0) !important;
+	color: #ffffff !important;
+}
+.delete-btn-news:hover {
+	background-color: rgb(255, 143, 0) !important;
+	color: #ffffff !important;
+}
+.edit-delete-news {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(207, 216, 220);
+	border-radius: 2px;
+	background-color: rgba(207, 216, 220, 0);
+	max-width: 100px;
+	height: 43px;
+	z-index: 306;
+	color: #000 !important;
+}
+.content-news {
+	margin-top:20px;
+}
+.new-list-all {
+	background-color: rgb(255, 255, 255);
+	max-width: 1200px;
+	z-index: 207;
+	margin-top:40px;
+}
+.header-meni-create-corp > p {
+    margin-top: 20px;
+}
+.header-meni-create-corp > * {
+    margin-top: 10px;
+    /*margin-right: 10px;*/
+    /*margin-left: 10px;*/
+}
+.custom-margin-right {
+	margin-right: 10px;
+}
+.size-panel-news {
+	margin-top:20px;
+	height:auto;
+}
+.sessions-text {
+	text-align:left;
+}
+.list-view-btn {
+	color: #ffffff !important;
+}
+.title-admin {
+	width:100% !important;
+	margin-bottom:20px;
+}
+.admin-news-content {
+	border:none !important;
+}
+.radio-btn-news-create {
+	width: 5% !important;
+	height: auto !important;
+}
+.text-radio-news {
+	float: left;
+}
+.table.dataTable tbody tr {
+	height: 20px !important;
+}
+@media (max-width:992px) {
+	.corporation-create {
+		border:none;
+	}
+}
+@media (max-width: 500px) {
+	.date-responsive {
+		display: none;
+	}
+	.data-filter-admin {
+		max-width: 279px;
+	}
+	.header-meni-create-corp {
+		height:130px;
+	}
+	.create-corporation-heading-btn {
+		float: left !important;
+		margin-top:10px;
+	}
+	.text-header-corporation {
+		width: 100%;
+	}
+}
+@media (max-width: 425px) {
+	.custom-display {
+		display: flex;
+	}
+	.custom-margin-phone {
+		margin-right: 10px;
+	}
+}
+@media (max-width: 768px) {
+	.custom-margin-medium {
+		margin-top: 10px;
+	}
+}
+
+

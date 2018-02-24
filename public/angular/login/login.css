@@ -1,0 +1,267 @@
+.login-form {
+    border-radius: 4px;
+    background-color: rgba(233, 132, 4, 0);
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.12);
+    top: 80px;
+    z-index: 31;
+    margin-bottom: 80px;
+    margin-left: 0px;
+}
+.login-form h2 {
+  	font-size: 25px;
+  	font-family: "Asap";
+  	color: rgb(33, 33, 33);
+  	line-height: 1.2;
+ 	  z-index: 84;
+}
+.login-form p {
+  	font-size: 16px;
+  	font-family: "Asap";
+  	color: rgb(144, 164, 174);
+  	line-height: 1.438;
+  	text-align: left;
+    -moz-transform: matrix( 0.99988637508828,0,0,1,0,0);
+    -webkit-transform: matrix( 0.99988637508828,0,0,1,0,0);
+    -ms-transform: matrix( 0.99988637508828,0,0,1,0,0);
+    z-index: 82;
+}
+.login-form input {
+  	border: none;
+  	font-size: 14px;
+    margin-top: 9px;
+    width: 100%
+}
+.login-form input:hover {
+  	border: none;
+}
+.login-form input:focus {
+  	border: none;
+  	outline: none;
+}
+.login-form input:active {
+  	border: none;
+}
+.input-login i {
+  	color: #000;
+  	font-size: 11px;
+  	line-height: 42px;
+}
+.input-login {
+	 border-style: solid;
+  	border-width: 1px;
+  	border-color: rgb(207, 216, 220);
+  	border-radius: 2px;
+  	background-color: rgba(233, 132, 4, 0);
+  	z-index: 78;
+  	max-width: 350px;
+  	min-height: 42px;
+  	margin-top: 25px;
+}
+.sign-in-button button {
+    background-color: #fff;
+    border: 1px solid #ff8f00;
+  	width: 100%;
+  	min-height: 42px;
+  	color: #ff8f00;
+  	margin-top: 20px;
+    border-radius: 2px;
+}
+.sign-in-button button:hover {
+  	background-color: #ff8f00;
+  	color: #fff;
+  	border-color: #ff8f00;
+}
+.sign-in-button button:active {
+  	background-color: #fff;
+  	color: #ff8f00;
+  	border-color: #ff8f00;
+}
+.sign-in-button button:active:focus {
+	background-color: #ff8f00;
+	color: #fff;
+	border-color: #ff8f00;
+	outline: none;
+}
+.sign-in-button button:focus {
+	background-color: #fff;
+	color: #ff8f00;
+	border-color: #ff8f00;
+	outline: none;
+}
+.sign-in-button {
+	max-width: 380px;
+	margin-bottom: 20px;
+}
+/*checkboc*/
+.forgot-password {
+    color: #9f9e9e;
+    text-decoration: none !important;
+}
+.checkbox label {
+    padding-left: 0px;
+    color: #9f9e9e;
+}
+.checkbox label:after,
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ff8f00;
+    background: #ff8f00;
+    color: #FFFFFF;
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: .5em;
+}
+.radio .cr {
+    border-radius: 50%;
+}
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+/* Checkbox */
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+.check-box-forgot-pw  {
+    margin-top: 30px;
+    max-width: 380px;
+}
+.forgot-password {
+    line-height: 40px;
+}
+/*login-right*/
+.right h2 {
+  	font-size: 25px;
+  	font-family: "Asap";
+  	color: rgb(255, 143, 0);
+  	line-height: 1.2;
+  	z-index: 48;
+}
+.right h6 {
+    font-size: 14px;
+    font-family: "Asap";
+    color: rgb(144, 164, 174);
+    text-align: left;
+    -moz-transform: matrix( 0.99988637508828,0,0,1,0,0);
+    -webkit-transform: matrix( 0.99988637508828,0,0,1,0,0);
+    -ms-transform: matrix( 0.99988637508828,0,0,1,0,0);
+    z-index: 46;
+}
+.locum {
+	margin: 0px;
+}
+.practice {
+	margin: 0px;
+}
+.btn-locum {
+  	background-color: #ff8f00;
+  	color: #fff;
+  	height: 42px;
+  	width: 125px;
+  	border-color: #ff8f00;
+  	margin-top: 20px;
+  	margin-bottom: 20px;
+    border-radius: 2px;
+}
+.btn-locum:hover {
+  	border-color: #ff8f00;
+  	background-color: #fff;
+  	color: #ff8f00;
+}
+.btn-locum:focus {
+  	border-color: #ff8f00;
+  	background-color: #ff8f00;
+  	color: #fff;
+  	outline: none;
+	border: none;
+}
+.btn-locum:active {
+  	border-color: #ff8f00;
+  	background-color: #fff;
+  	color: #ff8f00;
+}
+.btn-locum:active:focus {
+  	border-color: #ff8f00;
+  	background-color: #fff;
+  	color: #ff8f00;
+  	outline: none;
+}
+.locum img {
+  	margin-top: 20px;
+  	margin-left: 37px;
+}
+.practice img {
+  	margin-top: 20px;
+  	margin-left: 37px;
+}
+.right-locum {
+	max-width: 380px;
+}
+.padding-login {
+	  margin-top: 50px;
+    margin-bottom: 50px;
+}
+.forgot-password:hover {
+    color: #ff8f00;
+}
+.input-login i span {
+    font-family: 'Asap', sans-serif;
+    font-weight: 700;
+    color: #000;
+    margin-left: 10px;
+}
+.input-login i {
+    font-weight: 700;
+    color: #000;
+}
+@media only screen and (max-width: 500px) {
+    .login-form {
+      margin-top: 0px;
+    }
+    .mobile-login-register {
+      text-align: center !important;
+    }
+	.right p {
+		text-align: center!important;
+	}
+	.right h6 {
+		text-align: center!important;
+	}
+	.custom-phone-position img {
+		margin-left: 0px;
+	}
+}
+@media (max-width: 330px) {
+	.padding-right {
+		padding-right: 0px;
+	}
+}
+

@@ -1,0 +1,302 @@
+<div ng-include="'/angular/shared/views/practice/desktop-navigation.blade.html'">
+</div>
+<div ng-include="'/angular/shared/views/practice/mobile-navigation.blade.html'">
+</div>
+<div class="container">
+    <div>
+        <div class="header-billing">
+            <h1 class="title">Sessions</h1>
+            <p>Your Locum history.</p>
+            <div class="line"></div>
+        </div>
+    </div>
+    <div>
+        <div class="col-xs-12">
+            <div class="row">
+                <h3>Search filters</h3>
+                <p class='text-muted'>Start typing in the box and you will be shown results based on your query.</p>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="filter-in-filters">
+
+                    <form name="billingLocumForm">
+                        <div class="row find-a-job-search">
+                            <div class="col-sm-1 col-md-2"></div>
+                            <div class="col-xs-12 col-sm-10 col-md-8">
+                                <div class="row">
+                                    <div class="col-xs-12 search-billing">
+                                        <label>Search by locum name</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-1 col-md-2"></div>
+                        </div>
+                        <div class="row find-a-job-search">
+                            <div class="col-sm-1 col-md-2"></div>
+                            <div class="col-xs-12 col-sm-10 col-md-8">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="input-group input-billing">
+                                            <span class="input-group-addon group-addion-changes"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control city-of-postcode-input" ng-model="searchTerm.title" placeholder="Search by locum name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-1 col-md-2"></div>
+                        </div>
+                        <!-- labele -->
+                        <!-- <div class="row find-a-job-search">
+                            <div class="col-sm-1 col-md-2"></div>
+                            <div class="col-xs-12 col-sm-10 col-md-8">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                        <label>From</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                        <label>To</label>
+                                    </div>
+                                </div>  
+                            </div> 
+                            <div class="col-sm-1 col-md-2"></div>
+                        </div> -->
+                        <!-- from to  -->
+                        <div class="row find-a-job-search">
+                            <div class="col-sm-1 col-md-2"></div>
+                            <div class="col-xs-12 col-sm-10 col-md-8">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                        <p class="input-group">
+                                            <label>From</label>
+                                          <input type="text" class="form-control" uib-datepicker-popup="MM/dd/yyyy" ng-model="searchTerm.dateFromToSearch" is-open="popup1.opened" datepicker-options="dateOptions" close-text="Close" ng-click="open1()" ng-required="searchTerm.dateToToSearch" name="dateFrom" placeholder="MM/DD/YYYY"/>
+                                          <span class="input-group-btn" >
+                                            <button type="button" class="btn btn-default custom-margin-sessions" ng-click="open1()"><i class="glyphicon glyphicon-calendar" ></i></button>
+                                          </span>
+                                            <div ng-messages="billingLocumForm.dateFrom.$error" role="alert">
+                                                <div class="text-danger" ng-message="required">
+                                                    Required
+                                                </div>
+                                            </div>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                        <p class="input-group">
+                                        <label>To</label>
+                                          <input type="text" class="form-control" uib-datepicker-popup="MM/dd/yyyy" ng-model="searchTerm.dateToToSearch" is-open="popup2.opened" datepicker-options="dateOptions" close-text="Close" ng-click="open2()" ng-required="searchTerm.dateFromToSearch" name="dateTo" placeholder="MM/DD/YYYY"/>
+                                          <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default custom-margin-sessions" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                          </span>
+                                          <div ng-messages="billingLocumForm.dateTo.$error" role="alert">
+                                                <div class="text-danger" ng-message="required">
+                                                    Required
+                                                </div>
+                                            </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 col-md-2"></div>
+                        </div>
+
+                        <!-- search clear -->
+                        <div class="row find-a-job-search">
+                            <div class="col-sm-1 col-md-2"></div>
+                            <div class="col-xs-12 col-sm-10 col-md-8">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                        <button class="btn create-your-acc-btn sign-up-btn search-btn-filters pull-right" ng-click="search(searchTerm);" type="submit" ng-disabled="!billingLocumForm.$valid">
+                                            Search
+                                        </button>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                        <button class="btn create-your-acc-btn sign-up-btn search-btn-filters btn-clear" ng-click="reload()" type="submit">
+                                            Clear
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-1 col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <div>
+                <h3>Filtered list</h3>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div ng-hide="(completedJobs==0 || completedJobs==null)&&(currentSessions==0 || currentSessions==null) && !showLoader">
+                <div>
+                    <div class="pull-right">
+                        <ul uib-pagination total-items="sessions.bigTotalItems" ng-model="sessions.bigCurrentPage" max-size="5" class="pagination-sm pagination-header" boundary-link-numbers="true" ng-change="pageChanged()" items-per-page="sessions.maxSize">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div>
+                <p class='text-muted'>Here you will be shown a live preview of the filtered sessions you searched for.</p>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 30px;">
+        <uib-accordion close-others="true">
+            <div ng-repeat="sessions in currentSessions" ng-class="{'col-md-12 margin-bottom-20':true}">
+                <div class="row">
+                    <div uib-accordion-group class="panel-default" is-open="false" is-disabled="false">
+                        <div uib-accordion-heading>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-2 text-uppercase span-date">
+                                    <label class="text-capitalize"><b>From:</b></label>&nbsp <span><b>{{ moment(sessions.job_start).format('MMM DD') }}</b></span><br>
+                                    <label class="text-capitalize"><b>To:</b></label>&nbsp <span><b>{{ moment(sessions.job_end).format('MMM DD') }}</b></span>
+                                </div>
+                                <div class="col-xs-12 col-md-5 span-date sessions-text span-date">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <label class="text-capitalize"><b>Locum name:&nbsp</b></label>&nbsp<span><b>{{sessions.user.name}}</b></span>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            <label class="text-capitalize"><b>Job title:&nbsp</b></label>&nbsp<span><b>{{sessions.title | limitTo:200}}{{sessions.title.length > 200 ? '...' : ''}}</b></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-5 text-right" ng-if="sessions.day_rate!=null">
+                                    <p>{{ sessions.day_rate | currency:"$" }}</p>
+                                </div>
+                                <div class="col-xs-12 col-md-5 text-right" ng-if="sessions.day_rate==null">
+                                    <p>{{ sessions.percentage }}%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row billing-practice-collaps">
+                            <div class="col-xs-12 col-md-12">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h5>{{sessions.title}}</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <label>{{sessions.desc | limitTo: 350}}{{sessions.desc.length > 350 ? '...' : ''}}</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12" ng-if="sessions.percentages!=0">
+                                        <a ng-click="showPercs(sessions)" style="cursor:pointer; color: #ff8f00;" data-toggle="modal" data-target="#locumLocum" >View day rate sent by this Locum</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-3" ng-if="sessions.day_rate!=null">
+                                        <h5>Price by day</h5>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3" ng-if="sessions.day_rate!=null">
+                                        <label>{{ sessions.day_rate | currency:"$" }}</label>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3" ng-if="sessions.day_rate==null">
+                                        <h5>{{sessions.user.name}}'s Fee %{{ sessions.percentage }}</h5>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3 pull-right">
+                                        <button ng-if="sessions.practiceRated==0" class="btn last-jobs-btn mail-profile-btn-practice transitions pull-right" type="submit" data-toggle="modal" data-target="#rateLocumModal" ng-click="openModal(sessions)" ng-disabled="sessions.canFinish==false">Finish And Rate</button>
+                                        <p ng-if="sessions.practiceRated==1" ><i class="fa fa-check-circle-o" aria-hidden="true"></i>&nbspRated</p>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3 text-for-finish-jobs">
+                                        <p class="pull-right" ng-if="sessions.canFinish==false">You can't finish job before it ends</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-show="(completedJobs==0 || completedJobs==null)&&(currentSessions==0 || currentSessions==null) && !showLoader">
+                <center>
+                    <h3 class="media-heading no-results-found" style="margin-top:50px;">No results found</h3>
+                    <div class="my-job-nosearch">
+                        <img src="img/nosearch.png">
+                    </div>
+                </center>
+            </div>
+            <div class="sk-three-bounce" ng-if="showLoader">
+                <div class="sk-child sk-bounce1"></div>
+                <div class="sk-child sk-bounce2"></div>
+                <div class="sk-child sk-bounce3"></div>
+            </div>
+        </uib-accordion>
+    </div>
+</div>
+<div ng-include="'/angular/shared/views/practice/footer.blade.html'"></div>
+<div class="modal fade" id="locumLocum" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content span-date">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times exit-popup" aria-hidden="true"></i></button>
+                <h4 class="modal-title">These are {{percs.user.name}} day rate</h4>
+            </div>
+            <div class="modal-body">
+                    <label>{{percs.user.name}}</label>
+                    <div>
+                        <div>
+                           <div ng-repeat="perc in percs.percentages">
+                                <label>Day:&nbsp </label><span><b>{{perc.day}}-Amount:${{perc.amount}}</b></span>
+                                <button class="btn last-jobs-btn mail-profile-btn-practice transitions" ng-if="perc.approved==0 && perc.amount!=0" ng-click="accept(perc)" ng-attr-id="{{perc.id}}">Accept</button>
+                                <button class="btn last-jobs-btn mail-profile-btn-practice transitions" ng-if="perc.approved==0 && perc.amount!=0" ng-click="declineAmount(perc)" ng-attr-id="D{{perc.id}}">Decline</button>
+                            </div>
+                       </div>
+                    </div>
+                <form>
+               </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="rateLocumModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times exit-popup" aria-hidden="true"></i></button>
+                <h4 class="modal-title">Rate Locum</h4>
+            </div>
+            <div class="modal-body">
+                <center>
+                    <h2 class="title-popup">Give a rate to <span>{{rateLocum.user.name}}</span></h2>
+                </center>
+                <form name="rate">                    
+                    <div class="form-group col-xs-11 col-sm-12">
+                        <textarea name="desc" placeholder="Description" class="form-control latest-vacancies-description edit-overview popup-mail" rows="4" ng-model="rateLocum.content" ng-required=true></textarea>
+                    </div>
+                    <div ng-messages="rate.desc.$error" role="alert" style="margin-left:20px;margin-top:-5px">
+                        <div class="text-danger" ng-message="required">
+                            Required
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-11 col-sm-12">
+                        <input-stars name="rating" max="5" ng-model="rateLocum.rating" ng-required=true></input-stars>
+                    </div>
+                    <div ng-messages="rate.rating.$error" role="alert" style="margin-left:20px;margin-top:-5px">
+                        <div class="text-danger" ng-message="required">
+                            Required
+                        </div>
+                    </div>
+                    <center>
+                        <button type="submit" class="btn create-your-acc-btn send-popup" data-dismiss="modal" ng-click="giveFeedback(rateLocum)" ng-disabled="!rate.$valid">Rate</button>
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

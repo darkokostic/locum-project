@@ -1,0 +1,56 @@
+<nav class="col-lg-12 col-md-12 navbar navbar-default menu-nav-bar navbar_no_board locum-nav-bar visible-xs">
+    <div class="container-fluid menu-bar menu-bar-locum">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed hover-burger" data-toggle="collapse" data-target="#locum-mobile-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo logo-locum" href="#"><img src="../img/logo-locum.png" class="img-responsive" alt="Responsive image"/></a>
+        </div>
+        <div class="collapse navbar-collapse response-nav-bar-xs" id="locum-mobile-navbar-collapse" ng-init="init()" >
+            <ul class="nav navbar-nav navbar_font nav-bar-response-locum nav-bar-locum">
+                <li ng-class="{'active': $location.path()=='/locum/locum_my_job','navbar-locum-menu':true}"><a href="/#!/locum/locum_my_job" ng-click="clickToChangeHeader(2);clickToChangeActiveTabOnLocumNavbar(0)">My jobs<span class="sr-only">(current)</span></a></li>
+                <li ng-class="{'active': $location.path()=='/locum/locum_find_a_job','navbar-locum-menu':true}"><a href="/#!/locum/locum_find_a_job" ng-click="clickToChangeHeader(1);clickToChangeActiveTabOnLocumNavbar(1)">Find a job</a></li>
+                <li ng-class="{'active': $location.path()=='/locum/billing','navbar-locum-menu':true}"><a href="/#!/locum/billing" ng-click="clickToChangeHeader(3);clickToChangeActiveTabOnLocumNavbar(2)">Billing</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar_font navbar-right logging">
+                <li class="navbar-locum-menu"><a href="/#!/home" ng-click="clearCookies()">Home</a></li>
+                <li ng-class="{'active': $location.path()=='/locum','navbar-locum-menu':true}"><a href="/#!/locum" ng-click="clickToChangeHeader(0);clickToChangeActiveTabOnLocumNavbar(3)">Your Account</a></li>
+                <li class="navbar-locum-menu"><a href="#" ng-click="UserService.logout()"><i class="fa fa-unlock-alt lock-logout" aria-hidden="true" ></i>Logout</a></li>
+            </ul>
+        </div>
+    </div><!-- /.container-fluid -->
+    <div class="container menu-bar-2-locum col-xs-12 col-md-10 col-md-offset-2 col-lg-offset-1" ng-if="$location.path()=='/locum'" >
+        <ul class="nav nav-tabs border-nav-tabs-locum locum-nav-2">
+
+            <li role="presentation" ng-class="{'active': activeClassesForAccInformation[0]=='active','menu-bar-2-active':true}"><a href="/#!/locum" ng-click="clickToChangeActiveTabOnYourAccount(0)">Profile</a></li>
+            <li role="presentation" ng-class="{'active': activeClassesForAccInformation[2]=='active','menu-bar-2-active':true}"><a href="/#!/locum" ng-click="clickToChangeActiveTabOnYourAccount(2)">Feedback</a></li>
+            <li role="presentation" ng-class="{'active': activeClassesForAccInformation[1]=='active','menu-bar-2-active':true}"><a href="/#!/locum" ng-click="clickToChangeActiveTabOnYourAccount(1)">Availability</a></li>
+        </ul>
+    </div>
+    <div class="container menu-bar-2-locum col-xs-12 col-md-10 col-md-offset-2 col-lg-offset-1" ng-if="$location.path()=='/locum/locum_find_a_job'">
+        <ul class="nav nav-tabs border-nav-tabs-locum locum-nav-2">
+            <li class="active menu-bar-2-active profile-btn-locum-menu" role="presentation"><a href="/#!/locum/locum_find_a_job">Find a job</a></li>
+        </ul>
+    </div>
+    <div class="container menu-bar-2-locum col-xs-12 col-md-10 col-md-offset-2 col-lg-offset-1" ng-if="$location.path()=='/locum/locum_my_job'">
+        <ul class="nav nav-tabs border-nav-tabs-locum locum-nav-2">
+            <li role="presentation" ng-class="{'active': activeClassesForMyJobs[0]=='active','menu-bar-2-active':true}" style="max-width: 99px;"><a href="/#!/locum/locum_my_job" ng-click="clickToChangeActiveTabOnMyJobs(0)">Applications</a></li>
+            <li role="presentation" ng-class="{'active': activeClassesForMyJobs[1]=='active','menu-bar-2-active':true}"><a href="/#!/locum/locum_my_job" ng-click="clickToChangeActiveTabOnMyJobs(1)">Booked Jobs</a></li>
+            <li role="presentation" ng-class="{'active': activeClassesForMyJobs[2]=='active','menu-bar-2-active':true}"><a href="/#!/locum/locum_my_job" ng-click="clickToChangeActiveTabOnMyJobs(2)">Completed</a></li>
+        </ul>
+    </div>
+    <div class="container menu-bar-2-locum col-xs-12 col-md-10 col-md-offset-2 col-lg-offset-1" ng-if="$location.path()=='/locum/billing'">
+        <ul class="nav nav-tabs border-nav-tabs-locum locum-nav-2">
+            <li class="active menu-bar-2-active profile-btn-locum-menu" role="presentation"><a href="/#!/locum/billing">Billing</a></li>
+        </ul>
+    </div>
+    <div class="container menu-bar-2-locum col-xs-12 col-md-10 col-md-offset-2 col-lg-offset-1" ng-if="$location.path()=='/locum/job_details'">
+        <ul class="nav nav-tabs border-nav-tabs-locum locum-nav-2">
+            <li class="active menu-bar-2-active profile-btn-locum-menu" role="presentation"><a href="/#!/locum/job_details">Job Details</a></li>
+        </ul>
+    </div>
+</nav>

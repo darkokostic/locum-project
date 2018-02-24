@@ -1,0 +1,208 @@
+.pin-applications p {
+	margin-left: 15px;
+	margin-top: -20px;
+}
+.pin-applications i {
+	margin-top: 25px;
+}
+.button-rate {
+	margin-bottom: 10px;
+}
+.btn-clear {
+	background-color: #cfd8dc !important;
+}
+.booked-label label {
+	padding-top: 8px;
+}
+.datepicker-booked p {
+	width: 215px;
+}
+.pag-booked {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.my-jobs-rate h2 {
+	margin-left: 0px;
+    margin-right: 60px;
+    float: none;
+    margin-top: -30px;
+}
+.applications-person-details {
+	border-style: solid;
+    border-width: 1px;
+    border-color: rgb(207, 216, 220);
+    border-radius: 4px;
+    background-color: rgba(33, 33, 33, 0);
+    width: 100%;
+    max-width: 1043px;
+    margin-top: 20px;
+}
+.see-more-btn {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(207, 216, 220);
+	border-radius: 2px;
+	background-color: rgba(33, 33, 33, 0);
+	max-width: 96px;
+	height: 36px;
+    color: #90a4ae;
+    margin-top: 21px;
+}
+.see-more-btn:hover {
+	background-color: #ff8f00;
+    color: #ffffff;
+}
+.living-place {
+	color: #90a4ae;
+}
+.dr-live-place-my-jobs {
+	margin-left: 20px;
+}
+.dr-live-place-my-jobs i {
+	float: left;
+    margin-right: 10px;
+    margin-left: -30px;
+}
+.practice-name-my-job {
+	font-size: 13px;
+	color: #000000;
+	line-height: 1.792;
+	text-align: left;
+    font-weight: 400;
+}
+.practice-name-my-job-div a:hover {
+	text-decoration: none;
+}
+.title-ofjob-my-jobs h1 {
+	margin-top: 0px !important;
+}
+.practice-name-my-job-div {
+	max-width: 904px;
+}
+.about-dr-img {
+	max-width: 54px;
+	height: auto;
+    margin-top: -2px;
+}
+.dr-my-jobs {
+	color:#212121 !important;
+}
+.about-doctor-my-jobs {
+	margin-bottom: 16px;
+}
+.about-doctor-my-jobs a h3:hover {
+	color: #ff8f00 !important;
+}
+.about-doctor-my-jobs a:hover {
+	text-decoration: none !important;
+}
+.dr-place-live {
+	margin-left: 36px !important;
+}
+
+/*See more*/
+.position-some {
+	margin-top: 100px;
+}
+.text-addres2 {
+	padding-left: 10px;
+    margin-right: -10px;
+}
+.addres2 {
+	padding-left: 0px;
+}
+.feedback-btn-last {
+	width: 95px;
+}
+.title-of-see-more {
+	margin-top: 0px;
+}
+.all-applications {
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+.all-applications h3 {
+	font-weight: 700;
+	color: #ff8f00;
+}
+.applications-text {
+	color: #90a4ae;
+}
+.dr-my-jobs-border {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgb(207, 216, 220);
+	border-radius: 2px;
+	background-color: rgba(255, 143, 0, 0);
+    max-width: 600px;
+    margin-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.box-booked-jobs {
+	text-align: center;
+}
+.show-pages {
+	color: #a8b8bd;
+	font-weight: 400;
+}
+.pagination-booked {
+	margin:0;
+	float: right;
+}
+.pagination-booked li a {
+	color: #a8b8bd;
+}
+.pagination-booked li a:hover {
+	background-color: #ff8f00;
+	color: #ffffff;
+}
+.loading-locum-my-job {
+	max-width: 450px;
+}
+.view-more-locum-my-job {
+	margin-top: 30px;
+}
+.back-style {
+	margin-left:0;
+}
+.back-style a{
+	color:#90a4ae !important;
+	font-size:13px;
+	cursor:pointer;
+	text-decoration: none;
+}
+.back-style a:hover {
+	color: #ff8f00 !important;
+}
+.my-job-nosearch {
+	min-height: 300px;
+    line-height: 180px;
+}
+.city-postcode {
+	max-width: 225px;
+}
+.apllicated-jobs {
+	margin-top: 0px !important;
+}
+.your-app-jobs {
+	color: #ff8f00 !important;
+	font-weight: 700 !important;
+}
+.custom-margin {
+	margin-bottom: -25px;
+}
+@media (min-width: 768px) {
+	.margin-top-custom {
+		margin-top: 30px;
+	}
+}
+@media (max-width: 992px) {
+	.button-rate {
+		margin-bottom: -22px;
+	}
+	.custom-style-mobile {
+		text-align: center;
+	}
+}
+

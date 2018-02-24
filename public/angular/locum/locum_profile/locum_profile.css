@@ -1,0 +1,543 @@
+/*.feedback-locum {*/
+    /*margin-top: 20px;*/
+/*}*/
+.search-form-availability {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.click-job p:hover {
+    color: #ff8f00;
+    cursor: pointer;
+}
+.header-modal-availability p {
+    font-weight: bold;
+    color: #000;
+    margin-top: 20px;
+}
+.select-billing2 select {
+    width: 100%;
+    height: 50px;
+}
+.text-footer-availability span {
+    color: #000;
+    font-weight: bold;
+}
+.text-footer-availability p {
+    color: #99abb4;
+    font-weight: bold;
+}
+.footer-availability p {
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 40px;
+}
+.footer-availability p:hover {
+    color: #ff8f00;
+}
+.your-availability p {
+    font-weight: bold;
+    margin-left: 40px;
+}
+.calendar-design {
+    margin-top: 70px;
+}
+.calendar-design h4 {
+    margin-top: 0px;
+}
+.edit-btn-profile {
+    margin-top: 10px;
+}
+.progress {
+    height: 60px;
+    margin-bottom: 0;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+.addres1 {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(207, 216, 220);
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 14px;
+    color: rgb(144, 164, 174);
+    text-align: left;
+    margin-bottom: 8px;
+}
+.media-container {
+    margin-top: 30px !important;
+    margin-bottom: 5px;
+}
+.media-heading {
+    font-weight: 400;
+}
+.color-dayprice {
+    color: #757575;
+    font-size: 18px;
+    font-weight: 400;
+}
+.description-addres1 {
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+.cards-locum {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 6px 10.392px 45px 0px rgba(0, 0, 0, 0.15);
+    height: 380px;
+    margin-top: 15px;
+}
+.cards-locum-first {
+    margin-left: 0px !important;
+}
+.description-card-locum {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.description-card-locum p {
+    color: #90a4ae;
+    padding-left: 0px;
+}
+.specialist-equipment{
+    color: #ff8f00 !important;
+    margin-bottom: 20px;
+}
+.person-details-icon {
+    width: 15px;
+    margin-top: 3px;
+}
+.hover-icon-text {
+    font-weight: 700;
+}
+.hover-icon-text:hover {
+    color: #ff8f00;
+}
+.personal-details {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.check-circle {
+    color:#66bb6a;
+}
+.first-line-cards {
+    margin-top: 25px;
+}
+.dr-live-place p{
+    padding-left: 0px;
+}
+.dr-live-place i{
+    margin-left: -15px;
+    top: 2px;
+}
+.job-rewierws-btn {
+    color: #212121;
+    font-weight: 400;
+}
+.edit-btn-color {
+    background-color: #ff8f00;
+    color: #ffffff;
+}
+
+/*EDIT LOCUM*/
+.edit-media-heading {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(207, 216, 220);
+    border-radius: 2px;
+    background-color: rgba(144, 164, 174, 0);
+    margin-bottom: 20px;
+    margin-top: -11px;
+}
+.edit-price {
+    width: 100px;
+}
+.address-edit {
+    font-size: 15px;
+    margin-top: 0px;
+    height: 30px;
+}
+.address-input {
+    background-color: #ffffff !important;
+    color: rgb(144, 164, 174) !important;
+}
+.input-border {
+    border-left: 0px;
+    height: 32px;
+    border-style: solid;
+    border-color: rgb(207, 216, 220);
+    border-radius: 2px;
+    background-color: rgba(144, 164, 174, 0);
+    width: 243px !important;
+}
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative; 
+    width: 40px;  
+}
+.material-switch > input[type="checkbox"] {
+    display: none;   
+}
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative; 
+    width: 40px;  
+}
+.material-switch > label::before {
+    background: #5cb85c;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position:absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
+.input-border-address1 {
+    width: 100% !important;
+    height: 48px;
+}
+.address-input-address1 {
+    width: 160px;
+    padding-left: 0px;
+}
+.address-1-icon {
+    margin-top: 0px;
+}
+.dayprice-edit {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.person-details-edit {
+    margin-top: 0px !important;
+    margin-bottom: 0px;
+}
+.person-details-checkbox {
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+.checkbox-edit {
+    float: right;
+}
+
+.hidden-visible {
+    margin-bottom: 0px !important;
+    padding-right: 0px;
+}
+
+/* job review roght */
+.job-review-right h1 {
+    font-size: 16px;
+    font-family: "Asap";
+    color: rgb(33, 33, 33);
+    line-height: 1.438;
+    text-align: left;
+    -moz-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    -webkit-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    -ms-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    z-index: 146;
+}
+.job-review-right h2 {
+    font-size: 13px;
+    font-family: "Asap";
+    color: rgb(33, 33, 33);
+    line-height: 1.769;
+    text-align: left;
+    -moz-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    -webkit-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    -ms-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    z-index: 147;
+    /*margin-right: 20px;*/
+    float: right;
+}
+.job-review-right h3 {
+    font-size: 13px;
+    font-family: "Asap";
+    color: rgb(144, 164, 174);
+    line-height: 1.769;
+    text-align: left;
+    -moz-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    -webkit-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    -ms-transform: matrix( 0.9986350932651,0,0,1,0,0);
+    z-index: 148;
+    margin: 0;
+    margin-right: 20px;
+    font-weight: 400;
+}
+.job-review-right .review {
+    color: #ff8f00;
+    margin-top: 10px;
+}
+.review p {
+    margin-left: 10px;
+}
+.view-more {
+    font-size: 13px;
+    font-family: "Asap";
+    color: rgb(255, 143, 0);
+    line-height: 1.769;
+    text-align: center;
+    cursor: pointer;
+    z-index: 128;
+}
+.loading {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 143, 0);
+    border-radius: 2px;
+    background-color: rgba(255, 143, 0, 0.039);
+    z-index: 106;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 42px;
+    margin-bottom: 20px;
+}
+.loading p {
+    line-height: 42px;
+    text-align: center;
+    color: #ff8f00;
+}
+
+/* media */
+.save-changes {
+    position: fixed;
+    bottom: 0;
+    z-index: 100000;
+    width: 100%;
+    text-align: center;
+}
+.save-changes img {
+    width: 100%;
+    position: absolute;
+}
+.save-changes button {
+    position: relative;
+    background-color: #fff;
+    margin-top: 15px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-family: "Asap";
+    color: rgb(255, 143, 0);
+    -moz-transform: matrix( 0.99828080381731,0,0,1,0,0);
+    -webkit-transform: matrix( 0.99828080381731,0,0,1,0,0);
+    -ms-transform: matrix( 0.99828080381731,0,0,1,0,0);
+}
+.save-changes button:hover {
+    box-shadow: 6px 10.392px 45px 0px rgba(0, 0, 0, 0.42);
+    color: #ff8f00;
+}
+.save-changes button:focus {
+    box-shadow: 6px 10.392px 45px 0px rgba(0, 0, 0, 0.42);
+    color: #ff8f00;
+}
+.save-changes button:active {
+    box-shadow: 6px 10.392px 45px 0px rgba(0, 0, 0, 0.42);
+    color: #ff8f00;
+}
+.edit-overview {
+    resize: vertical;
+}
+.title-of-job {
+    font-weight: 400;
+}
+.title-of-job h1 {
+    font-weight: 500;
+}
+.title-of-job h2 {
+    font-weight: 500;
+}
+.title-of-job span {
+    color: #90a4ae;
+}
+.job-description {
+    font-weight: 400 !important;
+    font-style: italic;
+    word-wrap: break-word;
+}
+.place-marker-xs {
+    max-width: 15px;
+}
+
+/* Availability */
+.availability h1 {
+    font-size: 18px;
+    font-family: "Asap";
+    color: rgb(33, 33, 33);
+    line-height: 1.278;
+    text-align: left;
+}
+.availability-header {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(207, 216, 220);
+    border-radius: 2px;
+    background-color: rgba(33, 33, 33, 0);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.availability-datepicker {
+    min-width: 130px;
+}
+.search-practice-name{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.search-practice-name input {
+    max-width: 200px;
+    margin-bottom: 0px;
+}
+.check-circle-availability {
+    color: red;
+    margin-top: 10px;
+}
+/*Calendar locum*/
+.calendar {
+    margin-top: 40px;
+}
+.calendar .fc th, .fc td {
+    border-color: rgb(207, 216, 220) !important;
+    border-width: 2px;
+}
+.calendar .fc-toolbar .fc-center {
+    color: #ff8f00 !important;
+}
+.calendar .fc-view-container *, .fc-view-container *:before, .fc-view-container *:after {
+    color: #424242 !important;
+}
+.calendar .fc-title {
+    color: #fff !important;
+}
+.calendar .fc-time {
+    color: #fff !important;
+}
+.legend-desc {
+    width: 20px;
+    height: 20px;
+}
+.calendar .fc-day-number {
+    font-size: 20px !important;
+}
+.modal-header {
+    background-color: #000000 !important; 
+}
+.modal-body textarea {
+    width: 100%;
+    min-height: 100px;
+}
+.fc-state-down, .fc-state-active {
+    background-color: #ff8f00 !important; 
+    color: #fff !important;
+}
+.picker-availability {
+    width: 20%;
+}
+.locum-nav-2 li {
+    margin-top: -0.5px;
+}
+.media-body {
+    padding-left: 20px;
+}
+.modal-input input:focus {
+    outline: none;
+    border: 1px solid #ff8f00;
+}
+.modal-input textarea:focus {
+    border-color: #ff8f00;
+    outline: none;
+}
+.custom-margin {
+    margin-bottom: -25px;
+}
+.no-padding {
+    padding: 0px;
+}
+
+/* new fixed css */
+.fixed-edit-row {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.fixed-edit-label {
+    padding-top: 14px;
+    padding-left: 10px;
+}
+.fixed-edit-input {
+    padding-left: 0px;
+    padding-right: 0px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.fixed-edit-input input {
+    border: 0px !important;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    padding-left: 11px !important;
+}
+.fixed-edit-input select {
+    border: 0px !important;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    padding-left: 15px !important;
+}
+.person-details-icon {
+    width: 18px;
+}
+
+/* /calendar locum*/
+@media (min-width: 1201px) {
+    .cards-locum {
+        width: 24%;
+        margin-left: 15px;
+    } 
+}
+@media (max-width: 992px) {
+    .dr-live-place i{
+        padding-left: 17px;
+    }
+}
+@media (max-width: 600px) {
+    .mobile-response-locum-address{
+        padding-left: 0px;
+        max-width: 200px;
+    }
+}

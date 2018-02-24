@@ -1,0 +1,2166 @@
+<div ng-include="'/angular/shared/views/practice/desktop-navigation.blade.html'">
+</div>
+<div ng-include="'/angular/shared/views/practice/mobile-navigation.blade.html'">
+</div>
+<div ng-if="tabPagesPracticeYourAcc.page == 'profile'">
+    <div class="container">
+        <div>
+            <div class="media media-container col-xs-12 col-md-6">
+                <div class="row">
+                    <div class="media-left col-xs-12 col-sm-3 col-md-4 col-lg-3">
+                        <img class="media-object picture-media-object images-avatar" ng-src="{{currentUser.practice.avatar}}">
+                    </div>
+                    <div class="media-body">
+                        <div class="row">
+                            <h4 class="media-heading col-xs-12 col-md-7 col-lg-6" ng-model="currentUser.practice.practice_name">{{currentUser.practice.practice_name}}</h4>
+                            <h4 class="media-heading col-xs-12 col-sm-4" ng-model="currentUser.practice.day_rate">${{currentUser.practice.day_rate}}<span class="color-dayprice">/day</span></h4>
+                        </div>
+                        <div class="dr-live-place">
+                            <i class="fa fa-map-marker col-xs-1 col-sm-1 col-md-1 col-lg-1" aria-hidden="true"></i>
+                            <p class="col-xs-11 col-sm-11 col-md-10 col-lg-10" ng-model="currentUser.practice.practice_city">{{currentUser.practice.practice_city}}, {{currentUser.practice.practice_province}}</p>
+                        </div>
+                        <button class="btn last-jobs-btn job-rewierws-btn transitions" type="submit" ng-click="clickToChangeActiveTabOnYourAccountPractice(1)">Feedback</button>
+                        <button class="btn last-jobs-btn job-rewierws-btn edit-btn-color" type="submit" ng-click="clickToChangeActiveTabOnYourAccountPractice(3)">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="addres1 addres2 panel panel-default">
+                            <div class="text-addres1 text-addres2 panel-body">
+                                <div class="row">
+                                    <div class=" col-xs-12 col-sm-5 col-md-5">
+                                        <p class="description-addres1" ng-model="currentUser.address1">
+                                            <span class="hover-icon-text color-black">
+                                                <i aria-hidden="true" class="fa fa-map-marker person-details-icon">
+                                                </i>
+                                                Address 1
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7 col-md-7 address-padding">
+                                        {{currentUser.practice.practice_address1}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="addres1 addres2 panel panel-default" ng-hide="currentUser.practice.practice_address2=='' || currentUser.practice.practice_address2==null">
+                            <div class="text-addres1 text-addres2 panel-body">
+                                <div class="row">
+                                    <div class=" col-xs-12 col-sm-5 col-md-5">
+                                        <p class="description-addres1" ng-model="currentUser.address2">
+                                            <span class="hover-icon-text color-black">
+                                                <i aria-hidden="true" class="fa fa-map-marker person-details-icon">
+                                                </i>
+                                                Address 2
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7 col-md-7 address-padding">
+                                        {{currentUser.practice.practice_address2}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="addres1 addres2 panel panel-default">
+                            <div class="text-addres1 text-addres2 panel-body">
+                                <div class="row">
+                                    <div class=" col-xs-12 col-sm-5 col-md-5">
+                                        <p class="description-addres1" ng-model="currentUser.city">
+                                            <span class="hover-icon-text color-black">
+                                                <i aria-hidden="true" class="fa fa-home person-details-icon">
+                                                </i>
+                                                City
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                        {{currentUser.practice.practice_city}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="addres1 addres2 panel panel-default">
+                            <div class="text-addres1 text-addres2 panel-body">
+                                <div class="row">
+                                    <div class=" col-xs-12 col-sm-5 col-md-5">
+                                        <p class="description-addres1" ng-model="currentUser.province">
+                                            <span class="hover-icon-text color-black">
+                                                <i aria-hidden="true" class="fa fa-building-o person-details-icon">
+                                                </i>
+                                                Province
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                        {{currentUser.practice.practice_province}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="addres1 addres2 panel panel-default">
+                            <div class="text-addres1 text-addres2 panel-body">
+                                <div class="row">
+                                    <div class=" col-xs-12 col-sm-5 col-md-5">
+                                        <p class="description-addres1" ng-model="currentUser.postal_code">
+                                            <span class="hover-icon-text color-black">
+                                                <i aria-hidden="true" class="fa fa-paper-plane-o person-details-icon">
+                                                </i>
+                                                Postal code
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                        {{currentUser.practice.practice_postal_code | postal}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="addres1 addres2 panel panel-default">
+                            <div class="text-addres1 text-addres2 panel-body">
+                                <div class="row">
+                                    <div class=" col-xs-12 col-sm-5 col-md-5">
+                                        <p class="description-addres1">
+                                            <span class="hover-icon-text color-black">
+                                                <i class="fa fa-sort-numeric-asc person-details-icon" aria-hidden="true">
+                                                </i>
+                                                Size In SqFt
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                        {{currentUser.practice.sq_ft}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="addres1 addres2 panel panel-default">
+                            <div class="text-addres1 text-addres2 panel-body">
+                                <div class="row">
+                                    <div class=" col-xs-12 col-sm-5 col-md-5">
+                                        <p class="description-addres1">
+                                            <span class="hover-icon-text color-black">
+                                                <i class="fa fa-group person-details-icon" aria-hidden="true">
+                                                </i>
+                                                Number of Staff
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                        {{currentUser.practice.no_of_staff}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="addres1 addres2 panel panel-default">
+                            <div class="text-addres1 text-addres2 panel-body">
+                                <div class="row">
+                                    <div class=" col-xs-12 col-sm-5 col-md-5">
+                                        <p class="description-addres1">
+                                            <span class="hover-icon-text color-black">
+                                                <i class="fa fa-phone person-details-icon" aria-hidden="true">
+                                                </i>
+                                                Phone
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                        {{currentUser.practice.practice_phone | tel}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="addres1 addres2 panel panel-default">
+                            <div class="text-addres1 text-addres2 panel-body">
+                                <div class="row">
+                                    <div class=" col-xs-12 col-sm-5 col-md-5">
+                                        <p class="description-addres1">
+                                            <span class="hover-icon-text color-black">
+                                                <i class="fa fa-envelope-o person-details-icon" aria-hidden="true">
+                                                </i>
+                                                Practice email
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                        {{currentUser.practice.practice_email}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="addres1 addres2 panel panel-default">
+                            <div class="text-addres1 text-addres2 panel-body">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-5 col-md-5">
+                                        <p class="description-addres1">
+                                            <span class="hover-icon-text color-black">
+                                                <i class="fa fa-rss-square person-details-icon" aria-hidden="true">
+                                                </i>Website
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                        {{currentUser.practice.practice_website}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="addres1 addres2 panel panel-default">
+                            <div class="text-addres1 text-addres2 panel-body">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-5 col-md-5">
+                                        <p class="description-addres1">
+                                            <span class="hover-icon-text color-black">
+                                                <i class="fa fa-facebook person-details-icon" aria-hidden="true">
+                                                </i>
+                                                Facebook
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                        {{currentUser.practice.practice_facebook}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="addres1 addres2 panel panel-default">
+                            <div class="text-addres1 text-addres2 panel-body">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-5 col-md-5">
+                                        <p class="description-addres1">
+                                            <span class="hover-icon-text color-black">
+                                            <i class="fa fa-eye person-details-icon" aria-hidden="true">
+                                            </i>
+                                            Number of exam lanes
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                        {{currentUser.practice.no_of_exam_lanes}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h3 class="personal-details">Practice Profile</h3>
+            <p class="latest-vacancies-description">{{currentUser.practice.overview}}</p>
+            <p class="latest-vacancies-description" ng-if="currentUser.practice.overview==null">Please write a brief introduction to your potential clients</p>
+        </div>
+        <div class="container">
+            <h3 class="personal-details">Practice Information</h3>
+            <div class="first-line-cards row">
+                <div class="cards-locum cards-locum-first col-md-5 col-lg-3">
+                    <div class="description-card-locum col-xs-12">
+                        <p class="specialist-equipment">Specialist Equipment</p>
+                        <p class="col-xs-10">OCT</p><i class="{{specialistEquipment['OCT']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Digital Retinal Camera</p><i class="{{specialistEquipment['Digital Retinal Camera']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Optos Optomap</p><i class="{{specialistEquipment['Optos Optomap']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Visual Fields Perimetry</p><i class="{{specialistEquipment['Visual Fields Perimetry']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">HRT</p><i class="{{specialistEquipment['HRT']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Digital Slit Lamp</p><i class="{{specialistEquipment['Digital Slit Lamp']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="cards-locum col-md-offset-1 col-md-5 col-lg-3 col-lg-offset-0">
+                    <div class="description-card-locum col-xs-12">
+                        <p class="specialist-equipment">Practice Specialty</p>
+                        <p class="col-xs-10">Pediatric</p><i class="{{practiceSpecialty['Pediatric']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Glaucoma</p><i class="{{practiceSpecialty['Glaucoma']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Perimetry</p><i class="{{practiceSpecialty['Perimetry']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Low Vision</p><i class="{{practiceSpecialty['Low Vision']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Sports Vision</p><i class="{{practiceSpecialty['Sports Vision']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Vision Therapy</p><i class="{{practiceSpecialty['Vision Therapy']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Specialty Contact Lenses</p><i class="{{practiceSpecialty['Specialty Contact Lenses']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Dry Eye</p><i class="{{practiceSpecialty['Dry Eye']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="cards-locum col-md-5 col-lg-3">
+                    <div class="description-card-locum col-xs-12">
+                        <p class="specialist-equipment">Practice Management System</p>
+                        <p class="col-xs-10">Acuitas activeEHR2</p><i class="{{practiceManagementSystem['Acuitas activeEHR2']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">VisualEyes</p><i class="{{practiceManagementSystem['VisualEyes']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">MyVisionExpress</p><i class="{{practiceManagementSystem['MyVisionExpress']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">iFile/cFile</p><i class="{{practiceManagementSystem['iFile/cFile']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Maximeyes</p><i class="{{practiceManagementSystem['Maximeyes']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Genie</p><i class="{{practiceManagementSystem['Genie']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Eyefinity OfficeMate</p><i class="{{practiceManagementSystem['Eyefinity OfficeMate']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Other</p><i class="{{practiceManagementSystem['Other']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="cards-locum col-md-offset-1 col-md-5 col-lg-3 col-lg-offset-0">
+                    <div class="description-card-locum col-xs-12">
+                        <p class="specialist-equipment">Lens Product Affiliation</p>
+                        <p class="col-xs-10">Hoya</p><i class="{{lensProductAffiliation['Hoya']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Nikon</p><i class="{{lensProductAffiliation['Nikon']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Essilor</p><i class="{{lensProductAffiliation['Essilor']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Zeiss</p><i class="{{lensProductAffiliation['Zeiss']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Rodenstock</p><i class="{{lensProductAffiliation['Rodenstock']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Centennial</p><i class="{{lensProductAffiliation['Centennial']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Seiko</p><i class="{{lensProductAffiliation['Seiko']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Other</p><i class="{{lensProductAffiliation['Other']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Independent</p><i class="{{lensProductAffiliation['Independent']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="first-line-cards row">
+                <div class="cards-locum cards-locum-first col-md-5 col-lg-3">
+                    <div class="description-card-locum col-xs-12">
+                        <p class="specialist-equipment">Contact Lens Specialty</p>
+                        <p class="col-xs-10">Scleral</p><i class="{{contactLensSpecialty['Scleral']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">RGP</p><i class="{{contactLensSpecialty['RGP']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Keratoconus</p><i class="{{contactLensSpecialty['Keratoconus']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Toric</p><i class="{{contactLensSpecialty['Toric']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="cards-locum col-md-offset-1 col-md-5 col-lg-3 col-lg-offset-0">
+                    <div class="description-card-locum col-xs-12">
+                        <p class="specialist-equipment">Average Full Exam Time</p>
+                        <p class="col-xs-10">15min</p><i class="{{avgExamTime['15min']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">20min</p><i class="{{avgExamTime['20min']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">25min</p><i class="{{avgExamTime['25min']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">30min</p><i class="{{avgExamTime['30min']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">35min</p><i class="{{avgExamTime['35min']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">40min</p><i class="{{avgExamTime['40min']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">45min</p><i class="{{avgExamTime['45min']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="cards-locum col-md-5 col-lg-3">
+                    <div class="description-card-locum col-xs-12">
+                        <p class="specialist-equipment">Handover between Dr, Patient, Dispenser</p>
+                        <p class="col-xs-10">Yes</p><i class="{{answer['1']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">No</p><i class="{{answer['0']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="cards-locum col-md-offset-1 col-md-5 col-lg-3 col-lg-offset-0">
+                    <div class="description-card-locum col-xs-12">
+                        <p class="specialist-equipment">Patient Booking Preference</p>
+                        <p class="col-xs-10">Full-Full-Partial</p><i class="{{patientBookingPreference['Full-Full-Partial']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Full-Partial-Full</p><i class="{{patientBookingPreference['Full-Partial-Full']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">No Preference</p><i class="{{patientBookingPreference['No Preference']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Other</p><i class="{{patientBookingPreference['Other']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="first-line-cards row">
+                <div class="cards-locum cards-locum-first col-md-5 col-lg-3">
+                    <div class="description-card-locum col-xs-12">
+                        <p class="specialist-equipment">Pretest Equipment</p>
+                        <p class="col-xs-10">Non Contact Tonometer</p><i class="{{pretestEquipment['Non Contact Tonometer']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Auto Refractor</p><i class="{{pretestEquipment['Auto Refractor']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Keratometer</p><i class="{{pretestEquipment['Keratometer']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Color Vision Test</p><i class="{{pretestEquipment['Color Vision Test']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">E-Chart</p><i class="{{pretestEquipment['E-Chart']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">Pachymetry </p><i class="{{pretestEquipment['Pachymetry']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="cards-locum col-md-offset-1 col-md-5 col-lg-3 col-lg-offset-0">
+                    <div class="description-card-locum col-xs-12">
+                        <p class="specialist-equipment">Experience requirement</p>
+                        <p class="col-xs-10">New Grad</p><i class="{{experienceRequirements['New Grad']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">1-3 Years</p><i class="{{experienceRequirements['1-3 Years']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">3-5 Years</p><i class="{{experienceRequirements['3-5 Years']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                        <p class="col-xs-10">5+ Years</p><i class="{{experienceRequirements['5+ Years']}} col-xs-2 check-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- feedback -->
+<div ng-if="tabPagesPracticeYourAcc.page == 'feedback'" >
+    <div class="container" ng-if="activeApplicationTabFeedback">
+        <div class="media media-container col-xs-12 col-md-6">
+            <div class="row">
+                <div class="media-left col-xs-12 col-sm-3 col-md-4 col-lg-3">
+                    <img class="media-object picture-media-object images-avatar" ng-src="{{currentUser.practice.avatar}}">
+                </div>
+                <div class="media-body">
+                    <div class="row">
+                        <h4 class="media-heading col-xs-12 col-md-7 col-lg-12">{{currentUser.practice.practice_name}}</h4>
+                    </div>
+                    <div class="dr-live-place">
+                        <i class="fa fa-map-marker col-xs-1 col-sm-1 col-md-1 col-lg-1" aria-hidden="true"></i>
+                        <p class="col-xs-11 col-sm-11 col-md-10 col-lg-11">{{currentUser.practice.practice_city}}, {{currentUser.practice.practice_province}}</p>
+                    </div>
+                    <button class="btn last-jobs-btn job-rewierws-btn feedback-btn-last transitions" type="submit" ng-click='clickToChangeActiveTabOnYourAccountPractice(0)'>Profile</button>
+                </div>
+            </div>
+        </div>
+        <div class="media media-container col-xs-12 col-md-6">
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1" ng-model="currentUser.address1">
+                                        <span class="hover-icon-text color-black">
+                                            <i aria-hidden="true" class="fa fa-map-marker person-details-icon">
+                                            </i>
+                                            Address 1
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 address-padding">
+                                    {{currentUser.practice.practice_address1}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="addres1 addres2 panel panel-default" ng-hide="currentUser.practice.practice_address2=='' || currentUser.practice.practice_address2==null">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1" ng-model="currentUser.address2">
+                                        <span class="hover-icon-text color-black">
+                                            <i aria-hidden="true" class="fa fa-map-marker person-details-icon">
+                                            </i>
+                                            Address 2
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 address-padding">
+                                    {{currentUser.practice.practice_address2}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1" ng-model="currentUser.city">
+                                        <span class="hover-icon-text color-black">
+                                            <i aria-hidden="true" class="fa fa-home person-details-icon">
+                                            </i>
+                                            City
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{currentUser.practice.practice_city}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1" ng-model="currentUser.province">
+                                        <span class="hover-icon-text color-black">
+                                            <i aria-hidden="true" class="fa fa-building-o person-details-icon">
+                                            </i>
+                                            Province
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{currentUser.practice.practice_province}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1" ng-model="currentUser.postal_code">
+                                        <span class="hover-icon-text color-black">
+                                            <i aria-hidden="true" class="fa fa-paper-plane-o person-details-icon">
+                                            </i>
+                                            Postal code
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{currentUser.practice.practice_postal_code | postal}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                            <i class="fa fa-sort-numeric-asc person-details-icon" aria-hidden="true">
+                                            </i>
+                                            Size In SqFt
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{currentUser.practice.sq_ft}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                            <i class="fa fa-group person-details-icon" aria-hidden="true">
+                                            </i>
+                                            Number of Staff
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{currentUser.practice.no_of_staff}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                        <i class="fa fa-phone person-details-icon" aria-hidden="true">
+                                        </i>
+                                            Phone
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{currentUser.practice.practice_phone | tel}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class=" col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                            <i class="fa fa-envelope-o person-details-icon" aria-hidden="true">
+                                            </i>
+                                            Practice email
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{currentUser.practice.practice_email}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                            <i class="fa fa-rss-square person-details-icon" aria-hidden="true">
+                                            </i>Website
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{currentUser.practice.practice_website}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                            <i class="fa fa-facebook person-details-icon" aria-hidden="true">
+                                            </i>
+                                            Facebook
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{currentUser.practice.practice_facebook}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="addres1 addres2 panel panel-default">
+                        <div class="text-addres1 text-addres2 panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-5 col-md-5">
+                                    <p class="description-addres1">
+                                        <span class="hover-icon-text color-black">
+                                        <i class="fa fa-eye person-details-icon" aria-hidden="true">
+                                        </i>
+                                        Number of exam lanes
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 number-of-exam-padding">
+                                    {{currentUser.practice.no_of_exam_lanes}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Feedback</h3>
+                    <p class="text-muted">See your feedback from Locums</p>
+                </div>
+                <div class="col-md-6" ng-hide="(!feedbacks || feedbacks.length==0) && !showLoader">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class=pull-right>
+                                <ul uib-pagination total-items="feedback.bigTotalItemsFeedback" ng-model="feedback.bigCurrentPageFeedback" max-size="5" class="pagination-sm" boundary-link-numbers="true" ng-change="pageChangedFeedback()" items-per-page="feedback.maxSizeFeedback">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!-- novo -->
+            <div class="row job-review-right" ng-repeat="feedback in feedbacks" ng-if="feedbacks!=0">
+                <div class="col-xs-12">
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <div class="col-xs-12 span-date">
+                            <label><b>From:</b></label>&nbsp<span><b><i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp{{ moment(feedback.job_start).format('MMM DD YYYY')}}</b></span>
+                        </div>
+                        <div class="col-xs-12 span-date">
+                            <label><b>To:</b></label>&nbsp<span><b><i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp {{ moment(feedback.job_end).format('MMM DD YYYY')}}</b></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="title-of-job price-practice" ng-if="feedback.day_rate!=null">
+                        <h2>${{feedback.day_rate}} <span>/day</span></h2>
+                    </div>
+                    <div class="title-of-job price-practice" ng-if="feedback.day_rate==null">
+                        <h2>{{feedback.percentage}}% <span>/day</span></h2>
+                    </div>
+                    
+                </div>
+                <div class="col-xs-12">
+                    <div class="job-description job-description-practice">
+                        <h3>{{feedback.title | limitTo:120}}{{feedback.desc.length > 120 ? '...' : ''}}</h3>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="about-doctor-my-jobs">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                    <div class="review review-practice">
+                                        <div style="float: left;" ng-repeat="rating in getNumber(feedback.feedback.rating) track by $index">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                        </div>
+                                        <p ng-if="feedback.feedback.rating!=null"> {{feedback.feedback.rating}} / 5</p>
+                                        <p ng-if="feedback.feedback.rating==null"> No rating</p>
+                                    </div>
+                                <h3>{{feedback.feedback.content | limitTo:600}}{{feedback.feedback.content.length > 600 ? '...' : ''}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <hr>
+                </div>
+            </div>
+            <div ng-if="(!feedbacks || feedbacks.length==0) && !showLoader">
+                <h2 class="media-heading no-results-found" style="text-align:center">No results found</h2>
+                <div class="container text-center my-job-nosearch col-xs-12">
+                    <img src="img/nosearch.png">
+                </div>
+            </div>
+            <div class="sk-three-bounce" ng-if="showLoader">
+                <div class="sk-child sk-bounce1"></div>
+                <div class="sk-child sk-bounce2"></div>
+                <div class="sk-child sk-bounce3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- availability -->
+<div ng-if="tabPagesPracticeYourAcc.page == 'availability'">
+    <div ng-if="activeApplicationTabJobs" ng-init="initCalendar()">
+        <div class="container">
+            <div class="row availability">
+                <div class="col-xs-12">
+                    <h3>
+                    Search filters
+                    </h3>
+                    <p class="text-muted">
+                        Search for Locum’s by Name or Availability.
+                    </p>
+                </div>
+                <div class="col-xs-12">
+                    <!--<div class="row">-->
+                        <form name="searchForm" class="search-form-availability">
+                            <!-- labele -->
+                            <!--<div class="row">-->
+                                <!--<div class="col-md-3 col-md-offset-3">-->
+                                    <!--<label>From:</label>-->
+                                <!--</div>-->
+                                <!--<div class="col-md-3">-->
+                                    <!--<label>To:</label>-->
+                                <!--</div>-->
+                                <!--<div class="col-md-3"></div>-->
+                            <!--</div>-->
+                            <!-- /labele -->
+                            <div class="row">
+                                <div class="col-md-3 col-md-offset-3">
+                                    <p class="input-group">
+                                        <label>From:</label>
+                                      <input type="text" class="form-control" uib-datepicker-popup ng-model="searchTerm.dateFromToSearch" is-open="popup5.opened" datepicker-options="dateOptions" ng-required="searchTerm.locumName==''" close-text="Close" ng-disabled="searchTerm.locumName!=''" placeholder="MM/DD/YYYY" ng-click="open5()" placeholder="MM/DD/YYYY" />
+                                      <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default custom-margin" ng-click="open5()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                      </span>
+                                    </p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="input-group">
+                                        <label>To:</label>
+                                      <input type="text" class="form-control" uib-datepicker-popup ng-model="searchTerm.dateToToSearch" is-open="popup6.opened" datepicker-options="dateOptions" ng-required="searchTerm.locumName==''" close-text="Close"/ ng-disabled="searchTerm.locumName!=''" placeholder="MM/DD/YYYY" ng-click="open6()" placeholder="MM/DD/YYYY"/>
+                                      <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default custom-margin" ng-click="open6()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                      </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-md-offset-5">
+                                    <div class="row">
+                                        <div class="col-md-4 col-md-offset-4 text-center">
+                                            <h4>
+                                                OR
+                                            </h4>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-md-offset-3">
+                                    <label>Locum name:</label>
+                                </div>
+                                <div class="col-md-6 col-md-offset-3">
+                                    <input  type="text" ng-model="searchTerm.locumName" placeholder="Locum name" uib-typeahead="name for name in liveSearch($viewValue)" typeahead-loading="loadingLocations"
+                                            typeahead-no-results="noResults" class="form-control edit-media-heading search-practice-name" aria-describedby="inputGroupSuccess3Status"
+                                            ng-disabled="searchTerm.dateToToSearch!=null||searchTerm.dateFromToSearch!=null"  ng-required="(!searchTerm.dateFromToSearch==null&&!searchTerm.dateToToSearch==null)">
+                                    <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+                                    <div ng-show="noResults">
+                                        <i class="glyphicon glyphicon-remove"></i> No Results Found
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                            <div class="row">
+                                <div class="col-md-3 col-md-offset-3">
+                                    <button class="btn create-your-acc-btn sign-up-btn search-btn-filters" ng-click="search(searchTerm);searchTerm.dateFromToSearch=null;searchTerm.dateToToSearch=null;" type="submit" ng-disabled="!searchForm.$valid">
+                                        Search
+                                    </button>
+                                </div>
+                                <div class="col-md-3" style="margin-bottom: 20px;">
+                                    <button class="btn create-your-acc-btn sign-up-btn search-btn-filters btn-clear" ng-click="initCalendar()" type="submit">
+                                        Clear
+                                    </button>
+                                </div>
+                            </div>
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 ">
+                    <h3>Calendar</h3>
+                    <p class="text-muted">Locum availability</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-md-2">
+                    <h4>{{ calendarTitle }}</h4>
+                </div>
+                <div class="col-sm-8 col-md-4 col-md-offset-6">
+                    <div class="col-lg-8 col-xs-7 col-md-8 no-padding btn-group">
+                        <button class="btn btn-primary" date="datas.viewDate" mwl-date-modifier decrement="datas.calendarView" ng-click="datas.cellIsOpen = false">
+                            Previous
+                        </button>
+                        <button class="btn btn-primary" date="datas.viewDate" mwl-date-modifier set-to-today ng-click="datas.cellIsOpen = false" >
+                            Today
+                        </button>
+                        <button class="btn btn-primary" date="datas.viewDate" mwl-date-modifier increment="datas.calendarView" ng-click="datas.cellIsOpen = false">
+                            Next
+                        </button>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-5 no-padding btn-group pull-right">
+                        <label class="btn edit-btn-color" ng-click="datas.cellIsOpen = false" ng-model="datas.calendarView" uib-btn-radio="'year'">
+                            Year
+                        </label>
+                        <label class="btn edit-btn-color" ng-click="datas.cellIsOpen = false" ng-model="datas.calendarView" uib-btn-radio="'month'">
+                            Month
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <mwl-calendar cell-auto-open-disabled="false" cell-is-open="datas.cellIsOpen" cell-modifier="modifyCell(calendarCell)" day-view-end="22:59" day-view-split="30" day-view-start="06:00" events="events" on-event-click="eventClicked(calendarEvent)" on-event-times-changed="eventTimesChanged(calendarEvent); calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd" on-timespan-click="timespanClicked(calendarDate, calendarCell)" view="datas.calendarView" view-date="datas.viewDate" view-title="calendarTitle">
+            </mwl-calendar>
+            <div class="container" ng-repeat="legendJob in legendJobs">
+                <div class="legend-desc col-xs-1" style="background-color: {{legendJob.color}}">
+                </div>
+                <p class="col-xs-11">{{legendJob.name}}</p>
+            </div>
+            <div id="fullCalModal2" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
+                            <h4 id="modalTitle1" class="modal-title"></h4>
+                        </div>
+                        <div id="modalBody1" class="modal-body">
+                        <h4 id="modalBody1" class="modal-body"></h4>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="viewLocum()">View Locum</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fullCalModal1" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
+                            <h4 id="modalTitle" class="modal-title">Title</h4>
+                        </div>
+                        <div id="modalBody" class="modal-body">
+                            <h3>Title</h3>
+                            <input type="text" name="" ng-model="calendar.title">
+                            <h3>Description</h3>
+                            <textarea ng-model="calendar.description"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="calendarSubmitPractice()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div style="margin-top: 20px;">
+                <div class="your-availability">
+                    <div class="color-footer-availability"></div>
+                    <div>
+                        <p>Your Jobs</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>    
+        </div>
+        <div class="container">
+            <div class="row text-your-job">
+                <div class="col-xs-12">
+                    <p>Locums and their availabilities:</p>
+                </div>             
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-xs-12 col-sm-4 col-md-3" ng-repeat="locum in locumsToShow" >
+                <div class="row footer-availability">
+                    <div class="panel-default" is-open="false" is-disabled="false">
+                        <div>
+                            <div style="width: 30px; height: 15px;float: left; margin-top: 3px;" ng-style="set_color(locum.color);">
+                                
+                            </div>
+                            <p ng-click="changeSingleLocum(locum)" data-target="#jobDetails" data-toggle="modal" >{{locum.name}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script id="onCalendarClick.html" type="text/ng-template">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">{{ data }}</h3>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <div class="row">
+                    
+                </div>
+                <div class="btn-group">
+                    <div class="content">
+                        <form name="createAJob1Form">
+                            <div class="col-xs-12"></div>
+                            <div class="col-xs-6">
+                                <h2>
+                                    Title of Job
+                                </h2>
+                            </div>
+                            <div class="col-xs-12"></div>
+                            <div ng-class="{'has-error': !createAJob1Form.title.$valid}">
+                                <div class="col-xs-6">
+                                    <input name="title" class="form-control edit-media-heading title-admin" name="" ng-model="newJob.title" placeholder="Title" type="text" ng-required="true">
+                                    </input>
+                                    <div ng-messages="createAJob1Form.title.$error" role="alert">
+                                        <div class="text-danger" ng-message="required">Required</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12"></div>
+                            <div class="col-xs-6">
+                                <h2>
+                                    Description of Job
+                                </h2>
+                            </div>
+                            <div class="col-xs-12"></div>
+                            <div ng-class="{'has-error': !createAJob1Form.desc.$valid}">
+                                <div class="col-xs-6">
+                                    <textarea name="desc" class="form-control edit-overview" ng-model="newJob.desc" placeholder="Description" ng-required="true">
+                                    </textarea>
+                                    <div ng-messages="createAJob1Form.desc.$error" role="alert">
+                                        <div class="text-danger" ng-message="required">Required</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="container">
+                            <div class="row">
+                                <form name="createAJob2Form">
+                                    <div class="col-xs-12"></div>
+                                    <div class="col-xs-6">
+                                        <h2>
+                                            Day rate
+                                        </h2>
+                                        <p>
+                                            Enter the Daily Rate in Dollars.
+                                        </p>
+                                        <div ng-class="{'has-error': !createAJob2Form.percentage.$valid}">
+                                            <input name="percentage" class="form-control edit-media-heading title-admin" name="" ng-disabled="newJob.percentage" ng-model="newJob.day_rate" placeholder="$50" type="number" ng-required="!newJob.percentage">
+                                            </input>
+                                            <div ng-messages="createAJob2Form.percentage.$error" role="alert">
+                                                <div class="text-danger" ng-message="required">Required</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12"></div>
+                                    <div class="col-xs-6">
+                                        <div class="row or-label">
+                                            <label>Or</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12"></div>
+                                    <div class="col-xs-6">
+                                        <h2>
+                                            Percentage
+                                        </h2>
+                                        <p>
+                                            Enter a % of sales generated by the locum.
+                                        </p>
+                                        <div ng-class="{'has-error': !createAJob2Form.day_rate.$valid}">
+                                            <input name="day_rate" class="form-control edit-media-heading title-admin" name="" ng-disabled="newJob.day_rate" ng-model="newJob.percentage" ng-change="check()" placeholder="30%" type="number" ng-required="!newJob.day_rate" ng-maxlength="3" ng-max="100" size="3">
+                                            </input>
+                                            <div ng-messages="createAJob2Form.day_rate.$error" role="alert">
+                                                <div class="text-danger" ng-message="required">Required</div>
+                                                <div class="text-danger" ng-message="maxlength">Only 3 numbers allowed.</div>
+                                                <div class="text-danger" ng-message="max">Maximum number of 100 exceeded.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <form name="createAJobForm">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12"></div>
+                                    <div class="col-xs-6">
+                                        <div>
+                                            <h2>
+                                                Application start date
+                                            </h2>
+                                            <p>
+                                                Enter the date you wish the vacancy to be visible.
+                                            </p>
+                                        </div>
+                                        <div class="date-input" ng-class="{'has-error': !createAJobForm.startDate.$valid, 'row btn-group input-group': true}">
+                                            <div >
+                                                <div class="row btn-group input-group date-input" type="date">
+                                                    <p class="input-group">
+                                                      <input name="startDate" type="text" class="form-control" uib-datepicker-popup="MM/dd/yyyy" ng-model="newJob.application_start" is-open="popup5.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" placeholder="MM/DD/YYYY" ng-click="open5()"/>
+                                                      <span class="input-group-btn" >
+                                                        <button type="button" class="btn btn-default" ng-click="open5()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                                      </span>
+                                                    </p>
+                                                </div>
+                                                <div ng-messages="createAJobForm.startDate.$error" role="alert">
+                                                    <div class="text-danger" ng-message="required">Required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12"></div>
+                                    <div class="col-xs-6">
+                                        <div>
+                                            <h2>
+                                                Application expire date
+                                            </h2>
+                                            <p>
+                                                Enter the date you wish the Vacancy to close.
+                                            </p>
+                                        </div>
+                                        <div class="date-input" ng-class="{'has-error': !createAJobForm.endDate.$valid, 'row btn-group input-group': true}">
+                                            <div>
+                                                <div class="row btn-group input-group date-input" type="date">
+                                                    <p class="input-group">
+                                                      <input name="endDate" type="text" class="form-control" uib-datepicker-popup="MM/dd/yyyy" ng-model="newJob.application_end" is-open="popup6.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" placeholder="MM/DD/YYYY" ng-click="open6()"/>
+                                                      <span class="input-group-btn" >
+                                                        <button type="button" class="btn btn-default" ng-click="open6()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                                      </span>
+                                                    </p>
+                                                </div>
+                                                <div ng-messages="createAJobForm.endDate.$error" role="alert">
+                                                    <div class="text-danger" ng-message="required">Required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12"></div>
+                                    <div class="col-xs-6">
+                                        <div>
+                                            <h2>
+                                                Job start
+                                            </h2>
+                                            <p>
+                                                Enter the Vacancy start date.
+                                            </p>
+                                        </div>
+                                        <div class="date-input" ng-class="{'has-error': !createAJobForm.jobStart.$valid, 'row btn-group input-group': true}">
+                                            <div>
+                                                <div class="row btn-group input-group date-input" type="date">
+                                                    <p class="input-group">
+                                                      <input name="jobStart" type="text" class="form-control" uib-datepicker-popup="MM/dd/yyyy" ng-model="newJob.job_start" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" placeholder="MM/DD/YYYY" ng-click="open1()"/>
+                                                      <span class="input-group-btn" >
+                                                        <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                                      </span>
+                                                    </p>
+                                                </div>
+                                                <div ng-messages="createAJobForm.jobStart.$error" role="alert">
+                                                    <div class="text-danger" ng-message="required">Required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12"></div>
+                                    <div class="col-xs-6">
+                                        <div>
+                                            <h2>
+                                                Job end
+                                            </h2>
+                                            <p>
+                                                Enter the Vacancy end date.
+                                            </p>
+                                        </div>
+                                        <div class="date-input" ng-class="{'has-error': !createAJobForm.jobEnd.$valid, 'row btn-group input-group': true}">
+                                            <div>
+                                                <div class="row btn-group input-group date-input" type="date">
+                                                    <p class="input-group">
+                                                      <input name="jobEnd" type="text" class="form-control" uib-datepicker-popup="MM/dd/yyyy" ng-model="newJob.job_end" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" placeholder="MM/DD/YYYY" ng-click="open2()"/>
+                                                      <span class="input-group-btn" >
+                                                        <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                                      </span>
+                                                    </p>
+                                                </div>
+                                                <div ng-messages="createAJobForm.jobEnd.$error" role="alert">
+                                                    <div class="text-danger" ng-message="required">Required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12"></div>
+                                    <div class="col-xs-6">
+                                        <div>
+                                            <h2>
+                                                Working time from
+                                            </h2>
+                                            <p>
+                                                Enter the Daily start time.
+                                            </p>
+                                        </div>
+                                        <div class="date-input" ng-class="{'has-error': !createAJobForm.timeFrom.$valid, 'row btn-group input-group': true}">
+                                            <div>
+                                                <div class="row btn-group input-group date-input" type="date">
+                                                    <div class="input-group date datepicker-input" id="datetimepicker5" ng-click="showDate5()">
+                                                        <span class="input-group-addon" >
+                                                            <span class="glyphicon glyphicon-time">
+                                                            </span>
+                                                        </span>
+                                                        <input name="timeFrom" class="form-control" style="width: 100% !important" ng-model="newJob.working_time_from" placeholder="From" ng-required="true" id="working-time-from"/>
+                                                        
+                                                    </div>
+                                                    <div ng-messages="createAJobForm.timeFrom.$error" role="alert">
+                                                        <div class="text-danger" ng-message="required">Required</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12"></div>
+                                    <div class="col-xs-6">
+                                        <div>
+                                            <h2>
+                                                Working time to
+                                            </h2>
+                                            <p>
+                                                Enter the Daily finish time.
+                                            </p>
+                                        </div>
+                                        <div class="date-input" ng-class="{'has-error': !createAJobForm.timeTo.$valid, 'row btn-group input-group': true}">
+                                            <div>
+                                                <div class="row btn-group input-group date-input" type="date">
+                                                    <div class="input-group date datepicker-input" id="datetimepicker6" ng-click="showDate6()">
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-time">
+                                                            </span>
+                                                        </span>
+                                                        <input name="timeTo" class="form-control" style="width: 100% !important" id="working-time-to" ng-model="newJob.working_time_to" placeholder="To" ng-required="true"/>
+                                                    </div>
+                                                    <div ng-messages="createAJobForm.timeTo.$error" role="alert">
+                                                        <div class="text-danger" ng-message="required">Required</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </form>
+                        <div class="col-xs-12 button-create-a-job">
+                            <button class="btn transitions" ng-click="editJob(newJob)" type="button" data-dissmis="modal" ng-disabled="!createAJobForm.$valid || !createAJob2Form.$valid">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <div class="modal fade" id="jobDetails" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" ng-disabled="isDisabled"><i class="fa fa-times exit-popup" aria-hidden="true"></i></button>
+                        <h4 class="modal-title">{{singleLocum.name}} Availabilities:</h4>
+                    </div>
+                    <div class="modal-body text-footer-availability span-date">
+                        <div ng-repeat="calendar in singleLocum.calendars">
+                            <div ng-click="viewLocum(singleLocum.id)" style="cursor:pointer" data-dismiss="modal">
+                                    <div class="col-xs-6">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <label><b>From:</b></label>&nbsp<span><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp<b>{{moment(calendar.start_date).format('MMM DD YYYY')}}</b></span>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <label><b>To:</b></label>&nbsp<span><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp<b>{{moment(calendar.end_date).format('MMM DD YYYY')}}</b></span>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div >
+                        <center>
+                            <button type="submit" data-dismiss="modal" class="btn create-your-acc-btn send-popup" style="margin-bottom:20px">Close</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- VIEW YOUR JOB -->
+<div class="container" ng-if="!activeApplicationTabJobs">
+        <div class="back-style row">
+            <a ng-click="changePageViewCalendar()">
+                <i class="fa fa-caret-square-o-left" aria-hidden="true"></i> Back to Applications
+            </a>
+        </div>
+        <div class="media media-container col-xs-12 col-md-5">
+            <div class="media-left col-xs-12 col-sm-3 col-md-5 col-lg-4">
+                <img class="media-object picture-media-object images-avatar" ng-src="{{currentUser.practice.avatar}}">
+            </div>
+            <div class="media-body">
+                <div class="row">
+                    <h4 class="media-heading col-xs-12 col-md-7 col-lg-12">{{currentUser.practice.practice_name}}</h4>
+                </div>
+                <div class="dr-live-place">
+                    <i class="fa fa-map-marker col-xs-1 col-sm-1 col-md-1 col-lg-1" aria-hidden="true"></i>
+                    <p class="col-xs-11 col-sm-11 col-md-10 col-lg-11">{{currentUser.practice.practice_city}}, {{currentUser.practice.practice_province}}</p>
+                </div>
+            </div>
+            <div class="position-some">
+                <div class="row addres1 addres2 panel panel-default col-xs-10">
+                    <div class="text-addres1 text-addres2 panel-body">
+                        <p class="col-xs-11 description-addres1"><span class="hover-icon-text color-black"><i class="fa fa-medkit col-xs-1 person-details-icon" aria-hidden="true"></i>Practice name </span>{{currentUser.practice.practice_name}}</p>
+                    </div>
+                </div>
+                <div class="row addres1 addres2 panel panel-default col-xs-10">
+                    <div class="text-addres1 text-addres2 panel-body">
+                        <p class="col-xs-11 description-addres1"><span class="hover-icon-text color-black"><i class="fa fa-medkit col-xs-1 person-details-icon" aria-hidden="true"></i>Practice email </span>{{currentUser.practice.practice_email}}</p>
+                    </div>
+                </div>
+                <div class="row addres1 addres2 panel panel-default col-xs-10">
+                    <div class="text-addres1 text-addres2 panel-body">
+                        <p class="col-xs-11 description-addres1"><span class="hover-icon-text color-black"><i class="fa fa-map-marker col-xs-1 person-details-icon" aria-hidden="true"></i>Address 1 </span>{{currentUser.practice.practice_address1}}</p>
+                    </div>
+                </div>
+                <div class="row addres1 addres2 panel panel-default col-xs-10">
+                    <div class="text-addres1 text-addres2 panel-body">
+                        <p class="col-xs-11 description-addres1"><span class="hover-icon-text color-black"><i class="fa fa-map-marker col-xs-1 person-details-icon" aria-hidden="true"></i>Address 2 </span>{{currentUser.practice.practice_address2}}</p>
+                    </div>
+                </div>
+                <div class="row addres1 addres2 panel panel-default col-xs-10">
+                    <div class="text-addres1 text-addres2 panel-body">
+                        <p class="col-xs-11 description-addres1"><span class="hover-icon-text color-black"><i class="fa fa-home col-xs-1 person-details-icon" aria-hidden="true"></i>City </span>{{currentUser.practice.practice_city}}</p>
+                    </div>
+                </div>
+                <div class="row addres1 addres2 panel panel-default col-xs-10">
+                    <div class="text-addres1 text-addres2 panel-body">
+                        <p class="col-xs-11 description-addres1"><span class="hover-icon-text color-black"><i class="fa fa-building col-xs-1 person-details-icon" aria-hidden="true"></i>Province </span>{{currentUser.practice.practice_province}}</p>
+                    </div>
+                </div>
+                <div class="row addres1 addres2 panel panel-default col-xs-10">
+                    <div class="text-addres1 text-addres2 panel-body">
+                        <p class="col-xs-11 description-addres1"><span class="hover-icon-text color-black"><i class="fa fa-paper-plane-o col-xs-1 person-details-icon" aria-hidden="true"></i>Postal code </span>{{currentUser.practice.practice_postal_code | postal}}</p>
+                    </div>
+                </div>
+                <div class="row addres1 addres2 panel panel-default col-xs-10">
+                    <div class="text-addres1 text-addres2 panel-body">
+                        <p class="col-xs-11 description-addres1"><span class="hover-icon-text color-black"><i class="fa fa-phone col-xs-1 person-details-icon" aria-hidden="true"></i>Phone </span>{{currentUser.practice.practice_phone | tel}}</p>
+                    </div>
+                </div>
+                <div class="row addres1 addres2 panel panel-default col-xs-10">
+                    <div class="text-addres1 text-addres2 panel-body">
+                        <p class="col-xs-11 description-addres1"><span class="hover-icon-text color-black"><i class="fa fa-file-o col-xs-1 person-details-icon" aria-hidden="true"></i>Number of Staff </span>{{currentUser.practice.no_of_staff}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-7">
+            <div class="row job-review-right applications-person-details">
+                <div class="practice-name-my-job-div col-xs-6 col-sm-7 col-md-8 col-lg-9">
+                    <p class="practice-name-my-job">{{currentUser.practice.practice_name}}</p>
+                </div>
+                <div class="title-of-job title-of-job-my-jobs title-of-see-more col-xs-6 col-sm-5 col-md-4 col-lg-3">
+                    <h2 ng-if="jobDetailsCalendar.percentage==null">${{jobDetailsCalendar.day_rate}} <span>/day</span></h2>
+                    <h2 ng-if="jobDetailsCalendar.day_rate==null">%{{jobDetailsCalendar.percentage}} <span>/day</span></h2>
+                </div>
+                <div class="title-of-job title-ofjob-my-jobs col-xs-12 col-md-12 col-lg-12">
+                    <h1>{{jobDetailsCalendar.title}}</h1>
+                </div>
+                <div class="dr-live-place dr-place-live col-xs-10 col-sm-8 col-md-10 col-lg-8">
+                    <i class="fa fa-map-marker col-xs-1 col-sm-1 col-md-1 col-lg-1" aria-hidden="true"></i>
+                    <p class="col-xs-11 col-sm-11 col-md-10 col-lg-10">{{currentUser.practice.practice_city}}, <span class="living-place">{{currentUser.practice.practice_province}}</span></p>
+                </div>
+                <div class="col-xs-12 col-md-10 col-lg-10 job-description">
+                    <h3>{{jobDetailsCalendar.desc}}</h3>
+                </div>
+                <div class="position-cards-feedback col-xs-12 col-sm-10">
+                    <div class="cards-feedback col-xs-2">
+                        {{currentUser.practice.contact_lens_specialty}}
+                    </div>
+                    <div class="cards-feedback col-xs-2">
+                        {{currentUser.practice.patient_booking_preference}}
+                    </div>
+                    <div class="cards-feedback col-xs-2">
+                        {{currentUser.practice.practice_management_system}}
+                    </div>
+                    <div class="cards-feedback col-xs-2">
+                        {{currentUser.practice.practice_specialty}}
+                    </div>
+                    <div class="cards-feedback col-xs-2">
+                        {{currentUser.practice.pretest_equipment}}
+                    </div>
+                    <div class="cards-feedback col-xs-2">
+                        {{currentUser.practice.specialist_equipment}}
+                    </div>
+                    <div class="cards-feedback col-xs-2">
+                        {{currentUser.practice.lens_product_affiliation}}
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <hr style="margin-left: 20px; margin-right: 20px;">
+                </div>
+                <div class="all-applications col-xs-12">
+                    <h3>Won <span class="applications-text">Application</span></h3>
+                </div>
+                <div class="about-doctor-my-jobs dr-my-jobs-border col-xs-11 col-lg-12" ng-if="userWhoWonCalendar.user.id!=null">
+                    <a ng-click="viewLocum(userWhoWonCalendar.user.id)" style="cursor:pointer;">
+                        <div class="about-dr-img col-xs-1">
+                            <img class="img-responsive about-dr-img" ng-src="{{userWhoWonCalendar.user.avatar}}">
+                        </div>
+                        <div class="col-xs-11 ">
+                            <h3 class="dr-my-jobs">{{userWhoWonCalendar.user.name}}</h3>
+                            <h3>{{userWhoWonCalendar.desc}}</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="all-applications col-xs-12">
+                    <h3>ALL <span class="applications-text">Applications</span></h3>
+                </div>
+                <div class="about-doctor-my-jobs dr-my-jobs-border col-xs-11 col-lg-12" ng-repeat="otherApplication in allOtherApplicationsCalendar">
+                        <div class="about-dr-img col-xs-1">
+                            <img class="img-responsive about-dr-img" ng-src="{{otherApplication.user.avatar}}">
+                        </div>
+                        <div class="col-xs-11">
+                            <a ng-click="viewLocum(otherApplication.user.id)" style="cursor:pointer;">
+                                <h3 class="dr-my-jobs">{{otherApplication.user.name}}</h3>
+                            </a>
+                            <h3>{{otherApplication.desc}}</h3>
+                        </div><button ng-if="userWhoWonCalendar.id==null" class="btn last-jobs-btn mail-profile-btn-practice pull-right" type="submit" data-toggle="modal" data-target="#myModal" ng-click="openModal(otherApplication.user)">Accept</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+    <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times exit-popup" aria-hidden="true"></i></button>
+                    <h4 class="modal-title">New message</h4>
+                </div>
+                <div class="modal-body">
+                    <center>
+                        <h2 class="title-popup">Send email to <span>{{$scope.userToSendMail.name}}</span></h2>
+                    </center>
+                    <form name="mailForm">
+                        <div class="form-group col-xs-11 col-sm-12">
+                            <div ng-class="{'has-error': !mailForm.subject.$valid, 'form-group input-group col-xs-12 has-feedback row popup-mail': true}">
+                                <div class="form-group input-group col-xs-12 has-feedback row popup-mail">
+                                    <span class="input-group-addon address-input popup-input"><span class="hover-icon-text"><i class="fa fa-envelope-open-o col-xs-1 person-details-icon address-1-icon" aria-hidden="true"></i>Subject</span></span>
+                                    <input name="subject" type="text" class="form-control input-border input-border-address1" placeholder="Subject" aria-describedby="inputGroupSuccess4Status" ng-model="mail.subject" ng-required="true">
+                                </div>
+                                <div ng-messages="mailForm.subject.$error" role="alert">
+                                    <div class="text-danger" ng-message="required">Required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-11 col-sm-12">
+                            <div ng-class="{'has-error': !mailForm.description.$valid}">
+                                <textarea name="description" placeholder="Description" class="form-control latest-vacancies-description edit-overview popup-mail" rows="4" ng-model="mail.description" ng-required="true"></textarea>
+                            </div>
+                            <div ng-messages="mailForm.description.$error" role="alert">
+                                <div class="text-danger" ng-message="required">Required</div>
+                            </div>
+                        </div>
+                        <center>
+                            <button type="submit" class="btn create-your-acc-btn send-popup" ng-click="acceptAndSendMail(mail)" ng-disabled="!mailForm.$valid">Send</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Edit profile -->
+<div ng-if="tabPagesPracticeYourAcc.page == 'edit'">
+    <div class="container">
+        <div class="media media-container col-xs-12 col-md-9 col-lg-7">
+            <div class="media-left col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <img class="media-object picture-media-object images-avatar" ng-src="{{currentUser.practice.avatar}}">
+                <h4>Upload on file select</h4>
+                  <button type="file" ngf-select="uploadFiles($file, $invalidFiles)"
+                          accept="image/*" ngf-max-size="1MB">
+                      Select File</button>
+                  <br><br>
+                  <div style="font:smaller">
+                  File:{{f.name}} 
+                  <p style="color:red;">{{errFile.name}} {{errFile.$error}}</p>
+                  </div>     
+                  {{errorMsg}}
+            </div>
+            <div class="media-body for-mobile-response">
+                <div class="row">
+                    <form name="form1">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7">
+                            <div ng-class="{'has-error': !form1.practice_name.$valid}">
+                                <input name="practice_name" type="text" class="form-control edit-media-heading" placeholder="Enter your name" ng-model="currentUser.practice.practice_name" value="{{currentUser.practice.practice_name}}" ng-required="true">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+                                <div class="col-xs-5 col-sm-6 col-lg-7">
+                                    <div ng-class="{'has-error': !form1.day_rate.$valid}">
+                                        <input name="day_rate" type="number" class="form-control edit-media-heading edit-price" placeholder="Price" ng-model="currentUser.practice.day_rate" value="{{currentUser.practice.day_rate}}">
+                                    </div>
+                                </div>
+                                <h3 class="color-dayprice dayprice-edit col-xs-6 col-lg-5">/day</h3>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-group has-feedback">
+                    <label class="control-label sr-only" for="inputGroupSuccess4">Input group with success</label>
+                    <form name="form2">
+                        <div ng-class="{'has-error': !form2.practice_city.$valid, 'input-group':true}">
+                            <div class="input-group">
+                                <span class="input-group-addon address-input"><i class="fa fa-map-marker" aria-hidden="true"></i></i></span>
+                                    <input name="practice_city" type="text" class="form-control input-border mobile-resposne-address" id="inputGroupSuccess4" ng-model="currentUser.practice.practice_city" placeholder="Address" value="currentUser.practice.practice_city" aria-describedby="inputGroupSuccess4Status" ng-required="true">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <button class="btn last-jobs-btn job-rewierws-btn" type="submit" ng-click="clickToChangeActiveTabOnYourAccountPractice(1)">Feedback</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row person-details-checkbox">
+            <div class="col-xs-12 col-sm-8 col-lg-9">
+                <h3 class="personal-details person-details-edit ">Practice Details</h3>
+            </div>
+            <div class="col-xs-12 col-sm-4 filter-by-day hidden-visible">
+                <div class="checkbox checkbox-edit" >
+                    <label style="font-size: 1em" ng-if="currentUser.practice.practice_visible==0">
+                        <input type="checkbox" ng-model="currentUser.practice.practice_visible" ng-checked="currentUser.practice.practice_visible" ng-true-value="'1'" ng-false-value="'0'" ng-click="check()">
+                        <span class="cr" style="background-color:#e6e6e6;border:#e6e6e6"><i class="cr-icon fa fa-check"></i></span>Click to make your profile Public
+                    </label>
+                    <label style="font-size: 1em" ng-if="currentUser.practice.practice_visible==1">
+                        <input type="checkbox" ng-model="currentUser.practice.practice_visible" ng-checked="currentUser.practice.practice_visible" ng-true-value="'1'" ng-false-value="'0'" ng-click="check()">
+                        <span class="cr"><i class="cr-icon fa fa-check"></i></span>Click to make your profile Private
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <form name="editPracticeFrom">
+                <div ng-class="{'has-error': !editPracticeFrom.practice_address1.$valid, 'form-group input-group col-xs-12 has-feedback row': true}">
+                    <div class="form-inline input-group has-feedback col-xs-12 fixed-edit-row">
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 fixed-edit-label">
+                            <label class="hover-icon-text color-black">
+                                <i aria-hidden="true" class="fa fa-map-marker person-details-icon address-1-icon icon-black">
+                                </i>
+                                Address 1
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 fixed-edit-input">
+                            <input name="practice_address1" type="text" class="form-control input-border input-border-address1" id="inputGroupSuccess4" placeholder="Address 1" value="{{currentUser.practice.practice_address1}}" aria-describedby="inputGroupSuccess4Status" ng-model="currentUser.practice.practice_address1" ng-required="true">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 text-right">
+                        <div class="row">
+                            <div ng-messages="editPracticeFrom.practice_address1.$error" role="alert">
+                                <div class="text-danger" ng-message="required">Required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-class="{'has-error': !editPracticeFrom.practice_address2.$valid, 'form-group input-group col-xs-12 has-feedback row': true}">
+                    <div class="form-inline input-group has-feedback col-xs-12 fixed-edit-row">
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 fixed-edit-label">
+                            <label class="hover-icon-text color-black">
+                                <i aria-hidden="true" class="fa fa-map-marker person-details-icon address-1-icon icon-black">
+                                </i>
+                                Address 2
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 fixed-edit-input">
+                            <input name="practice_address2" type="text" class="form-control input-border input-border-address1" id="inputGroupSuccess4" placeholder="Address 2" aria-describedby="inputGroupSuccess4Status" value="{{currentUser.practice.practice_address2}}" ng-model="currentUser.practice.practice_address2">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 text-right">
+                        <div class="row">
+                            <div ng-messages="editPracticeFrom.practice_address2.$error" role="alert">
+                                <div class="text-danger" ng-message="required">Required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-class="{'has-error': !editPracticeFrom.practice_city.$valid, 'form-group input-group col-xs-12 has-feedback row': true}">
+                    <div class="form-inline input-group has-feedback col-xs-12 fixed-edit-row">
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 fixed-edit-label">
+                            <label class="hover-icon-text color-black">
+                                <i aria-hidden="true" class="fa fa-home person-details-icon address-1-icon icon-black">
+                                </i>
+                                City
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 fixed-edit-input">
+                            <input name="practice_city" type="text" class="form-control input-border input-border-address1" id="inputGroupSuccess4" placeholder="City" aria-describedby="inputGroupSuccess4Status" value="{{currentUser.practice.practice_city}}" ng-model="currentUser.practice.practice_city" ng-required="true">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 text-right">
+                        <div class="row">
+                            <div ng-messages="editPracticeFrom.practice_city.$error" role="alert">
+                                <div class="text-danger" ng-message="required">Required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-class="{'has-error': !editPracticeFrom.practice_province.$valid, 'form-group input-group col-xs-12 has-feedback row': true}">
+                    <div class="form-inline input-group has-feedback col-xs-12 fixed-edit-row">
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 fixed-edit-label">
+                            <label class="hover-icon-text color-black">
+                                <i aria-hidden="true" class="fa fa-building-o person-details-icon address-1-icon icon-black">
+                                </i>
+                                Province
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 fixed-edit-input">
+                            <select name="practice_province" class="form-control input-border input-border-address1" ng-model="currentUser.practice.practice_province" ng-options="c for c in countries" value="{{currentUser.practice.practice_province}}" ng-required="true"></select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 text-right">
+                        <div class="row">
+                            <div ng-messages="editPracticeFrom.practice_province.$error" role="alert">
+                                <div class="text-danger" ng-message="required">Required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-class="{'has-error': !editPracticeFrom.practice_postal_code.$valid, 'form-group input-group col-xs-12 has-feedback row': true}">
+                    <div class="form-inline input-group has-feedback col-xs-12 fixed-edit-row">
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 fixed-edit-label">
+                            <label class="hover-icon-text color-black">
+                                <i aria-hidden="true" class="fa fa-paper-plane-o person-details-icon address-1-icon icon-black">
+                                </i>
+                                Postal code
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 fixed-edit-input">
+                            <input name="practice_postal_code" type="text" class="form-control input-border input-border-address1" id="inputGroupSuccess4" placeholder="A9A-9A9" aria-describedby="inputGroupSuccess4Status" value="{{currentUser.practice.practice_postal_code}}" ng-model="currentUser.practice.practice_postal_code" ng-required="true" ui-mask="A9A-9A9" ui-mask-placeholder ui-mask-placeholder-char="_">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 text-right">
+                        <div class="row">
+                            <div ng-messages="editPracticeFrom.practice_postal_code.$error" role="alert">
+                                <div class="text-danger" ng-message="required">Required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-class="{'has-error': !editPracticeFrom.sq_ft.$valid, 'form-group input-group col-xs-12 has-feedback row': true}">
+                    <div class="form-inline input-group has-feedback col-xs-12 fixed-edit-row">
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 fixed-edit-label">
+                            <label class="hover-icon-text color-black">
+                                <i aria-hidden="true" class="fa fa-sort-numeric-asc person-details-icon address-1-icon icon-black">
+                                </i>
+                                Size in Sqft
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 fixed-edit-input">
+                            <input name="sq_ft" type="text" class="form-control input-border input-border-address1" id="inputGroupSuccess4" placeholder="Sq ft" aria-describedby="inputGroupSuccess4Status" value="{{currentUser.practice.sq_ft}}" ng-model="currentUser.practice.sq_ft">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 text-right">
+                        <div class="row">
+                            <div ng-messages="editPracticeFrom.sq_ft.$error" role="alert">
+                                <div class="text-danger" ng-message="required">Required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <form name="editPracticeFrom1">
+                    <div ng-class="{'has-error': !editPracticeFrom1.no_of_staff.$valid, 'form-group input-group col-xs-12 has-feedback row': true}">
+                        <div class="form-inline input-group has-feedback col-xs-12 fixed-edit-row">
+                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 fixed-edit-label">
+                                <label class="hover-icon-text color-black">
+                                    <i aria-hidden="true" class="fa fa-group person-details-icon address-1-icon icon-black">
+                                    </i>
+                                    Number of Staff
+                                </label>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 fixed-edit-input">
+                                <input name="no_of_staff" type="text" class="form-control input-border input-border-address1" id="inputGroupSuccess4" placeholder="Number of Staff" aria-describedby="inputGroupSuccess4Status" value="{{currentUser.practice.no_of_staff}}" ng-model="currentUser.practice.no_of_staff" ng-required="true">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 text-right">
+                            <div class="row">
+                                <div ng-messages="editPracticeFrom1.no_of_staff.$error" role="alert">
+                                    <div class="text-danger" ng-message="required">Required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-class="{'has-error': !editPracticeFrom1.practice_phone.$valid, 'form-group input-group col-xs-12 has-feedback row': true}">
+                        <div class="form-inline input-group has-feedback col-xs-12 fixed-edit-row">
+                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 fixed-edit-label">
+                                <label class="hover-icon-text color-black">
+                                    <i aria-hidden="true" class="fa fa-phone person-details-icon address-1-icon icon-black">
+                                    </i>
+                                    Phone
+                                </label>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 fixed-edit-input">
+                                <input name="practice_phone" type="text" class="form-control input-border input-border-address1" id="inputGroupSuccess4" placeholder="+1 (999) 999-9999" aria-describedby="inputGroupSuccess4Status" value="{{currentUser.practice.practice_phone}}" ng-model="currentUser.practice.practice_phone" ng-required="true" ng-required="true" ui-mask="+\1 (999) 999-9999"  ui-mask-placeholder ui-mask-placeholder-char="_">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 text-right">
+                            <div class="row">
+                                <div ng-messages="editPracticeFrom1.practice_phone.$error" role="alert">
+                                    <div class="text-danger" ng-message="required">Required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-class="{'has-error': !editPracticeFrom1.practice_email.$valid, 'form-group input-group col-xs-12 has-feedback row': true}">
+                        <div class="form-inline input-group has-feedback col-xs-12 fixed-edit-row">
+                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 fixed-edit-label">
+                                <label class="hover-icon-text color-black">
+                                    <i aria-hidden="true" class="fa fa-envelope-o person-details-icon address-1-icon icon-black">
+                                    </i>
+                                    Practice email
+                                </label>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 fixed-edit-input">
+                                <input name="practice_email" type="text" class="form-control input-border input-border-address1" id="inputGroupSuccess4" placeholder="Practice Email" aria-describedby="inputGroupSuccess4Status" value="{{currentUser.practice.practice_email}}" ng-model="currentUser.practice.practice_email" ng-required="true">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 text-right">
+                            <div class="row">
+                                <div ng-messages="editPracticeFrom1.practice_email.$error" role="alert">
+                                    <div class="text-danger" ng-message="required">Required</div>
+                                    <div class="text-danger" ng-message="email">Not a valid email.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-class="{'has-error': !editPracticeFrom1.practice_website.$valid, 'form-group input-group col-xs-12 has-feedback row': true}">
+                        <div class="form-inline input-group has-feedback col-xs-12 fixed-edit-row">
+                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 fixed-edit-label">
+                                <label class="hover-icon-text color-black">
+                                    <i aria-hidden="true" class="fa fa-rss-square person-details-icon address-1-icon icon-black">
+                                    </i>
+                                    Website
+                                </label>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 fixed-edit-input">
+                                <input name="practice_website" type="text" class="form-control input-border input-border-address1" id="inputGroupSuccess4" placeholder="Website" aria-describedby="inputGroupSuccess4Status" value="{{currentUser.practice.practice_website}}" ng-model="currentUser.practice.practice_website">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 text-right">
+                            <div class="row">
+                                <div ng-messages="editPracticeFrom1.practice_website.$error" role="alert">
+                                    <div class="text-danger" ng-message="required">Required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-class="{'has-error': !editPracticeFrom1.practice_facebook.$valid, 'form-group input-group col-xs-12 has-feedback row': true}">
+                        <div class="form-inline input-group has-feedback col-xs-12 fixed-edit-row">
+                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 fixed-edit-label">
+                                <label class="hover-icon-text color-black">
+                                    <i aria-hidden="true" class="fa fa-facebook person-details-icon address-1-icon icon-black">
+                                    </i>
+                                    Facebook
+                                </label>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 fixed-edit-input">
+                                <input name="practice_facebook" type="text" class="form-control input-border input-border-address1" id="inputGroupSuccess4" placeholder="Facebook" aria-describedby="inputGroupSuccess4Status" value="{{currentUser.practice.practice_facebok}}" ng-model="currentUser.practice.practice_facebook">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 text-right">
+                            <div class="row">
+                                <div ng-messages="editPracticeFrom1.practice_facebook.$error" role="alert">
+                                    <div class="text-danger" ng-message="required">Required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-class="{'has-error': !editPracticeFrom1.no_of_exam_lanes.$valid, 'form-group input-group col-xs-12 has-feedback row': true}">
+                        <div class="form-inline input-group has-feedback col-xs-12 fixed-edit-row">
+                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 fixed-edit-label">
+                                <label class="hover-icon-text color-black">
+                                    <i aria-hidden="true" class="fa fa-eye person-details-icon address-1-icon icon-black">
+                                    </i>
+                                    Number of exam lanes
+                                </label>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 fixed-edit-input">
+                                <input name="no_of_exam_lanes" type="text" class="form-control input-border input-border-address1" id="inputGroupSuccess4" placeholder="Number of Exam Lanes" aria-describedby="inputGroupSuccess4Status" value="{{currentUser.practice.no_of_exam_lanes}}" ng-model="currentUser.practice.no_of_exam_lanes">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 text-right">
+                            <div class="row">
+                                <div ng-messages="editPracticeFrom1.no_of_exam_lanes.$error" role="alert">
+                                    <div class="text-danger" ng-message="required">Required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="person-details-checkbox row">
+            <h3 class="personal-details person-details-edit col-xs-12 col-sm-12 col-md-12 col-lg-12">Practice Profile</h3>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 filter-by-day hidden-visible">
+            </div>
+        </div>
+        <textarea placeholder="Overview" class="form-control latest-vacancies-description edit-overview" rows="6" ng-model="currentUser.practice.overview" >{{currentUser.practice.overview}}</textarea> 
+    </div>
+    <div class="container">
+        <div class="row person-details-checkbox">
+            <h3 class="personal-details person-details-edit col-xs-6 col-sm-8 col-md-9 col-lg-10">Practice Information</h3>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 filter-by-day hidden-visible">
+            </div>
+        </div>
+        <div class="first-line-cards row">
+            <div class="cards-locum cards-locum-first col-md-5 col-lg-3">
+                <div class="description-card-locum col-xs-12">
+                    <p class="specialist-equipment">Specialist Equipment</p>
+                    <p class="col-xs-10">OCT</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault01" name="someSwitchOption001" type="checkbox" ng-model="specialistEquipment['OCT']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault01" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Digital Retinal Camera</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault02" name="someSwitchOption002" type="checkbox" ng-model="specialistEquipment['Digital Retinal Camera']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault02" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Optos Optomap</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault03" name="someSwitchOption003" type="checkbox" ng-model="specialistEquipment['Optos Optomap']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault03" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Visual Fields Perimetry</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault04" name="someSwitchOption004" type="checkbox" ng-model="specialistEquipment['Visual Fields Perimetry']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault04" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">HRT</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault05" name="someSwitchOption005" type="checkbox" ng-model="specialistEquipment['HRT']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault05" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Digital Slit Lamp</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault06" name="someSwitchOption006" type="checkbox" ng-model="specialistEquipment['Digital Slit Lamp']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault06" class="label-success"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-locum col-md-offset-1 col-md-5 col-lg-3 col-lg-offset-0">
+                <div class="description-card-locum col-xs-12">
+                    <p class="specialist-equipment">Practice Specialty</p>
+                    <p class="col-xs-10">Pediatric</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault07" name="someSwitchOption007" type="checkbox" ng-model="practiceSpecialty['Pediatric']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault07" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Glaucoma</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault08" name="someSwitchOption008" type="checkbox" ng-model="practiceSpecialty['Glaucoma']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault08" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Perimetry</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault09" name="someSwitchOption009" type="checkbox" ng-model="practiceSpecialty['Perimetry']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault09" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Low Vision</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault10" name="someSwitchOption010" type="checkbox" ng-model="practiceSpecialty['Low Vision']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault10" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Sports Vision</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault11" name="someSwitchOption011" type="checkbox" ng-model="practiceSpecialty['Sports Vision']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault11" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Vision Therapy</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault12" name="someSwitchOption012" type="checkbox" ng-model="practiceSpecialty['Vision Therapy']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault12" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Specialty Contact Lenses</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault13" name="someSwitchOption013" type="checkbox" ng-model="practiceSpecialty['Specialty Contact Lenses']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault13" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Dry Eye</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault14" name="someSwitchOption014" type="checkbox" ng-model="practiceSpecialty['Dry Eye']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault14" class="label-success"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-locum col-md-5 col-lg-3">
+                <div class="description-card-locum col-xs-12">
+                    <p class="specialist-equipment">Practice Management System</p>
+                    <p class="col-xs-10">Acuitas activeEHR2</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault15" name="someSwitchOption015" type="checkbox" ng-model="practiceManagementSystem['Acuitas activeEHR2']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault15" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">VisualEyes</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault16" name="someSwitchOption016" type="checkbox" ng-model="practiceManagementSystem['VisualEyes']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault16" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">MyVisionExpress</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault17" name="someSwitchOption017" type="checkbox" ng-model="practiceManagementSystem['MyVisionExpress']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault17" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">iFile/cFile</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault18" name="someSwitchOption018" type="checkbox" ng-model="practiceManagementSystem['iFile/cFile']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault18" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Maximeyes</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault19" name="someSwitchOption019" type="checkbox" ng-model="practiceManagementSystem['Maximeyes']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault19" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Genie</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault20" name="someSwitchOption020" type="checkbox" ng-model="practiceManagementSystem['Genie']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault20" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Eyefinity OfficeMate</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault21" name="someSwitchOption021" type="checkbox" ng-model="practiceManagementSystem['Eyefinity OfficeMate']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault21" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Other</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault22" name="someSwitchOption022" type="checkbox" ng-model="practiceManagementSystem['Other']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault22" class="label-success"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-locum col-md-offset-1 col-md-5 col-lg-3 col-lg-offset-0">
+                <div class="description-card-locum col-xs-12">
+                    <p class="specialist-equipment">Lens Product Affiliation</p>
+                    <p class="col-xs-10">Hoya</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault23" name="someSwitchOption023" type="checkbox" ng-model="lensProductAffiliation['Hoya']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault23" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Nikon</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault24" name="someSwitchOption024" type="checkbox" ng-model="lensProductAffiliation['Nikon']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault24" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Essilor</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault25" name="someSwitchOption025" type="checkbox" ng-model="lensProductAffiliation['Essilor']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault25" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Zeiss</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault26" name="someSwitchOption026" type="checkbox" ng-model="lensProductAffiliation['Zeiss']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault26" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Rodenstock</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault27" name="someSwitchOption027" type="checkbox" ng-model="lensProductAffiliation['Rodenstock']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault27" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Centennial</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault28" name="someSwitchOption028" type="checkbox" ng-model="lensProductAffiliation['Centennial']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault28" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Seiko</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault29" name="someSwitchOption029" type="checkbox" ng-model="lensProductAffiliation['Seiko']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault29" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Other</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault30" name="someSwitchOption030" type="checkbox" ng-model="lensProductAffiliation['Other']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault30" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Independent</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault31" name="someSwitchOption031" type="checkbox" ng-model="lensProductAffiliation['Independent']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault31" class="label-success"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="first-line-cards row">
+            <div class="cards-locum cards-locum-first col-md-5 col-lg-3">
+                <div class="description-card-locum col-xs-12">
+                    <p class="specialist-equipment">Contact Lens Specialty</p>
+                    <p class="col-xs-10">Scleral</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault32" name="someSwitchOption032" type="checkbox" ng-model="contactLensSpecialty['Scleral']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault32" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">RGP</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault34" name="someSwitchOption034" type="checkbox" ng-model="contactLensSpecialty['RGP']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault34" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Keratoconus</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault33" name="someSwitchOption033" type="checkbox" ng-model="contactLensSpecialty['Keratoconus']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault33" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Toric</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault48" name="someSwitchOption032" type="checkbox" ng-model="contactLensSpecialty['Toric']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault48" class="label-success"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-locum col-md-offset-1 col-md-5 col-lg-3 col-lg-offset-0">
+                <div class="description-card-locum col-xs-12">
+                    <p class="specialist-equipment">Average Full Exam Time</p>
+                    <p class="col-xs-10">15min</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault35" name="someSwitchOption035" type="checkbox" ng-model="avgExamTime['15min']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="avgExamTime['20min']='';avgExamTime['25min']='';avgExamTime['30min']='';avgExamTime['35min']='';avgExamTime['40min']='';avgExamTime['45min']='';" />
+                        <label for="someSwitchOptionDefault35" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">20min</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault36" name="someSwitchOption036" type="checkbox" ng-model="avgExamTime['20min']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="avgExamTime['15min']='';avgExamTime['25min']='';avgExamTime['30min']='';avgExamTime['35min']='';avgExamTime['40min']='';avgExamTime['45min']='';" />
+                        <label for="someSwitchOptionDefault36" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">25min</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault37" name="someSwitchOption037" type="checkbox" ng-model="avgExamTime['25min']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="avgExamTime['20min']='';avgExamTime['15min']='';avgExamTime['30min']='';avgExamTime['35min']='';avgExamTime['40min']='';avgExamTime['45min']='';" />
+                        <label for="someSwitchOptionDefault37" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">30min</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault38" name="someSwitchOption038" type="checkbox" ng-model="avgExamTime['30min']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="avgExamTime['20min']='';avgExamTime['15min']='';avgExamTime['25min']='';avgExamTime['35min']='';avgExamTime['40min']='';avgExamTime['45min']='';" />
+                        <label for="someSwitchOptionDefault38" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">35min</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault39" name="someSwitchOption039" type="checkbox" ng-model="avgExamTime['35min']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="avgExamTime['20min']='';avgExamTime['15min']='';avgExamTime['25min']='';avgExamTime['30min']='';avgExamTime['40min']='';avgExamTime['45min']='';" />
+                        <label for="someSwitchOptionDefault39" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">40min</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault40" name="someSwitchOption040" type="checkbox" ng-model="avgExamTime['40min']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="avgExamTime['20min']='';avgExamTime['15min']='';avgExamTime['25min']='';avgExamTime['30min']='';avgExamTime['35min']='';avgExamTime['45min']='';" />
+                        <label for="someSwitchOptionDefault40" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">45min</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault41" name="someSwitchOption041" type="checkbox" ng-model="avgExamTime['45min']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="avgExamTime['20min']='';avgExamTime['15min']='';avgExamTime['25min']='';avgExamTime['30min']='';avgExamTime['35min']='';avgExamTime['40min']='';" />
+                        <label for="someSwitchOptionDefault41" class="label-success"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-locum col-md-5 col-lg-3">
+                <div class="description-card-locum col-xs-12">
+                    <p class="specialist-equipment">Handover between Dr, Patient, Dispenser</p>
+                    <p class="col-xs-10">Yes</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault42" name="someSwitchOption042" type="checkbox" ng-model="answer['1']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="answer['0']=''" />
+                        <label for="someSwitchOptionDefault42" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">No</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault43" name="someSwitchOption043" type="checkbox" ng-model="answer['0']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="answer['1']=''" />
+                        <label for="someSwitchOptionDefault43" class="label-success"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-locum col-md-offset-1 col-md-5 col-lg-3 col-lg-offset-0">
+                <div class="description-card-locum col-xs-12">
+                    <p class="specialist-equipment">Patient Booking Preference</p>
+                    <p class="col-xs-10">Full-Full-Partial</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault44" name="someSwitchOption044" type="checkbox" ng-model="patientBookingPreference['Full-Full-Partial']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="patientBookingPreference['No Preference']='';patientBookingPreference['Full-Partial-Full']='';patientBookingPreference['Other']='';" />
+                        <label for="someSwitchOptionDefault44" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Full-Partial-Full</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault45" name="someSwitchOption045" type="checkbox" ng-model="patientBookingPreference['Full-Partial-Full']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="patientBookingPreference['No Preference']='';patientBookingPreference['Full-Full-Partial']='';patientBookingPreference['Other']='';" />
+                        <label for="someSwitchOptionDefault45" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">No Preference</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault46" name="someSwitchOption046" type="checkbox" ng-model="patientBookingPreference['No Preference']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="patientBookingPreference['Full-Full-Partial']='';patientBookingPreference['Full-Partial-Full']='';patientBookingPreference['Other']='';" />
+                        <label for="someSwitchOptionDefault46" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Other</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault47" name="someSwitchOption047" type="checkbox" ng-model="patientBookingPreference['Other']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="patientBookingPreference['Full-Full-Partial']='';patientBookingPreference['Full-Partial-Full']='';patientBookingPreference['No Preference']='';" />
+                        <label for="someSwitchOptionDefault47" class="label-success"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="first-line-cards row">
+            <div class="cards-locum cards-locum-first col-md-5 col-lg-3">
+                <div class="description-card-locum col-xs-12">
+                    <p class="specialist-equipment">Pretest Equipment</p>
+                    <p class="col-xs-10">Non Contact Tonometer</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault80" name="someSwitchOption080" type="checkbox" ng-model="pretestEquipment['Non Contact Tonometer']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault80" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Auto Refractor</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault81" name="someSwitchOption081" type="checkbox" ng-model="pretestEquipment['Auto Refractor']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault81" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Keratometer</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault82" name="someSwitchOption082" type="checkbox" ng-model="pretestEquipment['Keratometer']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault82" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Color Vision Test</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault83" name="someSwitchOption083" type="checkbox" ng-model="pretestEquipment['Color Vision Test']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault83" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">E-Chart</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault84" name="someSwitchOption084" type="checkbox" ng-model="pretestEquipment['E-Chart']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault84" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">Pachymetry</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault85" name="someSwitchOption085" type="checkbox" ng-model="pretestEquipment['Pachymetry']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" />
+                        <label for="someSwitchOptionDefault85" class="label-success"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-locum col-md-offset-1 col-md-5 col-lg-3 col-lg-offset-0">
+                <div class="description-card-locum col-xs-12">
+                    <p class="specialist-equipment">Experience requirement</p>
+                    <p class="col-xs-10">New Grad</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault86" name="someSwitchOption087" type="checkbox" ng-model="experienceRequirements['New Grad']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="experienceRequirements['1-3 Years']='';experienceRequirements['3-5 Years']='';experienceRequirements['5+ Years']='';" />
+                        <label for="someSwitchOptionDefault86" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">1-3 Years</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault87" name="someSwitchOption087" type="checkbox" ng-model="experienceRequirements['1-3 Years']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="experienceRequirements['New Grad']='';experienceRequirements['3-5 Years']='';experienceRequirements['5+ Years']='';" />
+                        <label for="someSwitchOptionDefault87" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">3-5 Years</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault88" name="someSwitchOption088" type="checkbox" ng-model="experienceRequirements['3-5 Years']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="experienceRequirements['1-3 Years']='';experienceRequirements['New Grad']='';experienceRequirements['5+ Years']='';" />
+                        <label for="someSwitchOptionDefault88" class="label-success"></label>
+                    </div>
+                    <p class="col-xs-10">5+ Years</p>
+                    <div class="material-switch pull-right col-xs-2 check-circle">
+                        <input id="someSwitchOptionDefault89" name="someSwitchOption089" type="checkbox" ng-model="experienceRequirements['5+ Years']" ng-true-value="'fa fa-check-circle'" ng-false-value="''" ng-change="experienceRequirements['1-3 Years']='';experienceRequirements['3-5 Years']='';experienceRequirements['New Grad']='';" />
+                        <label for="someSwitchOptionDefault89" class="label-success"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="save-changes">
+        <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+            <span class="sr-only">45% Complete</span>
+            <button type="button" class="btn transitions" ng-click="saveChanges()" ng-disabled="!editPracticeFrom1.$valid || !editPracticeFrom.$valid || !form1.$valid || !form2.$valid">Save changes</button>
+            <button type="button" class="@{{activeClassesForAccInformationPractice[0]}} menu-bar-2-active btn transitions" ng-click="cancelChanges()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="'/angular/shared/views/practice/footer.blade.html'"></div>

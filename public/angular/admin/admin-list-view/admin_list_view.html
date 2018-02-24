@@ -1,0 +1,54 @@
+<div class="container admin-panel">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>List view</h1>
+            <a href="/#!/locum"><button class="btn create-your-acc-btn custom_create_account sign-up-btn search-btn-filters pull-right" type="submit">Go home</button></a>
+            <a href="/#!/admin"><button class="btn create-your-acc-btn custom_create_account sign-up-btn search-btn-filters pull-right" type="submit"><i class="fa fa-chevron-left" aria-hidden="true"></i>Back</button></a>
+        </div>
+        <div class=" col-xs-12 latest-vacancies-description">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+        <div class="col-xs-12">
+        	<div class="line"></div>
+        </div>
+    </div>
+    <div class="row admin-header" ng-repeat="single in news track by $index">
+    	<div class="col-xs-12">
+    		<h2 style="float: left;">{{single.title}}</h2>
+    		<button class="btn create-your-acc-btn custom_create_account sign-up-btn search-btn-filters pull-right admin-header-btn" type="submit" ng-click="deleteNews(single.id,$index)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button data-target="#editNewsModal" data-toggle="modal" class="btn create-your-acc-btn custom_create_account sign-up-btn search-btn-filters pull-right" type="submit" ng-click="getNewsPopup(single.id)">Edit</button>
+    	</div>
+	    <div class="col-xs-12">
+			<p>{{single.content}}</p>
+			<hr>
+    	</div>
+    </div>
+</div>
+<div class="modal fade" id="editNewsModal" role="dialog">
+    <div class="modal-dialog">
+
+<!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times exit-popup" aria-hidden="true"></i></button>
+                <h4 class="modal-title">Edit news</h4>
+            </div>
+            <div class="modal-body">
+                <center>
+                    <h2 class="title-popup">Edit</h2>
+                </center>
+                <form>    
+                    <div class="form-group col-xs-11 col-sm-11">
+                        <input type="text" class="form-control latest-vacancies-description edit-overview popup-mail input-border-address1" placeholder="Subject" aria-describedby="inputGroupSuccess4Status" ng-model="single.title" value="{{single.title}}">
+                    </div>                
+                    <div class="form-group col-xs-11 col-sm-12">
+                        <textarea placeholder="Description" class="form-control latest-vacancies-description edit-overview popup-mail" rows="4" ng-model="single.content">{{single.content}}</textarea>
+                    </div>
+                    <center>
+                        <button type="submit" class="btn create-your-acc-btn send-popup" ng-click="editNewsPopup()">Save</button>
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

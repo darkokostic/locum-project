@@ -1,0 +1,370 @@
+<div ng-include="'/angular/shared/views/home/desktop-navigation.blade.html'">
+</div>
+<div ng-include="'/angular/shared/views/home/mobile-navigation.blade.html'">
+</div>
+<!-- 1 page -->
+<div class="container center-register" ng-if="!firstStepCompleted">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row registration-form">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3">
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <form name="form">
+                                <div class="col-xs-12">
+                                    <h2>
+                                        Get started with a free account
+                                    </h2>
+                                    <p>
+                                        If you have account, quickly sign in.
+                                    </p>
+                                    <img class="custom_image" src="../../img/login-line.jpg">
+                                    </img>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 ">
+                                        <div ng-class="{'has-error': !form.email.$valid, 'input-register hover-query': true}">
+                                            <div class="col-xs-5 col-sm-4">
+                                                <i aria-hidden="true" class="fa fa-envelope-o">
+                                                    <span>
+                                                        Email
+                                                    </span>
+                                                </i>
+                                            </div>
+                                            <div class="col-xs-7 col-sm-8">
+                                                <input name="email" ng-model="user.email" ng-required="true" placeholder="example@gmail.com" type="email">
+                                                </input>
+                                            </div>
+                                            <div class="col-xs-12 text-right">
+                                                <div class="row">
+                                                    <div ng-messages="form.email.$error" role="alert">
+                                                        <div class="text-danger" ng-message="required">Required</div>
+                                                        <div class="text-danger" ng-message="email">Not a valid email.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div ng-class="{'has-error': !form.password.$valid, 'input-register hover-query': true}" ng-style="{'clear': 'both'}">
+                                            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-4">
+                                                <i aria-hidden="true" class="fa fa-lock">
+                                                    <span>
+                                                        Password
+                                                    </span>
+                                                </i>
+                                            </div>
+                                            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-8">
+                                                <input name="password" ng-model="user.password" ng-required="true" placeholder="*********" type="password">
+                                                </input>
+                                            </div>
+                                            <div class="col-xs-12 text-right">
+                                                <div class="row">
+                                                    <div ng-messages="form.password.$error" role="alert">
+                                                        <div class="text-danger" ng-message="required">Required</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-9 left-checkbox-locum">
+                                        <div class="checkbox">
+                                            <label style="font-size: 1em">
+                                                <input type="checkbox" ng-model="user.agreed" unchecked ng-required="true">
+                                                <span class="cr"><i class="cr-icon fa fa-check"></i></span> <span class="text-danger">*</span><a class="terms-conditions-hover" href="/#!/terms_and_conditions"> I agree with the Terms and Conditions and Privacy <span class="policy-network-locum">Policy of Network Locum</span></a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 sign-up-button sign-up-button-locum">
+                                    <button class="btn btn-danger btn-sign-in transitions" ng-click="changeToStepTwo()" ng-disabled="!form.$valid" type="submit">
+                                        Next
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-xs-12 col-sm-3">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <p style="margin-bottom: 50px;">
+                        By clicking sign up for free you agree with our Terms and Privacy Policy
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">
+                        X
+                    </span>
+                </button>
+                <h4 class="modal-title">
+                    Email already exist
+                </h4>
+            </div>
+            <div class="modal-body">
+                <h3>
+                    This email is already registered!
+                </h3>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" ng-click="goToLogin()" type="button">
+                    Login
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  2 page -->
+<div class="container" ng-if="firstStepCompleted">
+    <div class="row container-locum">
+        <div class="col-xs-12 col-sm-2">
+        </div>
+        <div class="col-xs-12 col-sm-8">
+            <div class="registration-locum">
+                <div class="row registration-form">
+                    <form name="form">
+                        <div class="col-xs-12">
+                            <h1>
+                                Locum details
+                            </h1>
+                        </div>
+                        <div class="col-xs-12">
+                            <h2>
+                                Fill the form with locum information
+                            </h2>
+                        </div>
+                        <div class="col-xs-12 line-registration-locum">
+                            <img src="../../img/login-line.jpg">
+                            </img>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div ng-class="{'has-error': !form.name.$valid, 'input-registration-locum hover-query': true}">
+                                    <div class="col-xs-5">
+                                        <i aria-hidden="true" class="fa fa-user-o">
+                                            <span>
+                                                Full name
+                                            </span>
+                                        </i>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <input name="name" ng-model="user.name" ng-required="true" placeholder="Full name" type="name">
+                                        </input>
+                                    </div>
+                                    <div class="col-xs-12 text-right">
+                                        <div class="row">
+                                            <div ng-messages="form.name.$error" role="alert">
+                                                <div class="text-danger" ng-message="required">Required</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div ng-class="{'has-error': !form.address1.$valid, 'input-registration-locum hover-query': true}">
+                                    <div class="col-xs-5">
+                                        <i aria-hidden="true" class="fa fa-map-marker">
+                                            <span>
+                                                Address 1
+                                            </span>
+                                        </i>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <input name="address1" ng-model="user.address1" ng-required="true" placeholder="Address 1" type="name">
+                                        </input>
+                                    </div>
+                                    <div class="col-xs-12 text-right">
+                                        <div class="row">
+                                            <div ng-messages="form.address1.$error" role="alert">
+                                                <div class="text-danger" ng-message="required">Required</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div ng-class="{'input-registration-locum hover-query': true}">
+                                    <div class="col-xs-5">
+                                        <i aria-hidden="true" class="fa fa-map-marker">
+                                            <span>
+                                                Address 2
+                                            </span>
+                                        </i>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <input name="address2" ng-model="user.address2" ng-required="false" placeholder="Address 2" type="name">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div ng-class="{'has-error': !form.city.$valid, 'input-registration-locum hover-query': true}">
+                                    <div class="col-xs-5">
+                                        <i aria-hidden="true" class="fa fa-home">
+                                            <span>
+                                                City
+                                            </span>
+                                        </i>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <input name="city" ng-model="user.city" ng-required="true" placeholder="City" type="name">
+                                        </input>
+                                    </div>
+                                    <div class="col-xs-12 text-right">
+                                        <div class="row">
+                                            <div ng-messages="form.city.$error" role="alert">
+                                                <div class="text-danger" ng-message="required">Required</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div ng-class="{'has-error': !form.province.$valid, 'input-registration-locum hover-query': true}">
+                                    <div class="col-xs-5">
+                                        <i aria-hidden="true" class="fa fa-building-o">
+                                            <span>
+                                                Province
+                                            </span>
+                                        </i>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <select class="col-xs-12 col-sm-12 select-province" style="background-color: transparent;padding-left: 0px;" name="province" ng-model="user.province" ng-options="c for c in countries" ng-required="true">
+                                            <option value="">Select</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-12 text-right">
+                                        <div class="row">
+                                            <div ng-messages="form.province.$error" role="alert">
+                                                <div class="text-danger" ng-message="required">Required</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div ng-class="{'has-error': !form.postal_code.$valid, 'input-registration-locum hover-query': true}">
+                                    <div class="col-xs-5">
+                                        <i aria-hidden="true" class="fa fa-paper-plane-o">
+                                            <span>
+                                                Postal code
+                                            </span>
+                                        </i>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <input name="postal_code" ng-model="user.postal_code" ng-required="true" placeholder="A9A-9A9" type="text" ui-mask="A9A-9A9" ui-mask-placeholder ui-mask-placeholder-char="_">
+                                        </input>
+                                    </div>
+                                    <div class="col-xs-12 text-right">
+                                        <div class="row">
+                                            <div ng-messages="form.postal_code.$error" role="alert">
+                                                <div class="text-danger" ng-message="required">Required</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div ng-class="{'has-error': !form.phone.$valid, 'input-registration-locum hover-query': true}">
+                                    <div class="col-xs-5">
+                                        <i aria-hidden="true" class="fa fa-phone">
+                                            <span>
+                                                Phone
+                                            </span>
+                                        </i>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <input name="phone" ng-model="user.phone" ng-required="true" placeholder="+1 (999) 999-9999" type="text" ui-mask="+\1 (999) 999-9999"  ui-mask-placeholder ui-mask-placeholder-char="_">
+                                        </input>
+                                    </div>
+                                    <div class="col-xs-12 text-right">
+                                        <div class="row">
+                                            <div ng-messages="form.phone.$error" role="alert">
+                                                <div class="text-danger" ng-message="required">Required</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div ng-class="{'has-error': !form.website.$valid, 'input-registration-locum hover-query': true}">
+                                    <div class="col-xs-5">
+                                        <i aria-hidden="true" class="fa fa-globe">
+                                            <span>
+                                                Website
+                                            </span>
+                                        </i>
+                                    </div>
+                                    <div class="col-xs-7">
+                                        <input name="website" ng-model="user.website" placeholder="Website" type="text">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div ng-class="{'has-error': !form.graduated_year.$valid, 'input-registration-locum hover-query': true}">
+                                    <div class="col-xs-6 col-sm-6">
+                                        <i aria-hidden="true" class="fa fa-globe">
+                                            <span>
+                                                Graduated year
+                                            </span>
+                                        </i>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6">
+                                        <input class="graduated-year" name="graduated_year" ng-model="user.graduated_year" ng-required="true" placeholder="1996" type="number" ng-maxlength="4" ng-pattern="/^(194[5-9]|19[5-9]\d|200\d|201[0-7])$/">
+                                        </input>
+                                    </div>
+                                    <div class="col-xs-12 text-right">
+                                        <div class="row">
+                                            <div ng-messages="form.graduated_year.$error" role="alert">
+                                                <div class="text-danger" ng-message="required">Required</div>
+                                                <div class="text-danger" ng-message="maxlength">Maximum numbers allowed: 4</div>
+                                                <div class="text-danger" ng-message="pattern">Must be between 1945 and 2017</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="registration-locum-button">
+                                <button class="btn btn-danger btn-sign-in transitions" ng-click="registerLocum()" ng-disabled="!form.$valid" type="button">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-xs-12 col-sm-2">
+</div>
+<div ng-include="'/angular/shared/views/locum/footer.blade.html'">
+</div>

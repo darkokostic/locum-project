@@ -1,0 +1,186 @@
+.popup-mail input {
+	webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+.card-my-dashboard {
+	border-radius: 4px;
+	background-color: #ffffff;
+	box-shadow: 6px 10.392px 29px 0px rgba(0, 0, 0, 0.15);
+	max-width: 344px;
+	height: 148px;
+	margin-right: 35px;
+	margin-top: 14px;
+}
+.my-dashboard-numbers {
+	background-color: rgb(255, 143, 0);
+	width: auto;
+	height: 38px;
+	border-radius: 20px;
+	width: 47px;
+    max-width: 100px;
+}
+.position-practice-cards {
+	margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.img-in-cards {
+    margin-top: 24px;
+}
+.text-cards-practice h6 {
+	font-size: 15px;
+	color: rgb(33, 33, 33);
+	line-height: 1.533;
+	font-weight: 400;
+}
+.my-dashboard-numbers p {
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	line-height: 1.77;
+	text-align: center;
+}
+.my-dashboard-numbers2 {
+	background-color: #66bb6a;
+}
+.my-dashboard-numbers3 {
+	background-color: #90a4ae;
+}
+.nearest-doctors {
+	border-radius: 4px;
+	background-color: #ffffff;
+	box-shadow: 6px 10.392px 29px 0px rgba(0, 0, 0, 0.15);
+	max-width: 549px;
+	min-height: 210px;
+}
+.nearest-doctors-img {
+	margin-top: 23px;
+}
+.dr-practice {
+	font-size: 16px;
+	font-weight: 500;
+	color: #212121;
+}
+.practice-price-dr h2 {
+	font-size: 16px;
+	font-weight: 500;
+}
+.practice-dr-live {
+	color: #90a4ae;
+	font-weight: 400;
+}
+.description-practice-dr p {
+	color: #90a4ae;
+	font-weight: 400;
+	font-size: 14px !important;
+}
+.mail-profile-btn-practice {
+	font-weight: 400;
+	height: 35px;
+	background-color: #ffffff;
+	color: #90a4ae;
+	border-color: #90a4ae;
+	font-size: 15px;
+	margin-right: 8px;
+}
+.mail-profile-btn-practice:hover {
+	border-color: transparent;
+}
+.btns-practice-mail-profile {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.activites-card {
+	border-radius: 3px;
+	background-color: #ffffff;
+	box-shadow: 6px 10.392px 29px 0px rgba(0, 0, 0, 0.15);
+	max-width: 246px;
+	height: 210px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+.activites-card-title h4 {
+	font-weight: 400;
+	font-size: 16px;
+}
+.activites-card-description p {
+	font-weight: 400;
+	color: #90a4ae;
+}
+.activites-card-time p {
+	font-weight: 700 !important;
+}
+.activites-card-price h2 {
+	font-weight: 400;
+	margin-top: 10px;
+}
+.see-more-active-card {
+    margin-left: 47px;
+}
+
+/*POPUP*/
+.modal-header {
+	background-color: #000000;
+	color: #ffffff;
+}
+.modal-header h4 {
+	font-size: 13px;
+}
+.modal-dialog {
+	max-width:750px !important; 
+}
+.popup-mail {
+    max-width: 630px;
+}
+.popup-input {
+	width: 100px;
+}
+.exit-popup{
+	color: white !important;
+}
+.title-popup {
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+.title-popup span {
+	font-weight: 700;
+}
+.send-popup {
+    width: 77px;
+    max-width: 77px;
+    height: 36px;
+}
+.icon-calentar {
+	color: #90a4ae;
+}
+.padding-left {
+	padding-left: 30px!important;
+}
+.padding-left-title {
+	padding-left: 30px!important;
+}
+@media(min-width: 768px){
+	.modal-dialog {
+		width:750px !important; 
+	}
+}
+/*@media only screen and (max-width: 500px) {
+    .mail-profile-btn-practice{
+        margin-top: -45px;
+    }
+}
+*/
+@media (max-width: 767px){
+	.custom-padiing-phone {
+		padding: 0;
+	}
+}
+@media (max-width: 590px){
+	.activites-card {
+		margin-left: 0px!important;
+	}
+	.padding-left-title {
+		padding-left: 15px!important;
+	}
+}

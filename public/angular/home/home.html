@@ -1,0 +1,309 @@
+<div ng-include="'/angular/shared/views/home/desktop-navigation.blade.html'">
+</div>
+<div ng-include="'/angular/shared/views/home/mobile-navigation.blade.html'">
+</div>
+<div class="carousel slide" id="myCarousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li class="active" data-slide-to="0" data-target="#myCarousel">
+        </li>
+        <li data-slide-to="1" data-target="#myCarousel">
+        </li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active first-slide change_margin">
+            <img class="img-responsive" src="../img/slider1.png">
+                <div class="description-slide1 col-lg-10 col-md-10 col-sm-8 col-xs-8 col-md-offset-1">
+                    <h1 class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                        New graduate? Impulsive traveler? New family?
+                    </h1>
+                    <p class="col-lg-6 col-md-6 col-sm-6 col-xs-7">
+                        Find local opportunities for locum positions at LocumOD and experience flexible hours with varied practice environments, patient demographics and product selection.
+                    </p>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <button class="btn create-your-acc-btn custom_create_account" ng-click="loginPage()" ng-if="!currentUser" type="submit">
+                            Create your account
+                        </button>
+                    </div>
+                    <div class="card-slide1 col-md-11 col-sm-11 col-xs-11" ng-if="!currentUser">
+                        <div class="card-slide1-description">
+                            <p>
+                                Looking for professional locum or practice?
+                            </p>
+                            <a ng-click="loginPage()">
+                                Practice start here
+                            </a>
+                            <div class="bell_positioning">
+                                <i aria-hidden="true" class="fa fa-bell-o bell_positioning">
+                                </i>
+                            </div>
+                            <div class="arrow_positioning">
+                                <i aria-hidden="true" class="fa fa-angle-right">
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </img>
+        </div>
+        <div class="item">
+            <img class="img-responsive" src="../img/slider2.png">
+                <div class="description-slide1 col-lg-10 col-md-10 col-sm-8 col-xs-8 col-md-offset-1">
+                <h1 class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                        Struggling to take a vacation without your practice suffering? 
+                    </h1>
+                    <p class="col-lg-6 col-md-6 col-sm-6 col-xs-7">
+                        LocumOD offers a service to Doctors of Optometry matching Practices with Locum Optometrists to deliver continuous service and revenue in times of absence..
+                    </p>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-if="!currentUser">
+                        <button class="btn create-your-acc-btn custom_create_account" ng-click="loginPage()" type="submit">
+                            Create your account
+                        </button>
+                    </div>
+                    <div class="card-slide1 col-md-11 col-sm-11 col-xs-11" ng-if="!currentUser">
+                        <div class="card-slide1-description">
+                            <p>
+                                Looking for professional locum or practice?
+                            </p>
+                            <a ng-click="loginPage()">
+                                Practice start here
+                            </a>
+                            <div class="bell_positioning">
+                                <i aria-hidden="true" class="fa fa-bell-o bell_positioning">
+                                </i>
+                            </div>
+                            <div class="arrow_positioning">
+                                <i aria-hidden="true" class="fa fa-angle-right">
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </img>
+        </div>
+    </div>
+</div>
+<div class="container latest-vacanices">
+    <div>
+        <h1>
+            Latest Vacancies
+        </h1>
+    </div>
+    <div class="latest-vacancies-description">
+        <p>
+            A selection of our latest vacancies across Canada.
+        </p>
+    </div>
+    <div class="line">
+    </div>
+    <br>
+        <div class="row jobs-blog" ng-if="!vacActive">
+            <div class="media col-md-6" ng-repeat="vacanie in vacancies">
+                <div class="media-left">
+                    <img style="max-width:130px" ng-if="vacanie.role=='practice'" class="media-object picture-media-object" src="../images/avatar/practice/default_practice.jpg">
+                    </img>
+                    <img style="max-width:130px" ng-if="vacanie.role=='user'" class="media-object picture-media-object" src="../images/avatar/locum/default_locum.png">
+                    </img>
+                </div>
+                <div class="media-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4 class="media-heading title-new-vacanice">
+                                {{vacanie.title || vacanie.user.name}}                                
+                            </h4>
+                        </div>
+                        <div class="col-xs-12 desc-home">
+                            <p>
+                                {{vacanie.desc | limitTo: 140}}{{vacanie.desc.length > 140 ? '...' : ''}}
+                            </p>
+                        </div>
+                        <div class="col-xs-12">
+                            <button class="btn last-jobs-btn transitions" ng-click="setCurrentVac(vacanie)">
+                                See more
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sk-three-bounce" ng-if="showLoader">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+        <div ng-if="(!vacancies || vacancies.length==0) && !showLoader">
+            <h1 class="no-results-found" style="text-align:center">No results found</h1>
+        </div>
+        <div class="row" ng-if="vacActive">
+            <div class="col-xs-6 title-vacancies">
+                <h3 class="media-heading">
+                    {{currentVacancy.title}}
+                </h3>
+            </div>
+            <div class="col-xs-6 title-vacancies">
+                <!-- <h4 class="media-heading pull-right">
+                    Day rate:
+                    <b>
+                        ${{currentVacancy.day_rate}}
+                    </b>
+                </h4> -->
+            </div>
+            <div class="row col-xs-12 latest-vacancies-description">
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3">
+                            <h5>Publish date:</h5>
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <h6><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp{{ moment(currentVacancy.job_start).format('MMM DD,YYYY')}}</b>&nbsp - <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp{{ moment(currentVacancy.job_end).format('MMM DD,YYYY')}}</b></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row" ng-if="!currentVacancy.user.name">
+                        <div class="col-xs-12 col-sm-3">
+                            <h5 class="media-heading">Working Time:</h5>
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <h6><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp <b>{{currentVacancy.working_time_from}}&nbsp - &nbsp <i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp {{currentVacancy.working_time_to}}</b></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 latest-vacancies-description">
+                <p class="media-heading">
+                    {{currentVacancy.desc|limitTo:500}}{{ (currentVacancy.desc.length>500)?'...':'' }}
+                </p>
+            </div>
+            <div class="col-xs-6 back-vacancies">
+                <a ng-click="vacActiveFalse()">
+                    <button class="btn last-jobs-btn"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp Back</button>
+                </a>
+            </div>
+            <div class="col-xs-6 back-vacancies">
+                <a class="pull-right" ng-click="vacActiveFalse()">
+                   <button class="btn last-jobs-btn" ng-click="viewLocum(currentVacancy.user_id)" ng-if="currentVacancy.role=='user'">See more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                   <button class="btn last-jobs-btn" ng-click="viewPractice(currentVacancy.id)" ng-if="currentVacancy.role=='practice'">See more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </a>
+            </div>
+        </div>
+        <div class="latest-vacanices">
+            <h1>
+                How it works?
+            </h1>
+        </div>
+        <div class="latest-vacancies-description">
+            <p>
+                LocumOD is designed as a simple tool to connect Locum Optometrist’s with Optical Practices.
+            </p>
+        </div>
+        <div class="line">
+        </div>
+        <br>
+            <div class="row cards-in-thumbnail">
+                <div class="col-sm-6 col-md-4">
+                    <center>
+                        <div class="thumbnail card-how-it-works transitions">
+                            <img src="../img/number-select-free-time.png">
+                                <img src="../img/select-free-time.png">
+                                    <h3>
+                                        Create your Profile 
+                                    </h3>
+                                    <p>
+                                        Define your location, skill set and a brief bio of yourself or your Practice.
+                                    </p>
+                                </img>
+                            </img>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <center>
+                        <div class="thumbnail card-how-it-works transitions">
+                            <img src="../img/number-choice-new-job.png">
+                                <img src="../img/choice-new-job.png">
+                                    <h3>
+                                        Set Availabiliy
+                                    </h3>
+                                    <p>
+                                        Define your availability or vacancy via a simple calendar tool.
+                                    </p>
+                                </img>
+                            </img>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <center>
+                        <div class="thumbnail card-how-it-works transitions">
+                            <img src="../img/number-sign-up.png">
+                                <img src="../img/sign-up-img.png">
+                                    <h3>
+                                        Start work
+                                    </h3>
+                                    <p>
+                                        Engage with Locums or Practices to fill your time or vacancy.
+                                    </p>
+                                </img>
+                            </img>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <div class="latest-vacanices">
+                <h1>
+                    Latest News
+                </h1>
+            </div>
+            <div class="latest-vacancies-description"> 
+                <p>
+                    Hot topics and Industry News
+                </p>
+            </div>
+            <div class="line">
+            </div>
+            <br>
+                <div class="row jobs-blog">
+                    <div class="media col-md-6" ng-repeat="vacanciesNew in vacanciesNews">
+                        <div class="media-left">
+                            <img class="media-object picture-media-object" ng-src="{{vacanciesNew.avatar}}">
+                            </img>
+                        </div>
+                        <div class="media-body home-desc">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h4 class="media-heading title-new-vacanice">
+                                        {{vacanciesNew.title}}
+                                    </h4>
+                                </div>
+                                <div class="col-xs-12 desc-locum-home">
+                                    <p>
+                                        {{vacanciesNew.content | limitTo: 140}}{{vacanciesNew.content.length > 140 ? '...' : ''}}
+                                    </p>
+                                </div>
+                                <div class="col-xs-12">
+                                    <a target="_blank" href="{{vacanciesNew.url}}">
+                                        <button class="btn last-jobs-btn" ng-click="setCurrentNews(vacanciesNew)" type="submit">
+                                            See more
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-if="(!vacanciesNews || vacanciesNews==0) && !showLoader">
+                    <h1 class="no-results-found" style="text-align:center">No results found</h1>
+                </div>
+                <div class="sk-three-bounce" ng-if="showLoader">
+                    <div class="sk-child sk-bounce1"></div>
+                    <div class="sk-child sk-bounce2"></div>
+                    <div class="sk-child sk-bounce3"></div>
+                </div>
+            </br>
+        </br>
+    </br>
+</div>
+<div ng-include="'/angular/shared/views/home/footer.blade.html'">
+</div>

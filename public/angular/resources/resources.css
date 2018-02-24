@@ -1,0 +1,26 @@
+.resources-top {
+    margin-top: 5vh;
+}
+.resources-top h1{
+	font-weight: 400;
+}
+.title-practice-software h3 {
+	font-weight: 400;
+	font-size: 22px;
+	margin-bottom: 17px;
+}
+.site-practice-software a {
+	text-decoration: none;
+	color: #90a4ae;
+	font-size: 16px;
+	cursor: pointer;
+}
+.site-practice-software p {
+	margin-top: 30px;
+}
+.site-practice-software a:hover{
+	color: #ff8f00;
+}
+.title-practice-software {
+	margin-top: 25px;
+}

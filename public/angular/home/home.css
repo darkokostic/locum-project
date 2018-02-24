@@ -1,0 +1,254 @@
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    margin: auto;
+    height: auto;
+    width: 100%;
+}
+.title-new-vacanice {
+	word-wrap:break-word;
+}
+.desc-locum-home {
+	word-wrap:break-word;
+}
+.desc-home {
+	height: 65px;
+	word-wrap:break-word;
+}
+.single-vacancies {
+	border: 1px solid #cccccc;
+	margin-left: 0px;
+	margin-right: 0px;
+	border-radius: 4px;
+	margin-top: 30px;
+}
+.home-desc p {
+    word-wrap: break-word;
+}
+.home-desc h4 {
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+.first-slide {
+	position: relative;
+}
+.description-slide1 {
+	position: absolute;
+	top: 10%;
+}
+.description-slide1 h1 {
+	font-size: 50px;
+    word-wrap:break-word;
+}
+.description-slide1 p {
+	clear:both;
+	color: #90a4ae;
+	max-width:45ch;
+    word-wrap:break-word;
+}
+.card-slide1 {
+	margin-left:15px;
+	margin-top:15px;
+	background-color:rgba(0,0,0,0.4);
+	height: 63px;	
+}
+.card-slide1 p {
+	float:left;
+	margin-left:18px;
+	position: relative;
+	transform: translateY(50%);
+	color:white;
+}
+.card-slide1 a {
+	margin-right:18px;
+	margin-top:0px;
+	float:right;
+	position: relative;
+	transform: translateY(50%);
+	color:white;
+	text-decoration: underline;
+}
+.card-slide1-description a {
+	cursor: pointer;
+}
+.create-your-acc-btn {
+	background-color: #ff8f00;
+	color: #ffffff;
+	border-radius: 2px;
+	height: 43px;
+}
+.create-your-acc-btn:hover {
+	color: #ffffff;
+}
+.carousel-indicators li {
+	background: #cfd8dc;
+	border:none;
+}
+.carousel-indicators .active{
+	background: #ff8f00;
+}
+.line {
+	width: 40px;
+	color: #ff8f00;
+	float: left;
+	border: 2px solid;
+	border-radius: 2px;
+}
+.latest-vacanices{
+	margin-top: 14vh;
+}
+.latest-vacanices h1{
+	font-weight: 400;
+}
+.latest-vacancies-description {
+	color:#99abb4;
+}
+.latest-vacancies-description h5 {
+	font-size: 17px;
+	margin-top: 6px;
+	color: #000 !important;
+}
+.latest-vacancies-description h6 {
+	font-size: 14px;
+}
+.latest-vacancies-description label {
+	font-size: 16px;
+	color: black;
+}
+.media {
+	margin-top: 10px;
+}
+.jobs-blog {
+	margin-top: 5vh;
+}
+.picture-media-object img {
+	width: 137px;
+	height: auto;
+}
+.last-jobs-btn {
+	background-color: #eceff1;
+	border-radius: 2px;
+	color: #78909c;
+	font-weight: 700;
+	font-size: 12px;
+}
+.last-jobs-btn:hover {
+	background-color: #ff8f00;
+	color: #ffffff;
+}
+.media-body {
+	padding-top: 14px;
+}
+.media-body p {
+	color: #90a4ae;
+}
+.cards-in-thumbnail{
+	margin-top: 8vh;
+}
+.card-how-it-works {
+	box-shadow: 6px 10.392px 45px 0px rgba(0, 0, 0, 0.15);
+	border: none;
+}
+.card-how-it-works img {
+	margin-top: 60px;
+}
+.card-how-it-works p {
+	margin-top: 60px;
+	margin-bottom: 50px;
+	color: #90a4ae;
+	font-size: 16px;
+}
+.card-how-it-works h3 {
+	margin-top: 60px;
+	font-size: 13px;
+	font-weight: 700;
+}
+.title-vacancies {
+	margin-top: 20px;
+}
+.back-vacancies a {
+	margin-bottom: 20px;
+	font-size: 20px;
+	cursor: pointer;
+}
+.back-vacancies button {
+	width: 100px;
+}
+.back-vacancies a:hover {
+	text-decoration: none;
+	color: #ff8f00;
+}
+.bell_positioning {
+	color:white;
+	margin-left:-293px;
+	font-size: 18px;
+	margin-top:12px;
+}
+.arrow_positioning {
+	color:white;
+	float:right;
+	margin-top:-22.5px;
+	margin-right:0px;
+}
+@media (max-width: 450px) {
+    .description-slide1 h1{
+    	font-size: 14px !important;
+    }
+    .description-slide1 p{
+    	display:none;
+    }
+    .card-slide1 {
+    	display:none;
+    }
+    .custom_create_account {
+    	margin-top:-9px;
+    }
+    .custom_create_account {
+    	display: none;
+    }
+    .description-slide1 {
+    	left: 0px !important;
+    }
+}
+@media (max-width: 768px) {
+    .description-slide1 h1{
+    	font-size: 14px !important;
+    }
+    .description-slide1 p{
+    	font-size: 10px !important;
+    }
+    .card-slide1 {
+    	display:none;
+    }
+}
+@media (max-width: 1120px) {
+	.description-slide1 {
+		top:15px;
+		left:40px;
+	}
+    .description-slide1 h1{
+    	font-size: 28px;
+    }
+    .description-slide1 p{
+    	font-size: 14px;
+    }
+	.card-slide1 {
+		height: 50px;
+	}
+	.card-slide1 p {
+		font-size:13px;
+	}
+	.card-slide1 a {
+		font-size:13px;
+	}
+	.bell_positioning {
+		margin-left:-270px!important;
+		margin-top:10px!important;
+	}
+	.arrow_positioning {
+		float:right;
+		margin-top:-22.5px;
+		margin-right:0px;
+	}
+}
+
+

@@ -1,0 +1,51 @@
+.review-practice {
+	margin-left: 0px !important;
+	margin-top: 0px !important;
+}
+.time-avaible-practice {
+	color: #90a4ae;
+	font-size: 13px;
+	font-weight: 400;
+}
+.title-of-job-practice h1 {
+	font-weight: 400 !important;
+	font-size: 18px;
+}
+.job-description-practice {
+	font-style: normal;
+}
+.price-practice h2 {
+	font-weight: 400;
+}
+.view-more-practice {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.loading-practice {
+	max-width: 453px;
+}
+.icons-text-practice {
+	margin-top: 20px;
+}
+.cards-feedback {
+	border-radius: 2px;
+	background-color: #eceff1;
+	width: auto;
+	height: 23px;
+	color: #90a4ae;
+	font-size: 12px;
+	margin-left: 5px;
+	margin-top: 15px;
+}
+.position-cards-feedback {
+	margin-left: 15px;
+}
+.open-more-cards {
+	font-size: 12px;
+	color: #90a4ae;
+}
+@media (min-width: 1201px) {
+    .see-more-btn-practice{
+    	margin-left: -23px;
+    }
+}

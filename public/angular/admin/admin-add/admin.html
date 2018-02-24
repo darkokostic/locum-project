@@ -1,0 +1,26 @@
+<div class="container admin-panel">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Add</h1>
+            <a href="/#!/admin/admin-list-view"><button class="btn create-your-acc-btn custom_create_account sign-up-btn search-btn-filters pull-right" type="submit">List view</button></a>
+            <a href="/#!/home"><button class="btn create-your-acc-btn custom_create_account sign-up-btn search-btn-filters pull-right" type="submit">Home</button></a>
+        </div>
+        <div class=" col-xs-12 latest-vacancies-description">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+        <div class="col-xs-12">
+        	<div class="line"></div>
+        </div>
+    </div>
+    <div class="row admin-header">
+    	<div>
+    		<h2>Title</h2>
+    		<input placeholder="Title" type="text" name="" class="form-control edit-media-heading title-admin" ng-model="news.title">
+    		<h2>Description</h2>
+    		<textarea placeholder="Description" class="form-control latest-vacancies-description edit-overview" ng-model="news.content"></textarea>
+    	</div>
+    	<div class="btn-save">
+    		<button style="width: 100px !important; background-color: #ff8f00;" class="btn create-your-acc-btn custom_create_account sign-up-btn search-btn-filters save-admin-btn" type="submit" ng-click="newsPost(news)">Save</button>
+    	</div>
+    </div>
+</div>

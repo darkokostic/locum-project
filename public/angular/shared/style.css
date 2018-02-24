@@ -1,0 +1,680 @@
+@font-face {
+    font-family: Asap-Bold;
+    src: url(/fonts/Asap-bold.ttf);
+}
+@font-face {
+    font-family: Asap-Bold-Italic;
+    src: url(/fonts/Asap-BoldItalic.ttf);
+}
+@font-face {
+    font-family: Asap-Italic;
+    src: url(/fonts/Asap-Italic.ttf);
+}
+@font-face {
+    font-family: Asap-Medium;
+    src: url(/fonts/Asap-Medium.ttf);
+}
+@font-face {
+    font-family: Asap-Medium-Italic;
+    src: url(/fonts/Asap-MediumItalic.ttf);
+}
+@font-face {
+    font-family: Asap;
+    src: url(/fonts/Asap-Regular.ttf);
+}
+body{
+    font-family: 'Asap', sans-serif;
+}
+.adress-padding {
+    margin-left: -10px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+.footer-terms {
+    color: #ff8f00;
+}
+.footer-terms:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.footer-terms:active {
+    color: #fff;
+    text-decoration: none;
+}
+.footer-terms:focus {
+    color: #fff;
+    text-decoration: none;
+}
+.icon-black {
+    color: #000 !important;
+}
+.responsive-img {
+    max-width: 60px;
+    height: 60px;
+    margin-top: 6px;
+}
+.inline-tag {
+    margin-top: 0px;
+    line-height: 0px;
+}
+.color-black {
+    color: #000;
+}
+.pagination-header {
+    margin: 20px 0 0 !important;
+}
+.job-description {
+    font-style: normal !important;
+}
+.padding-search {
+    padding-left: 68px;
+}
+.layout-padding, .layout-padding-gt-sm,
+.layout-padding-md, .layout-padding > *, 
+.layout-padding-gt-sm > *, .layout-padding-md > *, 
+.layout-padding > .flex, .layout-padding > .flex-gt-sm, 
+.layout-padding > .flex-md {
+    padding: 0px !important;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    background-color: transparent !important;
+}
+.title {
+    font-size: 30px;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, 
+.pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #ff8f00;
+    border-color: #ff8f00;
+}
+.pagination>li>a, .pagination>li>span {
+    color: #ccc;
+}
+/* NAV BAR */
+.navbar-default .navbar-nav > li > a {
+    border-top: 2px solid transparent;
+}
+#home-desktop-navbar-collapse li.active > a {
+    border-top: 2px solid #ff8f00 !important;
+}
+#locum-desktop-navbar-collapse li.active > a {
+    border-top: 2px solid #fff !important;
+}
+#practice-desktop-navbar-collapse li.active > a {
+    border-top: 2px solid #fff !important;
+}
+/* /NAV BAR */
+.carousel-indicators {
+    bottom: 0; 
+}
+.table-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+/*images*/
+.images-avatar {
+    max-width: 125px;
+}
+/*/images*/
+.no-results-found {
+    text-align: center;
+    color: gray;
+    font-size: 20pt;
+}
+.fc-fri {
+ color:blue !important; 
+}
+.fc-sat { 
+    color:red !important;  
+}
+.fc td.fc-sun, .fc td.fc-sat { background-color:#f5f5f5; }
+.navbar-right a:hover {
+    text-decoration: none;
+}
+.transitions {
+    transition: 0.5s;
+}
+.angular-input-stars > li .active {
+    color: #ff8f00;
+}
+.angular-input-stars > li .active.angular-input-stars-hover {
+    text-shadow: red 0 0 0px;
+}
+/*check box*/
+.label-success {
+    background-color: #ff8f00;
+}
+.material-switch > label::before {
+    background: #fff !important;
+}
+/*datepicker*/
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+    background-color: #ff8f00 !important;
+ }
+ /*check circle*/
+.check-circle {
+    color: #ff8f00 !important;
+}
+/*check circle*/
+.menu-nav-bar {
+    margin-bottom: 0px;
+    z-index: 1000;
+}
+.menu-home-page {
+	padding-top: 20px;
+    background: #ffffff;
+}
+.logo-home-page {
+	padding-top: 0px;
+}
+.navbar_font a{
+    font-weight: 400;
+    font-style: normal;
+    font-size:15px;
+    color:#212121 !important;
+}
+#home-desktop-navbar-collapse li.active > a {
+    background-color: transparent;
+    font-weight: 600;
+    border-top: 2px solid black;
+}
+#practice-desktop-navbar-collapse li.active > a {
+    background-color: transparent;
+    font-weight: 600;
+    border-top: 2px solid white;
+}
+.navbar_no_board {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 0px solid transparent;
+    background-color: #ffffff;
+}
+.custom_button {
+	float:right;
+	display:inline-block;
+    margin-top:5px; 
+    margin-right:-155px;
+}
+.sign_up {
+	margin-right:-75px;
+}
+.footer {
+    background-color: #212121;
+    padding-top: 60px;
+}
+.footer-text p {
+    font-size: 14px;
+}
+.footer-text a {
+    color: #fff;
+}
+.footer-text a:hover {
+    color: #ff8f00;
+    text-decoration: none;
+}
+.footer-icons {
+    margin-right: 6px;
+    cursor: pointer;
+}
+.footer-icons:hover {
+   /* background-image: url(../img/facebook-active.png);*/
+}
+.company-address {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    font-size: 14px;
+    color: #bdbdbd;
+}
+.footer-text p {
+    font-size: 14px;
+    color: #bdbdbd;
+}
+.latest-news {
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #fafafa !important;
+}
+.copyright {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    color: #bdbdbd;
+}
+.footer-big-text-div {
+    margin-bottom: 35px;
+}
+.language-btn {
+    background-color: #858c8f !important;
+}
+.language-group-btn {
+    margin-left: 6px;
+}
+
+/*LOCUM MENU*/
+.locum-nav-bar {
+    background-color: #ff8f00;
+    border-radius: 0px;
+    padding-left: 0px;
+    height: 170px;
+    margin-bottom: 50px;
+}
+.menu-bar-locum {
+    background-color: #ff8f00;
+    padding-left: 0px;
+}
+.navbar-default .navbar_font>.active>a:hover{
+    background-color: transparent;
+}
+.menu-bar-2-locum {
+    margin-top: 61px;
+}
+.border-nav-tabs-locum {
+    border: none;
+    margin-top: 1px;
+}
+.nav-bar-response-locum {
+    margin-top: 15px;
+}
+.logo-locum {
+    margin-top: -15px;
+}
+.navbar-locum-menu a {
+    color: #ffffff !important;
+}
+.menu-bar-2-active a {
+    background-color: #ffc780;
+    color: #ff8f00 !important;
+}
+.active .menu-bar-2-active a {
+    background-color: #ffc780 !important;
+}
+.profile-btn-locum-menu a {
+    margin-left: 10px;
+}
+.langugae-btn-locum {
+    background-color: #ffffff !important;
+    color: #ff8f00 !important;
+}
+.lock-logout {
+    margin-right: 8px;
+}
+.footer-locum {
+    background-color: transparent;
+}
+.locum-company-address {
+    color: #212121;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color:#ffc780;
+    border-color: #ffc780;
+}
+.navbar-default .nav-bar-locum>.active>a:before {
+    border-bottom-color: #fff;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover  {
+    background-color: transparent;
+}
+.hover-burger span {
+    background-color: #ffffff !important;
+}
+.form-control:focus {
+    border-color: #ccc;
+    -webkit-box-shadow: none;
+    box-shadow:none;
+}
+.custom-style {
+    background-color: transparent!important;
+    border: none!important;
+    padding-left: 0px !important;
+}
+.custom-icon-bar {
+    background-color: #ffffff!important;
+}
+/*registration practice iphone 5*/
+@media (max-width: 350px) {
+    .name-iphone {
+        margin-left: -20px;
+    }
+    .email-iphone {
+        margin-left: -20px;
+    }
+    .address-iphone {
+        margin-left: -35px;
+    }
+    .staff-iphone {
+        margin-left: -35px;
+    }
+}
+@media (max-width: 991px) {
+    .graduated-year {
+        margin-left: -32px;
+    }
+    .select-registration {
+        margin-left: 0px;
+    }
+    .number-of-registration {
+        margin-left: 0px;
+    }
+}
+@media (min-width: 991px) and (max-width: 1200px) { 
+    .graduated-year {
+        margin-left: -25px;
+    }
+    .select-registration {
+        margin-left: 30px;
+    }
+    .number-of-registration {
+        margin-left: 0px;
+    }
+}
+@media (min-width: 1200px) {
+    .graduated-year {
+        margin-left: -32px;
+    }
+    .select-registration {
+        margin-left: 8px;
+    }
+    .number-of-registration {
+        margin-left: 4px;
+    }
+}
+@media (max-width: 375px) { 
+    .graduated-year {
+        margin-left: -20px;
+    }
+}
+@media (min-width: 375px) and (max-width: 768px) { 
+    .graduated-year {
+        margin-left: -28px;
+    }
+}
+@media (max-width: 768px) { 
+    .address-padding {
+        margin-left: 0px;
+    }
+  /*  .city-padding {
+        margin-left: 0px;
+    }
+    .province-padding {
+        margin-left: 0px;
+    }
+    .postal-code-padding {
+        margin-left: 0px;
+    }
+    .year-padding {
+        margin-left: 0px;
+    }
+    .phone-padding {
+        margin-left: 0px;
+    }
+    .website-padding {
+        margin-left: 0px;
+    }
+    .linkedin-padding {
+        margin-left: 0px;
+    }
+    .sqft-padding {
+        margin-left: 0px;
+    }
+    .number-of-staff-padding {
+        margin-left: 0px;
+    }
+    .practice-email-padding {
+        margin-left: 0px;
+    }
+    .facebook-padding {
+        margin-left: 0px;
+    }*/
+    .number-of-exam-padding {
+        margin-left: 0px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) { 
+    .address-padding {
+        margin-left: -110px;
+    }
+   /* .city-padding {
+        margin-left: -110px;
+    }
+    .province-padding {
+        margin-left: -80px;
+    }
+    .postal-code-padding {
+        margin-left: -120px;
+    }
+    .year-padding {
+        margin-left: -140px;
+    }
+    .phone-padding {
+        margin-left: -90px;
+    }
+    .website-padding {
+        margin-left: -80px;
+    }
+    .linkedin-padding {
+        margin-left: -75px;
+    }
+    .sqft-padding {
+        margin-left: -125px;
+    }
+    .number-of-staff-padding {
+        margin-left: -95px;
+    }
+    .practice-email-padding {
+        margin-left: -100px;
+    }
+    .facebook-padding {
+        margin-left: -70px;
+    }*/
+    .number-of-exam-padding {
+        margin-left: -110px;
+    }
+}
+@media (min-width: 991px) { 
+    .address-padding {
+        margin-left: -210px;
+    }
+/*    .city-padding {
+        margin-left: -50px;
+    }
+    .province-padding {
+        margin-left: -15px;
+    }
+    .postal-code-padding {
+        margin-left: -35px;
+    }
+    .year-padding {
+        margin-left: -40px;
+    }
+    .phone-padding {
+        margin-left: -30px;
+    }
+    .website-padding {
+        margin-left: -20px;
+    }
+    .linkedin-padding {
+        margin-left: -15px;
+    }
+    .sqft-padding {
+        margin-left: -35px;
+    }
+    .number-of-staff-padding {
+        margin-left: -10px;
+    }
+    .practice-email-padding {
+        margin-left: -20px;
+    }
+    .facebook-padding {
+        margin-left: -10px;
+    }*/
+    .number-of-exam-padding {
+        margin-left: -5px;
+    }
+}
+@media (min-width: 1200px) { 
+    .address-padding {
+        margin-left: -290px;
+    }
+    /*.city-padding {
+        margin-left: -70px;
+    }
+    .province-padding {
+        margin-left: -40px;
+    }
+    .postal-code-padding {
+        margin-left: -65px;
+    }
+    .year-padding {
+        margin-left: -80px;
+    }
+    .phone-padding {
+        margin-left: -55px;
+    }
+    .website-padding {
+        margin-left: -45px;
+    }
+    .linkedin-padding {
+        margin-left: -40px;
+    }
+    .sqft-padding {
+        margin-left: -70px;
+    }
+    .number-of-staff-padding {
+        margin-left: -40px;
+    }
+    .practice-email-padding {
+        margin-left: -50px;
+    }
+    .facebook-padding {
+        margin-left: -35px;
+    }*/
+    .number-of-exam-padding {
+        margin-left: -45px;
+    }
+}
+
+/*LOADER*/
+#loading-bar .bar {
+    background-color: #eceff1;
+}
+@media (min-width: 1200px) {
+    .menu-bar-2-locum {
+        padding-left: 99px;
+    }
+}
+@media (max-width: 767px) { 
+    .padding-search {
+        padding-left: 0px;
+    }
+}
+@media (max-width: 1006px) {         
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+       /* height: 401px;*/
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header{
+        float: none;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        /*box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);*/
+        webkit-box-shadow: inset 0 0px 0 rgba(255,255,255,.1)!important;
+        box-shadow: inset 0 0px 0 rgba(255,255,255,.1)!important;
+        border-color: transparent!important;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        /*margin: 7.5px -15px;*/
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .logging {
+        margin-left: 2px;
+    }
+    .login-home {
+        margin-left: -12px !important;
+    }
+    .sign-up-btn {
+        margin-left: 11px;
+    }
+    .language-group-btn {
+        margin-left: 11px;
+        margin-top: 4px;
+    }
+    .locum-nav-2 {
+        float: right;
+    }
+    .nav-bar-response-locum {
+        padding-left: 15px;
+        margin-top: 45px;
+    }
+    .drop-down-language {
+        right: auto !important;
+    }
+    .menu-bar-2-locum {
+        margin-top: 79px;
+    }
+    .navbar-default .nav-bar-locum>.active>a:before {
+        display: none;
+    }
+    .logging {
+        margin-top: 0px !important;
+    }
+}
+@media (max-width: 400px) {
+    .menu-bar-2-locum {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .menu-bar-2-active {
+        font-size: 13px;
+    }
+    .input-login i span {
+        margin-left: 0px !important;
+    }
+}
+@media (max-width: 992px) {
+}
+
+#locum-mobile-navbar-collapse, #practice-mobile-navbar-collapse {
+    position: absolute;
+    width: 99%;
+    background: #ff8f00;
+    margin-top: 80px;
+}
+@media (max-width: 425px) {
+    .custom-style {
+        padding-left: 15px!important;
+    }
+}

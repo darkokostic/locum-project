@@ -1,0 +1,100 @@
+.select-billing select {
+    width: 100%;
+    height: 50px;
+}
+.billing-practice-collaps label {
+    font-size: 17px;
+    color: #99abb4;
+}
+.billing-practice-collaps h5 {
+    font-size: 17px;
+}
+.span-date span {
+    color: #99abb4;
+    font-size: 14px;
+}
+.span-date label {
+    font-size: 14px;
+}
+.span-date p {
+    color: #000;
+    font-weight: bold;
+}
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+.scroll-billing {
+    list-style: none;
+}
+.billing-header {
+	border-style: solid;
+    border-width: 1px;
+    border-color: rgb(207, 216, 220);
+    border-radius: 2px;
+    background-color: rgba(255, 143, 0, 0);
+    min-height: 88px;
+}
+.input-billing {
+	border-style: solid;
+    border-width: 1px;
+    border-color: rgb(207, 216, 220);
+    border-radius: 2px;
+    background-color: rgba(255, 143, 0, 0);
+    height: 49px;
+    width: 100%;
+}
+.panel-default>.panel-heading {
+	background-color: transparent;
+	min-height: 60px;
+	border-radius: 0px;
+}
+.panel-default > .panel-heading {
+    border-left: 4px solid transparent;
+    -webkit-transition: all 1.5s; /* Safari */
+    transition: all 1.5s;
+}
+.panel-default > .panel-heading:hover, .hovering-single {
+	background-color: #e6e6e6;
+    border-left: 4px solid #ff8f00;
+    cursor: pointer;
+}
+.panel-default>.panel-heading h4 {
+	text-decoration: none;
+}
+.panel-group {
+	margin-bottom: -15px;
+}
+.panel-group .panel {
+	border-radius: 0px;
+}
+.simple-view h6 {
+	color: #ff8f00;
+	cursor: pointer;
+	font-size: 14px;
+	margin-top: 5px;
+}
+.simple-view h5 {
+	margin-top: 5px;
+}
+.simple-view h3 {
+	margin-top: -15px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.custom-margin {
+    margin-bottom: -25px;
+}
+@media (min-width: 991px) {
+    .scroll-billing {
+        width: 100%;
+        height: 500px;
+        overflow: auto;        
+    }
+}
+@media (max-width: 760px) {
+    .billing-status-mobile {
+        margin-top: 20px;        
+    }
+}
+
+

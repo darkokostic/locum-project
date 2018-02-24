@@ -1,0 +1,221 @@
+<div ng-include="'/angular/shared/views/locum/desktop-navigation.blade.html'">
+</div>
+<div ng-include="'/angular/shared/views/locum/mobile-navigation.blade.html'">
+</div>
+<div class="container" ng-hide="!activeApplicationTab" >
+    <!--<div class="row">-->
+        <div class="header-billing">
+            <h1 class="title">Find a job</h1>
+            <p>Search and apply for roles that suit you</p>
+            <div class="line"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                <h3>Search filters</h3>
+                <p class='text-muted'>Search for a Job based on a City or Practice Name.</p>
+            </div>
+        </div>
+                <div class="col-xs-12">
+                    <div class="row padding-search">
+                        <div class="filter-in-filters">
+                            <form name="bookedForm">
+                                <!-- Labele -->
+                                <!--<div class="row find-a-job-search">-->
+                                    <!--<div class="col-sm-1 col-md-2"></div>-->
+                                    <!--<div class="col-xs-12 col-sm-10 col-md-8">-->
+                                        <!--<div class="row">-->
+                                            <!--<div class="col-xs-12 col-sm-5 col-md-5">-->
+                                                <!--<label>City/Postcode</label>-->
+                                            <!--</div>-->
+                                            <!--<div class="col-xs-12 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1">-->
+                                                <!--<label>Practice name</label>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-1 col-md-2"></div>-->
+                                <!--</div>-->
+                                <!-- city/postcode or practice name -->
+                                <div class="row find-a-job-search">
+                                    <div class="col-sm-1 col-md-2"></div>
+                                    <div class="col-xs-12 col-sm-10 col-md-8">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-5 col-md-5">
+                                                <label>City/Postcode</label>
+                                                <div class="input-group city-of-postcode">
+                                                    <span class="input-group-addon group-addion-changes">
+                                                        <i aria-hidden="true" class="fa fa-map-marker">
+                                                        </i>
+                                                    </span>
+                                                    <input aria-describedby="inputGroupSuccess3Status" class="form-control city-of-postcode-input" id="inputGroupSuccess3"  ng-disabled="searchTerm.name" ng-model="searchTerm.city" placeholder="City or postcode" type="text" name="city">
+                                                    </input>
+                                                </div>
+                                            </div>
+                                            <div class="or-text col-xs-12 col-sm-1 col-md-1">
+                                                <label class="margin-top-custom"><b>OR</b></label>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-5 col-md-5">
+                                                <label>Practice name</label>
+                                                <div class="input-group city-of-postcode">
+                                                    <span class="input-group-addon group-addion-changes">
+                                                        <i aria-hidden="true" class="fa fa-medkit">
+                                                        </i>
+                                                    </span>
+                                                    <input aria-describedby="inputGroupSuccess3Status" class="form-control city-of-postcode-input" id="inputGroupSuccess3" ng-disabled="searchTerm.city" ng-model="searchTerm.name" placeholder="Practice name" type="text"  name="name">
+                                                    </input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1 col-md-2"></div>
+                                </div>
+                                <!-- labele -->
+                                <!--<div class="row find-a-job-search">-->
+                                    <!--<div class="col-sm-1 col-md-2"></div>-->
+                                    <!--<div class="col-xs-12 col-sm-10 col-md-8">-->
+                                        <!--<div class="row">-->
+                                            <!--<div class="col-xs-12 col-sm-5 col-md-5">-->
+                                                <!--<label>From</label>-->
+                                            <!--</div>-->
+                                            <!--<div class="col-xs-12 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1">-->
+                                                <!--<label>To</label>-->
+                                            <!--</div>-->
+                                        <!--</div>  -->
+                                    <!--</div> -->
+                                    <!--<div class="col-sm-1 col-md-2"></div>-->
+                                <!--</div>-->
+                                <!-- from to  -->
+                                <div class="row find-a-job-search">
+                                    <div class="col-sm-1 col-md-2"></div>
+                                    <div class="col-xs-12 col-sm-10 col-md-8">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-5 col-md-5">
+                                                <p class="input-group">
+                                                    <label>From</label>
+                                                  <input type="text" class="form-control" uib-datepicker-popup="MM/dd/yyyy" ng-model="searchTerm.dateFromToSearch" is-open="popup1.opened" datepicker-options="dateOptions" close-text="Close" ng-click="open1()" ng-required="searchTerm.dateToToSearch" name="dateFrom" placeholder="MM/DD/YYYY"> </input>
+                                                  <span class="input-group-btn" >
+                                                    <button type="button" class="btn btn-default custom-margin" ng-click="open1()"><i class="glyphicon glyphicon-calendar" ></i></button>
+                                                  </span>
+                                                    <div ng-messages="bookedForm.dateFrom.$error" role="alert">
+                                                        <div class="text-danger" ng-message="required">
+                                                            Required
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1">
+                                                <p class="input-group">
+                                                    <label>To</label>
+                                                  <input type="text" class="form-control" uib-datepicker-popup="MM/dd/yyyy" ng-model="searchTerm.dateToToSearch" is-open="popup2.opened" datepicker-options="dateOptions" close-text="Close" ng-click="open2()" ng-required="searchTerm.dateFromToSearch" name="dateTo" placeholder="MM/DD/YYYY"/>
+                                                  <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-default custom-margin" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                                  </span>
+                                                  <div ng-messages="bookedForm.dateTo.$error" role="alert">
+                                                        <div class="text-danger" ng-message="required">
+                                                            Required
+                                                        </div>
+                                                    </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1 col-md-2"></div>
+                                </div>
+
+                                <!-- search clear -->
+                                <div class="row find-a-job-search">
+                                    <div class="col-sm-1 col-md-2"></div>
+                                    <div class="col-xs-12 col-sm-10 col-md-8">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-5 col-md-5">
+                                                <button class="btn create-your-acc-btn sign-up-btn search-btn-filters pull-right" ng-click="search(searchTerm);" type="submit" ng-disabled="!bookedForm.$valid">
+                                                    Search
+                                                </button>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1">
+                                                <button class="btn create-your-acc-btn search-btn sign-up-btn search-btn-filters btn-clear" ng-click="reload()" type="submit">
+                                                    Clear
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-1 col-md-2"></div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--</div>-->
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+                <h3>Filtered jobs list</h3>
+        </div>
+        <div class="col-xs-6">
+                <p class='text-muted'>Here you will be shown a list of all available jobs we have.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4" ng-repeat="job in jobResults track by $index">
+            <div ng-class="{'find-a-job-card animated':'true', 'bounceOutLeft':disableSlideLeftBack, 'bounceInLeft':disableSlideLeft, 'bounceInRight':disableSlideRight, 'bounceOutRight':disableSlideRightBack} " ng-click="redirectToJobDetails(job)">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p><b>#{{job.number}}</b></p>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="circle-div pull-right"></div>
+                    </div>
+                    <div class="col-xs-12">
+                        <h5>{{job.title | limitTo:30}}{{job.title.length > 30 ? '...' : ''}}</h5>
+                    </div>
+                    <div class="col-xs-12">
+                        <h4><i class="fa fa-building-o" aria-hidden="true"></i>&nbsp{{job.practice.practice_name | limitTo:27}}{{job.practice.practice_name.length > 27 ? '...' : ''}}</h4>
+                    </div>
+                    <div class="col-xs-12">
+                        <h4><i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp{{job.job_start|date}} - {{job.job_end|date}}</h4>
+                    </div>
+                    <div class="col-xs-6">
+                        <h4><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp {{job.working_time_from}} - {{job.working_time_to}}</h4>
+                    </div>
+                    <div class="col-xs-6">
+                        <button class="btn create-your-acc-btn pull-right btn-view-job" ng-click="redirectToJobDetails(job)">View job</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class=pull-right ng-hide="jobResults==0 || jobResults==null">
+                <ul uib-pagination total-items="job.bigTotalItemsJob" ng-model="job.bigCurrentPageJob" max-size="5" class="pagination-sm" boundary-link-numbers="true" ng-change="pageChangedJob()" items-per-page="job.maxSizeJob">
+                </ul>
+            </div>
+        </div>      
+    </div>
+</div>
+<div clas="col-xs-12 text-center" ng-if="(jobResults==0 || jobResults==null) && !showLoader">
+    <center>
+        <h2 class="media-heading col-xs-12 no-results-found" style="margin-top:50px;">No results found</h2>
+        <div class="container text-center my-job-nosearch">
+            <img src="img/nosearch.png"></img>
+        </div>
+    </center>
+</div>
+<div class="sk-three-bounce" ng-if="showLoader">
+    <div class="sk-child sk-bounce1"></div>
+    <div class="sk-child sk-bounce2"></div>
+    <div class="sk-child sk-bounce3"></div>
+</div>
+<div ng-include="'/angular/shared/views/locum/footer.blade.html'"></div>
+
+<!-- / new dwsign -->
+

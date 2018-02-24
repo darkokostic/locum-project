@@ -1,0 +1,180 @@
+<div ng-include="'/angular/shared/views/practice/desktop-navigation.blade.html'">
+</div>
+<div ng-include="'/angular/shared/views/practice/mobile-navigation.blade.html'">
+</div>
+<div class="container" ng-init = "initDashboard()" ng-if="activeApplicationTabFeedback">
+    <div class="container">
+		<div class="row">
+    		<h3 class="personal-details col-xs-12" style="margin-top:0px">My Dashboard</h3>
+    	</div>
+    	<div class="row">
+	    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	    		<div class="card-my-dashboard col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-6 col-lg-4">
+	    			<div class="row position-practice-cards">
+	    				<div class="text-cards-practice col-xs-8">
+	    					<h6>Previous Locums</h6>
+	    					<div class="my-dashboard-numbers">
+	    						<p>{{dashboard.prevousion_locum}}</p>
+	    					</div>
+	    				</div>
+	    				<div class="img-in-cards col-xs-4">
+	    					<img src="../img/login-locum.png">
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="card-my-dashboard col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-6 col-lg-4">
+	    			<div class="row position-practice-cards">
+	    				<div class="text-cards-practice col-xs-8">
+	    					<h6>Completed Jobs</h6>
+	    					<div class="my-dashboard-numbers my-dashboard-numbers2">
+	    						<p>{{dashboard.completed_jobs}}</p>
+	    					</div>
+	    				</div>
+	    				<div class="img-in-cards col-xs-4">
+	    					<img src="../img/bag2.png">
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="card-my-dashboard col-sm-offset-3 col-sm-6 col-md-offset-0 col-md-6 col-lg-4">
+	    			<div class="row position-practice-cards">
+	    				<div class="text-cards-practice col-xs-8">
+	    					<h6>Posted Jobs</h6>
+	    					<div class="my-dashboard-numbers my-dashboard-numbers3">
+	    						<p>{{dashboard.posted_jobs}}</p>
+	    					</div>
+	    				</div>
+	    				<div class="img-in-cards col-xs-4">
+	    					<img src="../img/bag.png">
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+    </div>
+    <div class="container">
+	    <div class="col-xs-12 col-lg-6">
+	    	<div class="row">
+	    		<h3 class="personal-details col-xs-12 col-md-6">Nearest Doctors</h3>
+	    	</div>
+	    	<div class="row">
+	    		<div class="about-doctor-my-jobs nearest-doctors col-xs-11 col-lg-12" ng-repeat="nearestDoctor in nearestDoctors">
+		        	<div class="about-dr-img nearest-doctors-img col-xs-2">
+		        		<img class="img-responsive about-dr-img" ng-src="{{nearestDoctor.avatar}}">
+		        	</div>
+		        	<div class="col-xs-12 col-sm-7 custom-padiing-phone">
+			        	<div class="col-xs-8">
+	                        <h3 class="dr-my-jobs dr-practice">{{nearestDoctor.name}}</h3>
+	                    </div>
+		        		<div class="dr-live-place practice-dr-live col-xs-12">
+		                    <p class="col-xs-11 col-sm-11 col-md-10 col-lg-11"><b>Day rate: </b>${{nearestDoctor.day_rate}}</p>
+		                </div>
+		        	</div>
+		        	<div class="col-xs-12 col-sm-3">
+		        	</div>
+		        	<div class="row">
+		        		<div class="dr-live-place practice-dr-live col-xs-12 col-md-10 col-md-offset-2">
+		        			<i class="fa fa-map-marker col-xs-1 col-sm-1 col-md-1 col-lg-1" aria-hidden="true" style="margin-left:-21px"></i>
+		                    <p class="col-xs-11 col-sm-11 col-md-10 col-lg-11">{{nearestDoctor.province}}, {{nearestDoctor.city}}, {{nearestDoctor.address1}}</p>
+		                </div>
+		        	</div>
+		        	<div class="row">
+		        		<div class="btns-practice-mail-profile col-xs-12 padding-left">
+		        			<button class="btn last-jobs-btn mail-profile-btn-practice transitions" type="submit" data-toggle="modal" data-target="#myModal" ng-click="nearestDoctorId(nearestDoctor)">Mail</button>
+			        		<button class="btn last-jobs-btn mail-profile-btn-practice transitions" type="submit" ng-click="viewLocum(nearestDoctor.id)">Profile</button>        				
+        				</div>
+		        	</div>
+		        </div>
+                <div ng-if="(nearestDoctors == 0 || nearestDoctors == null) && !showLoader">
+                    <h1 class="no-results-found" style="text-align:center">No results found</h1>
+                </div>
+                <div class="sk-three-bounce" ng-if="showLoader">
+	                <div class="sk-child sk-bounce1"></div>
+	                <div class="sk-child sk-bounce2"></div>
+	                <div class="sk-child sk-bounce3"></div>
+	            </div>
+                <div class="row" ng-if="nextPageExistDoctors">
+                    <div class="btns-practice-mail-profile col-xs-12 col-lg-6 col-lg-offset-3">
+                        <p infinite-scroll="getMoreDoctors()" infinite-scroll-disabled="disabledScrollDoctors">
+                            <span us-spinner="{radius:12, width:4, length: 6}" spinner-on="disabledScrollDoctors"></span>
+                        </p>
+                    </div>
+                </div>
+	    	</div>
+	    </div>
+	    <div class="col-xs-12 col-lg-6">
+	    	<div class="row">
+	    		<h3 class="personal-details col-xs-12 col-lg-6 padding-left-title">Active Jobs</h3>
+	    	</div>
+	    	<div class="row">
+	    		<div class="activites-card col-xs-12 col-lg-12" ng-repeat="activity in dashboard.activities.data">
+	    			<div class="activites-card-title col-xs-12">
+	    				<h4>{{activity.title}}</h4>
+	    			</div>
+	    			<div class="activites-card-description activites-card-time col-xs-12">
+	    				<p>{{activity.desc|limitTo:90}} {{ (activity.desc && activity.desc.length>90)?'...':''}}</p>
+	    			</div>
+	    			<div class="btns-practice-mail-profile col-xs-12">
+		        		<button class="btn last-jobs-btn mail-profile-btn-practice transitions" type="submit" data-target="#viewJobsModal" ng-click="viewJobDetails(activity.id)">View more</button>        				
+    				</div>
+	    		</div>
+	    	</div>
+            <div ng-if="(dashboard.activities.data ==0 || dashboard.activities.data ==null) && !showLoader">
+                <h1 class="no-results-found" style="text-align:center">No results found</h1>
+            </div>
+            <div class="sk-three-bounce" ng-if="showLoader">
+                <div class="sk-child sk-bounce1"></div>
+                <div class="sk-child sk-bounce2"></div>
+                <div class="sk-child sk-bounce3"></div>
+            </div>
+	    	<div class="row" ng-if="nextPageExist">
+	    		<div class="btns-practice-mail-profile col-xs-12 col-lg-6 col-lg-offset-3">
+                    <p infinite-scroll="getNextDashboardData(dashboard.activities.next_page_url)" infinite-scroll-disabled="disabledScroll">
+                        <span us-spinner="{radius:12, width:4, length: 6}" spinner-on="disabledScroll"></span>
+                    </p>
+        		</div>
+	    	</div>
+	    </div>
+    </div>
+</div>
+
+<!-- POPUP -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog" data-keyboard="false" data-backdrop="static">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" ng-disabled="isDisabled"><i class="fa fa-times exit-popup" aria-hidden="true"></i></button>
+				<h4 class="modal-title">Won application - {{nameOfDoctor}}</h4>
+			</div>
+			<div class="modal-body">
+				<form name="mailForm">
+					<div class="form-group col-xs-11 col-sm-12">
+						<div ng-class="{'has-error': !mailForm.subject.$valid, 'form-group input-group col-xs-12 has-feedback row popup-mail': true}">
+							<div class="form-group input-group col-xs-12 has-feedback row popup-mail">
+				                <span class="input-group-addon address-input popup-input"><span class="hover-icon-text"><i class="fa fa-envelope-open-o col-xs-1 person-details-icon address-1-icon" aria-hidden="true"></i>Subject</span></span>
+				                <input name="subject" type="text" class="form-control input-border input-border-address1" placeholder="Contact user {{nameOfDoctor}}" aria-describedby="inputGroupSuccess4Status" ng-model="nearestDoctor.subject" ng-disabled="isDisabled" ng-required="true">
+				            </div>
+				            <div ng-messages="mailForm.subject.$error" role="alert">
+	                            <div class="text-danger" ng-message="required">Required</div>
+	                        </div>
+				        </div>
+					</div>
+					<div class="form-group col-xs-11 col-sm-12">
+						<div ng-class="{'has-error': !mailForm.description.$valid}">
+							<textarea name="description" placeholder="Email body" class="form-control latest-vacancies-description edit-overview popup-mail" rows="4" ng-model="nearestDoctor.description" ng-disabled="isDisabled" ng-required="true"></textarea>
+						</div>
+						<div ng-messages="mailForm.description.$error" role="alert">
+                            <div class="text-danger" ng-message="required">Required</div>
+                        </div>
+					</div>
+					<center>
+						<button type="submit" data-dismiss="modal" class="btn create-your-acc-btn send-popup" ng-click="sendMailPractice(nearestDoctor)" ng-disabled="!mailForm.$valid || isDisabled">Send</button>
+					</center>
+                    <span us-spinner="{radius:50, width:20, length: 20}" spinner-on="showSpinner"></span>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div ng-include="'/angular/shared/views/practice/footer.blade.html'"></div>

@@ -1,0 +1,39 @@
+.practice-home-desc p {
+    word-wrap: break-word;
+    padding-right: 35%;
+}
+.practice-home-desc h4 {
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+.book-sessional-practice-home {
+	width: 23ch !important;
+}
+.description-slide-practice-home {
+	max-width: 60ch !important;
+}
+.title-vacancies {
+    margin-top: 20px;
+}
+.back-vacancies a {
+    margin-bottom: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.back-vacancies a:hover {
+    text-decoration: none;
+    color: #ff8f00;
+}
+.bell_positioning {
+    color:white;
+    margin-left:-293px;
+    font-size: 18px;
+    margin-top:12px;
+}
+.arrow_positioning {
+    color:white;
+    float:right;
+    margin-top:-22.5px;
+    margin-right:0px;
+}
+

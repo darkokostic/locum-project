@@ -1,0 +1,231 @@
+<div ng-include="'/angular/shared/views/practice/desktop-navigation.blade.html'">
+</div>
+<div ng-include="'/angular/shared/views/practice/mobile-navigation.blade.html'">
+</div>
+<div ng-init="initAllJobs()" ng-if="activeApplicationTabJobs">
+	<div>
+	<div class="container">
+	   <div class="header-billing">
+            <h1 class="title">All Jobs</h1>
+            <p>Review all your jobs.</p>
+            <div class="line"></div>
+        </div>
+        <div class="col-xs-12">
+            <div class="row">
+                <h3>Search filters</h3>
+                <p class='text-muted'>Search for a Job based on a title or description.</p>
+            </div>
+        </div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div>
+					<div class="filter-in-filters">
+                        <form name="allJobsForm">
+                            <div class="row find-a-job-search">
+                                <div class="col-sm-1 col-md-2"></div>
+                                <div class="col-xs-12 col-sm-10 col-md-8">
+                                    <div class="row">
+                                        <div class="col-xs-12 search-billing">
+                                            <label>Search all jobs</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-1 col-md-2"></div>
+                            </div>
+                            <div class="row find-a-job-search">
+                                <div class="col-sm-1 col-md-2"></div>
+                                <div class="col-xs-12 col-sm-10 col-md-8">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="input-group city-of-postcode">
+                                                <span class="input-group-addon group-addion-changes"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control city-of-postcode-input" ng-model="searchTerm.title" placeholder="Search by title or description of Job" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-1 col-md-2"></div>
+                            </div>
+                            <!-- labele -->
+                            <!--<div class="row find-a-job-search">-->
+                                <!--<div class="col-sm-1 col-md-2"></div>-->
+                                <!--<div class="col-xs-12 col-sm-10 col-md-8">-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="col-xs-12 col-sm-6 col-md-6">-->
+                                            <!--<label>From</label>-->
+                                        <!--</div>-->
+                                        <!--<div class="col-xs-12 col-sm-6 col-md-6">-->
+                                            <!--<label>To</label>-->
+                                        <!--</div>-->
+                                    <!--</div>  -->
+                                <!--</div> -->
+                                <!--<div class="col-sm-1 col-md-2"></div>-->
+                            <!--</div>-->
+                            <!-- from to  -->
+                            <div class="row find-a-job-search">
+                                <div class="col-sm-1 col-md-2"></div>
+                                <div class="col-xs-12 col-sm-10 col-md-8">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                            <p class="input-group">
+                                                <label>From</label>
+                                              <input type="text" class="form-control" uib-datepicker-popup="MM/dd/yyyy" ng-model="searchTerm.dateFromToSearch" is-open="popup1.opened" datepicker-options="dateOptions" close-text="Close" ng-click="open1()" ng-required="searchTerm.dateToToSearch" name="dateFrom" placeholder="MM/DD/YYYY"/>
+                                              <span class="input-group-btn" >
+                                                <button type="button" class="btn btn-default custom-margin" ng-click="open1()"><i class="glyphicon glyphicon-calendar" ></i></button>
+                                              </span>
+                                                <div ng-messages="allJobsForm.dateFrom.$error" role="alert">
+                                                    <div class="text-danger" ng-message="required">
+                                                        Required
+                                                    </div>
+                                                </div>
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                            <p class="input-group">
+                                                <label>To</label>
+                                              <input type="text" class="form-control" uib-datepicker-popup="MM/dd/yyyy" ng-model="searchTerm.dateToToSearch" is-open="popup2.opened" datepicker-options="dateOptions" close-text="Close" ng-click="open2()" ng-required="searchTerm.dateFromToSearch" name="dateTo" placeholder="MM/DD/YYYY"/>
+                                              <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default custom-margin" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                              </span>
+                                              <div ng-messages="allJobsForm.dateTo.$error" role="alert">
+                                                    <div class="text-danger" ng-message="required">
+                                                        Required
+                                                    </div>
+                                                </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1 col-md-2"></div>
+                            </div>
+
+                            <!-- search clear -->
+                            <div class="row find-a-job-search">
+                                <div class="col-sm-1 col-md-2"></div>
+                                <div class="col-xs-12 col-sm-10 col-md-8">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                            <button class="btn create-your-acc-btn sign-up-btn search-btn-filters" ng-click="searchAllJobs(searchTerm);searchTerm.dateFromToSearch=null;searchTerm.dateToToSearch=null;" type="submit" ng-disabled="!allJobsForm.$valid">Search</button>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                            <button class="btn create-your-acc-btn sign-up-btn search-btn-filters btn-clear" ng-click="initAllJobs();searchTerm.dateToToSearch=null;searchTerm.dateFromToSearch=null" type="submit">
+                                                Clear
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-1 col-md-2"></div>
+                            </div>
+                        </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Filtered list of all your jobs</h3>
+                </div>
+                <div class="col-xs-6">
+                    <p class='text-muted'>Here you will be shown a list of all your jobs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4" ng-repeat="job in allJobs track by $index">
+                    <div  ng-class="{'find-a-job-card animated':true, 'bounceOutLeft':disableSlideLeftBack, 'bounceInLeft':disableSlideLeft, 'bounceInRight':disableSlideRight, 'bounceOutRight':disableSlideRightBack}" ng-click="viewJobDetails(job.id)">
+                        <div class="">
+                            <div class="col-xs-6">
+                                <p><b>#{{job.index}}</b></p>
+                            </div>
+                            <div class="col-xs-6 circle">
+                                <div class="circle-div pull-right"></div>
+                            </div>
+                            <div class="col-xs-12">
+                                <h5><i class="fa fa-building-o" aria-hidden="true"></i>&nbsp{{job.title}}</h5>
+                            </div>
+                            <div class="col-xs-12">
+                                <h4><i class="fa fa-file" aria-hidden="true"></i>&nbsp{{job.desc | limitTo:90}}{{job.desc.length > 90 ? '...' : ''}}</h4>
+                            </div>
+                            <div class="col-xs-12">
+                                <h4><i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp{{moment(job.job_start).format('MMM DD YYYY')}} - {{moment(job.job_end).format('MMM DD YYYY')}}</h4>
+                            </div>
+                            <div class="col-xs-12">
+                                <h4>&nbsp{{job.completed}}&nbsp <i style="color: #ff8f00;" ng-hide="job.completed=='Completed'" class="fa fa-times-circle-o" aria-hidden="true"></i><i style="color: #ff8f00;" ng-hide="job.completed=='Uncompleted'" class="fa fa-check-circle-o" aria-hidden="true"></i></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" ng-hide="jobResults || allJobs == 0 || allJobs == null">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class=pull-right>
+                        <ul uib-pagination total-items="jobs.bigTotalItemsAllJobs" ng-model="jobs.bigCurrentPageAllJobs" max-size="5" class="pagination-sm" boundary-link-numbers="true" ng-change="pageChangedAllJobs()" items-per-page="jobs.maxSizeAllJobs">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+    </div>
+</div>
+<div clas="col-xs-12 text-center" ng-show="(jobResults || allJobs == 0 || allJobs == null) && !showLoader">
+    <center>
+        <h2 class="media-heading col-xs-12 no-results-found" style="margin-top:50px;">No results found</h2>
+        <div class="my-job-nosearch">
+            <img src="img/nosearch.png"></img>
+        </div>
+    </center>
+</div>
+<div class="sk-three-bounce" ng-if="showLoader">
+    <div class="sk-child sk-bounce1"></div>
+    <div class="sk-child sk-bounce2"></div>
+    <div class="sk-child sk-bounce3"></div>
+</div>
+<div ng-include="'/angular/shared/views/practice/footer.blade.html'"></div>
+<div class="modal fade" id="myModal" role="dialog">
+	<div class="modal-dialog">
+
+<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><i class="fa fa-times exit-popup" aria-hidden="true"></i></button>
+				<h4 class="modal-title">New message</h4>
+			</div>
+			<div class="modal-body">
+				<center>
+					<h2 class="title-popup">Send email to <span>{{nameOfDoctor}}</span></h2>
+				</center>
+				<form name="mailForm">
+					<div class="form-group col-xs-11 col-sm-12">
+						<div ng-class="{'has-error': !mailForm.subject.$valid, 'form-group input-group col-xs-12 has-feedback row popup-mail': true}">
+							<div class="form-group input-group col-xs-12 has-feedback row popup-mail">
+				                <span class="input-group-addon address-input popup-input"><span class="hover-icon-text"><i class="fa fa-envelope-open-o col-xs-1 person-details-icon address-1-icon" aria-hidden="true"></i>Subject</span> |</span>
+				                <input name="subject" type="text" class="form-control input-border input-border-address1" placeholder="Subject" aria-describedby="inputGroupSuccess4Status" ng-model="nearestDoctor.subject" ng-required="true">
+				            </div>
+				            <div ng-messages="mailForm.subject.$error" role="alert">
+	                            <div class="text-danger" ng-message="required">Required</div>
+	                        </div>
+				        </div>
+					</div>
+					<div class="form-group col-xs-11 col-sm-12">
+						<div ng-class="{'has-error': !mailForm.description.$valid}">
+							<textarea name="description" placeholder="Description" class="form-control latest-vacancies-description edit-overview popup-mail" rows="4" ng-model="nearestDoctor.description" ng-required="true"></textarea>
+						</div>
+						<div ng-messages="mailForm.description.$error" role="alert">
+                            <div class="text-danger" ng-message="required">Required</div>
+                        </div>
+					</div>
+					<center>
+						<button type="submit" class="btn create-your-acc-btn send-popup" ng-click="acceptAndSendMail(nearestDoctor)" ng-disabled="!mailForm.$valid">Send</button>
+					</center>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

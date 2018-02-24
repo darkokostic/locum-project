@@ -1,0 +1,64 @@
+.txa-resize textarea {
+	resize: none;
+}
+.contact-form-button {
+	background-color: #ff8f00;
+    color: #ffffff;
+    border-radius: 2px;
+    height: 43px;
+}
+.contact-form-button:focus {
+	background-color: #fff;
+	color: #ff8f00;
+	border-color: #ff8f00;
+}
+.contact-form-button:hover {
+	background-color: #fff;
+	color: #ff8f00;
+	border-color: #ff8f00;
+}
+.contact-form-button:active {
+	background-color: #fff;
+	color: #ff8f00;
+	border-color: #ff8f00;
+}
+.contact-form-button:visited {
+	background-color: #fff;
+	color: #ff8f00;
+	border-color: #ff8f00;
+}
+.contact-form {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.contact-us p {
+	font-size: 16px;
+    color: rgb(144, 164, 174);
+}
+.contact-us h1 {
+	font-weight: 200;
+	margin-top: 70px;
+}
+.contact-us h2 {
+	color: rgb(144, 164, 174);
+	font-size: 16px;
+	font-weight: medium;
+	margin-top: 2px;
+    margin-left: 10px;
+}
+.contact-us h3 {
+	color: rgb(144, 164, 174);
+	font-size: 16px;
+	font-weight: 200;
+	margin-top: 2px;
+    margin-left: 10px;
+}
+.contact-us i {
+	color: rgb(144, 164, 174);
+}
+.contact-us-form {
+	margin-top: 10px;
+}
+.contact-us-div {
+	margin-top: 40px;
+}

@@ -1,0 +1,32 @@
+.header-billing p {
+	color: #99abb4;
+	margin-bottom: 4vh;
+}
+.billing-table {
+	margin-top: 20px;
+}
+.heading-panel {
+	background-color: #ff8f00 !important;
+	color: #fff !important;
+}
+.billing-name a:hover {
+	color: #ff8f00;
+	text-decoration: none;
+	cursor: pointer;
+}
+.billing-name a {
+	color: #333;
+}
+.search-billing label {
+	margin-top: 40px;
+}
+@media (max-width: 790px) {
+    .dont-show-status{
+    	display: none;
+    }
+}
+@media (max-width: 765px) {
+    .billing-status {
+    	margin-top: 20px;
+    }
+}
